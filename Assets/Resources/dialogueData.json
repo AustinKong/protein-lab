@@ -1,0 +1,17 @@
+{
+  "scenes": [
+    {
+      "sceneName": "Game01",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "Hello my name is Dr. Penguin! This is a test"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "This is the next dialogue"
+        }
+      ]
+    }
+  ]
+}

@@ -23,6 +23,7 @@ public class Combineable : Draggable
       Debug.Log(this.itemName + " + " + target.itemName);
       string result = CombinationRules.GetCombinationResult(this.itemName, target.itemName);
       GameObject newItem = Instantiate(Resources.Load<GameObject>($"Items/{result}"), target.transform.position, Quaternion.identity);
+      ParticlePoolManager.Instance.PlayParticle("Star", transform.position);
 
       Destroy(target.gameObject);
       Destroy(gameObject);
