@@ -9,21 +9,19 @@ public class Combineable : Draggable
 
   protected override void Update() {
     base.Update();
-    if (isDragging && target != null) {
-      // Do highlighting + size increase
-      // TODO: Update this
-      this.GetComponent<SpriteRenderer>().size = new Vector2(1.2f, 1.2f);
+    if (target != null && target.target == this) {
+      transform.localScale = Vector2.one * 1.1f;
     } else {
-      this.GetComponent<SpriteRenderer>().size = Vector2.one;
+      transform.localScale = Vector2.one;
     }
   }
 
   protected override void OnDragEnd(InputAction.CallbackContext context) {
     if (isDragging && target != null) {
-      Debug.Log(this.itemName + " + " + target.itemName);
       string result = CombinationRules.GetCombinationResult(this.itemName, target.itemName);
-      GameObject newItem = Instantiate(Resources.Load<GameObject>($"Items/{result}"), target.transform.position, Quaternion.identity);
-      ParticlePoolManager.Instance.PlayParticle("Star", transform.position);
+      Vector3 newPosition = (target.transform.position + this.transform.position) / 2f;
+      GameObject newItem = Instantiate(Resources.Load<GameObject>($"Items/{result}"), newPosition, Quaternion.identity);
+      ParticlePoolManager.Instance.PlayParticle("Star", newPosition);
 
       Destroy(target.gameObject);
       Destroy(gameObject);

@@ -3,15 +3,15 @@ using UnityEngine.InputSystem;
 
 public class Draggable : MonoBehaviour
 {
-  [SerializeField] private InputActionAsset inputActions;
+  [SerializeField] protected InputActionAsset inputActions;
   private Camera mainCamera;
   private InputAction clickAction;
   private InputAction pointAction;
 
   protected bool isDragging = false;
-  private Vector3 dragOffset;
+  protected Vector3 dragOffset;
 
-  private void Awake() {
+  protected virtual void Awake() {
     pointAction = inputActions.FindAction("Game/Point");
     clickAction = inputActions.FindAction("Game/Click");
     mainCamera = Camera.main;
@@ -51,7 +51,7 @@ public class Draggable : MonoBehaviour
     }
   }
 
-  private Vector3 GetPointerWorldPosition() {
+  protected Vector3 GetPointerWorldPosition() {
     Vector3 screenPosition = pointAction.ReadValue<Vector2>();
     Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, 0));
     return worldPosition;

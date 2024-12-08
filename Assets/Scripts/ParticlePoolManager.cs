@@ -13,7 +13,7 @@ public class ParticlePoolManager : MonoBehaviour
   }
 
   [SerializeField] private List<ParticlePrefab> particlePrefabs;
-  private const int initialPoolSize = 1;
+  private const int INITIAL_POOL_SIZE = 0;
 
   private Dictionary<string, Queue<ParticleSystem>> particlePools;
 
@@ -34,7 +34,7 @@ public class ParticlePoolManager : MonoBehaviour
 
     foreach (ParticlePrefab particlePrefab in particlePrefabs) {
       Queue<ParticleSystem> pool = new Queue<ParticleSystem>();
-      for (int i = 0; i < initialPoolSize; i++) {
+      for (int i = 0; i < INITIAL_POOL_SIZE; i++) {
         pool.Enqueue(CreateParticleInstance(particlePrefab.particlePrefab));
       }
       particlePools[particlePrefab.particleName] = pool;
