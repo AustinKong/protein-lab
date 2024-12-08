@@ -21,7 +21,7 @@ public class Combineable : Draggable
       string result = CombinationRules.GetCombinationResult(this.itemName, target.itemName);
       Vector3 newPosition = (target.transform.position + this.transform.position) / 2f;
       GameObject newItem = Instantiate(Resources.Load<GameObject>($"Items/{result}"), newPosition, Quaternion.identity);
-      ParticlePoolManager.Instance.PlayParticle("Star", newPosition);
+      ParticlePoolManager.Instance.PlayParticle("Smoke", newPosition);
 
       Destroy(target.gameObject);
       Destroy(gameObject);
