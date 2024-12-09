@@ -29,6 +29,7 @@ public class Mixing : Draggable
       transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 10f);
     }
   }
+
   private void TrackShakeInput() {
     float magnitude = deltaAction.ReadValue<Vector2>().magnitude;
     if (magnitude > SHAKE_THRESHOLD && Time.time - lastShakeTime > SHAKES_COOLDOWN) {
@@ -39,6 +40,7 @@ public class Mixing : Draggable
       if (shakesCount >= SHAKES_REQUIRED) {
         canShake = false;
         ParticlePoolManager.Instance.PlayParticle("StarLarge", Vector2.zero);
+        SceneManager.Instance.LoadScene("Game01");
       }
     }
   }

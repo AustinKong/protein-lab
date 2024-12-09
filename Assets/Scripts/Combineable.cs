@@ -5,7 +5,7 @@ public class Combineable : Draggable
 {
   public string itemName;
 
-  private Combineable target;
+  protected Combineable target;
 
   protected override void Update() {
     base.Update();
@@ -20,7 +20,7 @@ public class Combineable : Draggable
     if (isDragging && target != null) {
       string result = CombinationRules.GetCombinationResult(this.itemName, target.itemName);
       Vector3 newPosition = (target.transform.position + this.transform.position) / 2f;
-      GameObject newItem = Instantiate(Resources.Load<GameObject>($"Items/{result}"), newPosition, Quaternion.identity);
+      Instantiate(Resources.Load<GameObject>($"Items/{result}"), newPosition, Quaternion.identity);
       ParticlePoolManager.Instance.PlayParticle("Smoke", newPosition);
 
       Destroy(target.gameObject);
