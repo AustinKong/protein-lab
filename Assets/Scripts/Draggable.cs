@@ -34,7 +34,7 @@ public class Draggable : MonoBehaviour
     clickAction.canceled -= OnDragEnd;
   }
 
-  private void OnDestroy() {
+  protected virtual void OnDestroy() {
     clickAction.started -= OnDragStart;
     clickAction.canceled -= OnDragEnd;
   }

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5338008156271200430}
   - component: {fileID: 1979414064367381824}
   - component: {fileID: 4876139837610843195}
-  - component: {fileID: 3898278647469158888}
   - component: {fileID: 4498378919466593593}
+  - component: {fileID: 5424108326040017105}
   m_Layer: 0
   m_Name: Magnetic stirring plate
   m_TagString: Untagged
@@ -117,20 +117,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3898278647469158888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5089339087020282527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd4d7af2a00ec3409442a35e88f1e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  itemName: Magnetic stirring plate
 --- !u!61 &4498378919466593593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -177,3 +163,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.75, y: 2.41}
   m_EdgeRadius: 0
+--- !u!114 &5424108326040017105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5089339087020282527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1ed85f90c28ca41be59ed2de32ce50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  itemName: Magnetic stirring plate
+  minigameSceneName: Minigame02
