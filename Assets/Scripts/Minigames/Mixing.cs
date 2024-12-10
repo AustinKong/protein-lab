@@ -6,7 +6,7 @@ public class Mixing : Draggable
   private bool canShake = true;
 
   private const float SHAKE_THRESHOLD = 20f;
-  private const int SHAKES_REQUIRED = 8;
+  private const int SHAKES_REQUIRED = 2; // Originally 8 
   private const float SHAKES_COOLDOWN = 1.5f;
 
   private int shakesCount = 0;
@@ -40,7 +40,7 @@ public class Mixing : Draggable
       if (shakesCount >= SHAKES_REQUIRED) {
         canShake = false;
         ParticlePoolManager.Instance.PlayParticle("StarLarge", Vector2.zero);
-        SceneManager.Instance.LoadScene("Game01");
+        SceneManager.Instance.ReturnToOriginalScene();
       }
     }
   }
