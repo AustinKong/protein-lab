@@ -2,7 +2,6 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -19,6 +18,7 @@ public class DialogueManager : MonoBehaviour
   private void Awake() {
     if (Instance == null) {
       Instance = this;
+      DontDestroyOnLoad(gameObject);
     } else {
       Destroy(gameObject);
     }
@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
 
   public void Start() {
     nextButton.onClick.AddListener(NextDialogue);
-    StartDialogue(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    StartDialogue(SceneManager.Instance.GetActiveScene());
   }
 
   private void LoadDialogueData() {

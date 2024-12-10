@@ -6,6 +6,6 @@ public class Equipment : Combineable
 
   protected override void OnDestroy() {
     base.OnDestroy();
-    SceneManager.Instance.LoadScene(minigameSceneName);
+    SceneManager.Instance.LoadSceneAdditively(minigameSceneName);
   }
 }
