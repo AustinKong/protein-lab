@@ -54,7 +54,7 @@ public class SceneManager : MonoBehaviour
   private IEnumerator LoadSceneAdditivelyRoutine(string sceneName) {
     transitionAnimator.SetTrigger("Transition");
     yield return new WaitForSeconds(TRANSITION_DURATION);
-    UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Additive);
+    yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Additive);
     currentAdditiveScene = sceneName;
     if (!string.IsNullOrEmpty(currentBaseScene)) {
       HideBaseScene();
