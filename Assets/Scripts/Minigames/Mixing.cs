@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Mixing : Draggable
 {
@@ -6,7 +8,7 @@ public class Mixing : Draggable
   private bool canShake = true;
 
   private const float SHAKE_THRESHOLD = 20f;
-  private const int SHAKES_REQUIRED = 2; // Originally 8 
+  private const int SHAKES_REQUIRED = 2; // Tweaked, original is 8
   private const float SHAKES_COOLDOWN = 1.5f;
 
   private int shakesCount = 0;
@@ -40,8 +42,13 @@ public class Mixing : Draggable
       if (shakesCount >= SHAKES_REQUIRED) {
         canShake = false;
         ParticlePoolManager.Instance.PlayParticle("StarLarge", Vector2.zero);
-        SceneManager.Instance.ReturnToOriginalScene();
+        StartCoroutine(SuccessRoutine());
       }
     }
+  }
+
+  private IEnumerator SuccessRoutine() {
+    yield return new WaitForSeconds(1);
+    SceneManager.Instance.ReturnToOriginalScene();
   }
 }

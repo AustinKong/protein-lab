@@ -10,6 +10,19 @@
         {
           "character": "Dr Penguin",
           "text": "This is the next dialogue"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "This is yet another dialogue."
+        }
+      ]
+    },
+    {
+      "sceneName": "Game02",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "This is a new scene"
         }
       ]
     }
