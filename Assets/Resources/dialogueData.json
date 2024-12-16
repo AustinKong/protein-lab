@@ -8,8 +8,8 @@
           "text": "Hello my name is Dr. Penguin! This is a test"
         },
         {
-          "character": "Dr Penguin",
-          "text": "This is the next dialogue"
+          "character": "Lab Assitant Hedgehog",
+          "text": "This is a conversation between you and me Dr Penguin. I'm Lab assitatnt hedgeohg"
         },
         {
           "character": "Dr Penguin",
@@ -23,6 +23,40 @@
         {
           "character": "Dr Penguin",
           "text": "This is a new scene"
+        },
+        {
+          "character": "Lab Assitant Hedgehog",
+          "text": "Im a hedgehog"
+        }
+      ]
+    },
+    {
+      "sceneName": "Mixing",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "Hello, lets get to mixing. Click on the beaker and move it around to mix it"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Mix it until stars come out"
+        }
+      ]
+    },
+    {
+      "sceneName": "Centrifuge",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "Hello, lets centrifuge. Drag the tubes into the centrifuge such that it is balanced, then press start. The weights of each tube are written on its cap"
+        },
+        {
+          "character": "Lab Assitant Hedgehog",
+          "text": "Oh dear Dr Penguin, it seems this game has a lot of bugs"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Shhhh. The programmer is trying his best."
         }
       ]
     }

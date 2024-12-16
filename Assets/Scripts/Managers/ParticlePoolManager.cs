@@ -11,8 +11,8 @@ public class ParticlePoolManager : MonoBehaviour
     public string particleName;
     public GameObject particlePrefab;
   }
-
   [SerializeField] private List<ParticlePrefab> particlePrefabs;
+
   private const int INITIAL_POOL_SIZE = 0;
 
   private Dictionary<string, Queue<ParticleSystem>> particlePools;
@@ -20,8 +20,11 @@ public class ParticlePoolManager : MonoBehaviour
   public void Awake() {
     if (Instance == null) {
       Instance = this;
-      DontDestroyOnLoad(gameObject);
+      // Detach instance from parent, such that it can be reenabled between additive scenes
+      if (transform.parent != null) transform.SetParent(null);
     } else {
+      // Load disabled instance (affected by additive scene loading)
+      if (!Instance.isActiveAndEnabled) Instance.gameObject.SetActive(true);
       Destroy(gameObject);
     }
   }

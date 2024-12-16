@@ -18,9 +18,13 @@ public class SceneManager : MonoBehaviour
 
   private void Awake() {
     if (Instance == null) {
-      Instance = this;
+      Instance = this; 
+      if (transform.parent != null) transform.SetParent(null);
+      // This line is for development, such that we can open any scene to test
+      currentBaseScene = GetActiveScene();
       DontDestroyOnLoad(gameObject);
     } else {
+      if (!Instance.isActiveAndEnabled) Instance.gameObject.SetActive(true);
       Destroy(gameObject);
     }
   }
@@ -37,8 +41,8 @@ public class SceneManager : MonoBehaviour
   private IEnumerator LoadSceneRoutine(string sceneName) {
     transitionAnimator.SetTrigger("Transition");
     yield return new WaitForSeconds(TRANSITION_DURATION);
-    UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     currentBaseScene = sceneName;
+    UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     transitionAnimator.SetTrigger("Transition");
   }
 
@@ -54,8 +58,8 @@ public class SceneManager : MonoBehaviour
   private IEnumerator LoadSceneAdditivelyRoutine(string sceneName) {
     transitionAnimator.SetTrigger("Transition");
     yield return new WaitForSeconds(TRANSITION_DURATION);
-    yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Additive);
     currentAdditiveScene = sceneName;
+    yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Additive);
     if (!string.IsNullOrEmpty(currentBaseScene)) {
       HideBaseScene();
     }
@@ -81,13 +85,22 @@ public class SceneManager : MonoBehaviour
   }
 
   public string GetActiveScene() {
-    return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+    if (!string.IsNullOrEmpty(currentAdditiveScene)) {
+      return currentAdditiveScene;
+    } else if (!string.IsNullOrEmpty(currentBaseScene)) {
+      return currentBaseScene;
+    } else {
+      // Fallback, it should never reach this unless I fuked up
+      return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+    }
   }
 
   private void HideBaseScene() {
     UnityEngine.SceneManagement.Scene baseScene = UnityEngine.SceneManagement.SceneManager.GetSceneByName(currentBaseScene);
     foreach (GameObject obj in baseScene.GetRootGameObjects()) {
-      obj.SetActive(false);
+      if (!obj.CompareTag("Manager")) {
+        obj.SetActive(false);
+      }
     }
   }
 
