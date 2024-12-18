@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class Combineable : Draggable
 {
   public string itemName;
+  public string actionId;
 
   protected Combineable target;
 
@@ -21,6 +22,7 @@ public class Combineable : Draggable
       string result = CombinationRules.GetCombinationResult(this.itemName, target.itemName);
       Vector3 newPosition = (target.transform.position + this.transform.position) / 2f;
       Instantiate(Resources.Load<GameObject>($"Items/{result}"), newPosition, Quaternion.identity);
+      GameEventSystem.Instance.TriggerActionCompleted(Resources.Load<GameObject>($"Items/{result}").GetComponent<Combineable>().actionId);
       ParticlePoolManager.Instance.PlayParticle("Smoke", newPosition);
 
       Destroy(target.gameObject);

@@ -1,5 +1,3 @@
-using UnityEngine.InputSystem;
-
 public class Equipment : Combineable
 {
   public string minigameSceneName;
