@@ -1,11 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TriggerEventType {
+  None, // Player has to manually click next
+  Action // Auto transitions to this event when action is met
+}
+
 [System.Serializable]
 public class Dialogue {
-  // Open to future extension
   public string character;
   public string text;
+  public TriggerEventType triggerEventType;
+  public string triggerEvent;
 }
 
 [System.Serializable]

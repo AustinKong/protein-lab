@@ -5,11 +5,13 @@
       "dialogues": [
         {
           "character": "Dr Penguin",
-          "text": "Hello my name is Dr. Penguin! This is a test"
+          "text": "Hello my name is Dr. Penguin! This is a test of the event driven dialogue system. Create an unmixed crude buffer solution to progress this dialogue."
         },
         {
           "character": "Lab Assitant Hedgehog",
-          "text": "This is a conversation between you and me Dr Penguin. I'm Lab assitatnt hedgeohg"
+          "text": "This is a conversation between you and me Dr Penguin. I'm Lab assitatnt hedgeohg",
+          "triggerEventType": 1,
+          "triggerEvent": "onUnmixedCrudeBuffer"
         },
         {
           "character": "Dr Penguin",

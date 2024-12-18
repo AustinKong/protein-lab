@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   itemName: Crude buffer solution
+  actionId: 
 --- !u!61 &9158628298576649745
 BoxCollider2D:
   m_ObjectHideFlags: 0
