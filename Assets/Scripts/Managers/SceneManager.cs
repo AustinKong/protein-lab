@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class SceneManager : MonoBehaviour
   // If a scene is loaded normally, empty the stack, unload all previous scenes, and load the new one
   private string currentBaseScene;
   private string currentAdditiveScene;
+  private Action<int> preAdditiveSceneCallback;
 
   private const float TRANSITION_DURATION = 1f;
 
@@ -46,12 +48,17 @@ public class SceneManager : MonoBehaviour
     transitionAnimator.SetTrigger("Transition");
   }
 
-  public void LoadSceneAdditively(string sceneName) {
+  // Callback is when the result of a minigame will affect some state in the main game
+  // An example of this is filling a measuring cylinder with water, the callback should
+  // set the value of contentUnits in measuring cylinder based on the result provided by minigame
+  // FIXME: This is currently unused, can be removed possibly
+  public void LoadMinigameScene(string sceneName, Action<int> callback = null) {
     if (!string.IsNullOrEmpty(currentAdditiveScene)) {
       Debug.LogWarning("An additive scene is already loaded. Unload it first.");
       return;
     }
 
+    preAdditiveSceneCallback = callback;
     StartCoroutine(LoadSceneAdditivelyRoutine(sceneName));
   }
 
@@ -66,22 +73,27 @@ public class SceneManager : MonoBehaviour
     transitionAnimator.SetTrigger("Transition");
   }
 
-  public void ReturnToOriginalScene() {
+  public void ReturnToOriginalScene(int result = -1) {
     if (string.IsNullOrEmpty(currentBaseScene)) {
       Debug.LogError("No original scene found.");
       return;
     }
 
-    StartCoroutine(ReturnToOriginalSceneRoutine());
+    StartCoroutine(ReturnToOriginalSceneRoutine(result));
   }
 
-  private IEnumerator ReturnToOriginalSceneRoutine() {
+  private IEnumerator ReturnToOriginalSceneRoutine(int result = -1) {
     transitionAnimator.SetTrigger("Transition");
     yield return new WaitForSeconds(TRANSITION_DURATION);
     ShowBaseScene();
     yield return UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentAdditiveScene);  
     currentAdditiveScene = null;
     transitionAnimator.SetTrigger("Transition");
+
+    if (result >= 0 && preAdditiveSceneCallback != null) {
+      preAdditiveSceneCallback(result);
+      preAdditiveSceneCallback = null;
+    }
   }
 
   public string GetActiveScene() {

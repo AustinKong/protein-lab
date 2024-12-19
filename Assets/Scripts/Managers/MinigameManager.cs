@@ -39,11 +39,11 @@ public class MinigameManager : MonoBehaviour
 
     float finalWidth, finalHeight;
     if (targetHeightForWidth <= targetHeight) {
-        finalWidth = targetWidth;
-        finalHeight = targetHeightForWidth;
+      finalWidth = targetWidth;
+      finalHeight = targetHeightForWidth;
     } else {
-        finalWidth = targetWidthForHeight;
-        finalHeight = targetHeight;
+      finalWidth = targetWidthForHeight;
+      finalHeight = targetHeight;
     }
 
     RectTransform rectTransform = completionItem.GetComponent<RectTransform>();

@@ -3,8 +3,8 @@ guid: de38f87e1b4f4574ba209d693d2bb904
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1488691291365649001
-    second: aquila0416_comic_book_page_of_scientists_discovering_protein._f_b686cf11-01da-4945-8099-a15aa1d8e9fd_0
+      213: -3164809056393425246
+    second: 01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aquila0416_comic_book_page_of_scientists_discovering_protein._f_b686cf11-01da-4945-8099-a15aa1d8e9fd_0
+      name: 01_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1456
-        height: 816
+        width: 1365
+        height: 768
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 795deed682b175be0800000000000000
-      internalID: -1488691291365649001
+      spriteID: 2ae0bbb5ee65414d0800000000000000
+      internalID: -3164809056393425246
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      aquila0416_comic_book_page_of_scientists_discovering_protein._f_b686cf11-01da-4945-8099-a15aa1d8e9fd_0: -1488691291365649001
+      01_0: -3164809056393425246
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

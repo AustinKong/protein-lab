@@ -61,6 +61,15 @@
           "text": "Shhhh. The programmer is trying his best."
         }
       ]
+    },
+    {
+      "sceneName": "MeasuringCylinder",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "This is a test of using a measuring cylinder. click anywhere on the screen to pour. careful, only pour when youre ready. letting go will stop you from pouring"
+        }
+      ]
     }
   ]
 }

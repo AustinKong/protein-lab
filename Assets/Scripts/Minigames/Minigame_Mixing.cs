@@ -18,9 +18,10 @@ public class Minigame_Mixing : Draggable
     initialPosition = transform.position;
   }
 
-  protected override void Update() {
+  // FIXME 
+  protected void Update() {
     if (canShake) {
-      base.Update();
+      // base.Update();
       if (isDragging) {
         TrackShakeInput();
       } else {

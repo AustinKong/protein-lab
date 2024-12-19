@@ -3,8 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Minigame_CentrifugeTube : SimpleDraggable 
+public class Minigame_CentrifugeTube : Draggable
 {
+  /*
   [HideInInspector] public float weight { get; private set; }
   [SerializeField] private TMP_Text weightText;
 
@@ -37,4 +38,5 @@ public class Minigame_CentrifugeTube : SimpleDraggable
     this.weight = weight;
     weightText.text = weight.ToString();
   }
+  */
 }

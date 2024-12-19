@@ -17,8 +17,10 @@ public class CombinationRules
     { "Buffer solution + Centrifuge tube", "Buffer solution in tube" },
     { "Buffer solution in tube + Protein", "Untreated protein solution" },
     { "Untreated protein solution + Centrifuge", "Treated protein solution" },
-    { "Treated protein solution + Syringe", "Filtered protein solution" }
+    { "Treated protein solution + Syringe", "Filtered protein solution" },
 
+    // Testing
+    { "Sodium Hydroxide + Hydrogen Chloride", "Sodium Chloride" },
   };
 
   public static string GetCombinationResult(string item1, string item2) {
