@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Combineable : Draggable
 {
-  public string itemName;
+  /*
   public string actionId;
 
   protected Combineable target;
@@ -48,4 +48,5 @@ public class Combineable : Draggable
       }
     }
   }
+  */
 }

@@ -1,9 +1,6 @@
-public class Equipment : Combineable
-{
-  public string minigameSceneName;
+using UnityEngine;
 
-  protected override void OnDestroy() {
-    base.OnDestroy();
-    SceneManager.Instance.LoadSceneAdditively(minigameSceneName);
-  }
+public class Equipment : Interactable
+{
+  [SerializeField] private string minigameSceneName;
 }
