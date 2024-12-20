@@ -8,11 +8,12 @@ public class InfiniteSolidsContainer : Interactable
 {
   [Header("Infinite Container Properties")]
   [SerializeField] private bool hasLid = false;
-  [SerializeField] private Draggable contentsPrefab;
+  [SerializeField] private string actionId;
 
-  [Header("Infintie Container References")]
+  [Header("Infinite Container References")]
   [SerializeField] private Sprite withLid;
   [SerializeField] private Sprite withoutLid;
+  [SerializeField] private Draggable contentsPrefab;
 
   private bool isOpen = false;
   private float dragStartY;
@@ -37,6 +38,7 @@ public class InfiniteSolidsContainer : Interactable
     base.OnDragEnd();
     if ((!hasLid || isOpen) && GetPointerWorldPosition().y - dragStartY > RETRIEVE_DELTA_Y) {
       Instantiate(contentsPrefab.gameObject, transform.position + Vector3.up * 2f, Quaternion.identity);
+      GameEventSystem.Instance.TriggerActionCompleted(Utils.ToCamelCase(actionId));
     }
   }
 }

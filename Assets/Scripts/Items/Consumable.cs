@@ -10,11 +10,11 @@ public class Consumable : Draggable
     base.OnDragEnd();
 
     IConsumer[] consumers = GetNearbyInteractables()
-      .Where(i => i is IConsumer c && c.CanConsume(itemName))
+      .Where(i => i is IConsumer c && c.CanConsume(GetItemName()))
       .Select(i => i as IConsumer).ToArray();
 
     if (consumers.Length > 0) {
-      consumers[0].Consume(itemName);
+      consumers[0].Consume(GetItemName());
       Destroy(gameObject);
     }
   }

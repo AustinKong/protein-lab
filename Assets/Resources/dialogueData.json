@@ -5,17 +5,49 @@
       "dialogues": [
         {
           "character": "Dr Penguin",
-          "text": "Hello my name is Dr. Penguin! This is a test of the event driven dialogue system. Create an unmixed crude buffer solution to progress this dialogue."
-        },
-        {
-          "character": "Lab Assitant Hedgehog",
-          "text": "This is a conversation between you and me Dr Penguin. I'm Lab assitatnt hedgeohg",
-          "triggerEventType": 1,
-          "triggerEvent": "onUnmixedCrudeBuffer"
+          "text": "Hello, young scientist! I'm Dr. Penguin, and today we’ll be making a buffer solution. Follow my instructions carefully to complete this experiment. Let’s start by pouring some deionized water into a glass bottle."
         },
         {
           "character": "Dr Penguin",
-          "text": "This is yet another dialogue."
+          "text": "Great job! Now, add some buffer salt into the deionized water. Be careful not to spill any.",
+          "triggerEventType": 1,
+          "triggerEvent": "onWaterPour"
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "The buffer salt is right over there! Let’s uncap the salt by clicking on it, then pull upwards to take some salt."
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Nice, now mix it with the deionized water.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSaltTake"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Perfect! Now, place the bottle on the stirring plate. This will help dissolve the salt evenly. Click on the stirring plate to start the machine.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Great job, now pull upwards to take the mixed solution from the stirring plate."
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Next, we’ll need to adjust the pH. Add a little acid or base to the mixture to balance it."
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Great! Now add the other one. Let’s continue adjusting the pH until Dr. Penguin says it’s perfect.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Fantastic! You’ve successfully prepared a buffer solution. Well done, young scientist!",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
         }
       ]
     },
@@ -24,11 +56,47 @@
       "dialogues": [
         {
           "character": "Dr Penguin",
-          "text": "This is a new scene"
+          "text": "Hello again, young scientist! I’m Dr. Penguin, and today we’ll work with proteins. Let’s start by pouring some buffer solution into a centrifuge tube."
         },
         {
-          "character": "Lab Assitant Hedgehog",
-          "text": "Im a hedgehog"
+          "character": "Lab Assistant Hedgehog",
+          "text": "The buffer solution is right there! Click and drag the bottle over to the centrifuge tubes to pour it in."
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Pour once more.",
+          "triggerEventType": 1,
+          "triggerEvent": "onBufferPour"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Well done! Now, let’s add some protein to the centrifuge tube. You can find the protein container (KFC) nearby.",
+          "triggerEventType": 1,
+          "triggerEvent": "onBufferPour"
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Pull upwards to take some protein, then drag it over to the centrifuge tube. Carefully add it to the buffer solution."
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Add another one to the other centrifuge tube.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Excellent work! Next, place the centrifuge tubes into the centrifuge. This will help mix the solution evenly.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Drag the centrifuge tubes onto the centrifuge and click to turn it on. Watch it spin!"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Fantastic job! You’ve completed the process. This is a vital step in preparing proteins for further analysis. Well done, young scientist!"
         }
       ]
     },

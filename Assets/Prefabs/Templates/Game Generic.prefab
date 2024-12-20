@@ -543,7 +543,7 @@ MonoBehaviour:
   characters:
   - name: Dr Penguin
     sprite: {fileID: 6430414238770418858, guid: bc249bd72f484a148ae7d4c89747f55c, type: 3}
-  - name: Lab Assitant Hedgehog
+  - name: Lab Assistant Hedgehog
     sprite: {fileID: 5454031384035240185, guid: 7f17760ec56b2314b8bd5750f6090e8e, type: 3}
 --- !u!1 &6050220531571063107
 GameObject:

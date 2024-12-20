@@ -35,7 +35,7 @@ using UnityEngine.UI;
 public class Interactable : MonoBehaviour
 {
   [Header("Interactable Properties")]
-  [SerializeField] protected string itemName;
+  [SerializeField] private string itemName;
 
   protected TMP_Text labelText;
   protected SpriteRenderer spriteRenderer;
@@ -149,5 +149,7 @@ public class Interactable : MonoBehaviour
     LayoutRebuilder.ForceRebuildLayoutImmediate(labelText.rectTransform);
     label.position = new Vector3(transform.position.x, 0.1f + spriteRenderer.bounds.max.y, 0);
   }
+
+  public string GetItemName() => itemName;
   #endregion Helper functions
 }

@@ -3605,6 +3605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Buffer solution
   contents: Buffer solution
+  actionId: onBufferPour
 --- !u!223 &7646237894931953491
 Canvas:
   m_ObjectHideFlags: 0
@@ -3971,11 +3972,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0217c69cb98404d40a2eab4f20db3f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 8 piece chicken bucket
+  itemName: Protein source
   hasLid: 0
-  contentsPrefab: {fileID: 8348244835728079306, guid: 1cffe3caeedfed44581674790d5e4d65, type: 3}
+  actionId: onProteinTake
   withLid: {fileID: 0}
   withoutLid: {fileID: 0}
+  contentsPrefab: {fileID: 8348244835728079306, guid: 1cffe3caeedfed44581674790d5e4d65, type: 3}
 --- !u!224 &8856470041757926896
 RectTransform:
   m_ObjectHideFlags: 0
