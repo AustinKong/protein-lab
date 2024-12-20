@@ -230,7 +230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a62cda988b4904eb13f957aadac897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   weightText: {fileID: 1932086373}
 --- !u!212 &46071948
 SpriteRenderer:
@@ -1758,7 +1757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a62cda988b4904eb13f957aadac897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   weightText: {fileID: 1433216407}
 --- !u!212 &780228637
 SpriteRenderer:
@@ -2028,7 +2026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a62cda988b4904eb13f957aadac897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   weightText: {fileID: 318724206}
 --- !u!212 &865900768
 SpriteRenderer:
@@ -2731,7 +2728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a62cda988b4904eb13f957aadac897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   weightText: {fileID: 755654812}
 --- !u!212 &1099521803
 SpriteRenderer:
@@ -2899,7 +2895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a62cda988b4904eb13f957aadac897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   weightText: {fileID: 1606282892}
 --- !u!212 &1129325378
 SpriteRenderer:
@@ -4002,7 +3997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a62cda988b4904eb13f957aadac897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   weightText: {fileID: 369380782}
 --- !u!212 &1578577987
 SpriteRenderer:
@@ -4408,7 +4402,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a62cda988b4904eb13f957aadac897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   weightText: {fileID: 1085571624}
 --- !u!212 &1757337289
 SpriteRenderer:
@@ -4733,7 +4726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a62cda988b4904eb13f957aadac897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   weightText: {fileID: 1240468280}
 --- !u!1 &1848701277
 GameObject:

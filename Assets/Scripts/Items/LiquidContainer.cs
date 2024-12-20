@@ -17,7 +17,7 @@ public class LiquidContainer : Draggable, IConsumer
     animator = GetComponentInChildren<Animator>();
   }
 
-    protected override void Update() {
+  protected override void Update() {
     base.Update();
     if (string.IsNullOrEmpty(contents)) {
       SetLabel(itemName);
@@ -29,22 +29,29 @@ public class LiquidContainer : Draggable, IConsumer
   protected override void OnDragEnd() {
     base.OnDragEnd();
 
-    IConsumer[] consumers = GetNearbyInteractables().Where(i => i is IConsumer consumer && consumer.CanConsume(contents)).Select(i => i as IConsumer).ToArray();
+    IConsumer[] consumers = GetNearbyInteractables()
+      .Where(i => i is IConsumer c && c.CanConsume(contents))
+      .Select(i => i as IConsumer).ToArray();
+
     if (consumers.Length > 0) {
-      consumers[0].Consume(contents);
-      contents = null;
+      string method = consumers[0].Consume(contents);
+      if (method == "Contents") {
+        contents = null;
+        animator.SetTrigger("Pour");
+      } else {
+        Destroy(gameObject);
+      }
     }
   }
 
   public bool CanConsume(string otherItemName) => string.IsNullOrEmpty(contents) || CombinationRules.GetCombinationResult(contents, otherItemName) != null;
 
-  public void Consume(string otherItemName) {
-    if (!CanConsume(otherItemName)) return;
-
+  public string Consume(string otherItemName) {
     if (string.IsNullOrEmpty(contents)) {
       contents = otherItemName;
     } else {
       contents = CombinationRules.GetCombinationResult(contents, otherItemName);
     }
+    return "Contents";
   }
 }

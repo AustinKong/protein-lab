@@ -4,18 +4,19 @@ public class CombinationRules
 {
   public static Dictionary<string, string> combinations = new Dictionary<string, string>{
     // Buffer solution preparation
-    { "Deionized water + Glass bottle", "Glass of deionized water" },
-    { "Glass of deionized water + Buffer salts", "Unmixed crude buffer solution" },
-    { "Unmixed crude buffer solution + Magnetic stirring plate", "Crude buffer solution" },
+    { "Buffer salt + Deionized water", "Unmixed crude buffer solution" },
+    { "Deionized water + Buffer salt", "Unmixed crude buffer solution" },
+    { "Unmixed crude buffer solution + Stirring plate", "Crude buffer solution" },
     // Two paths
-    { "Crude buffer solution + Acid", "Acidic buffer solution" },
-    { "Crude buffer solution + Base", "Basic buffer solution" },
-    { "Acidic buffer solution + Base", "Buffer solution" },
-    { "Basic buffer solution + Acid", "Buffer solution" },
+    { "Hydrochloride acid + Crude buffer solution", "Acidic buffer solution" },
+    { "Sodium hydroxide + Crude buffer solution", "Basic buffer solution" },
+    { "Sodium hydroxide + Acidic buffer solution", "Buffer solution" },
+    { "Hydrochloride acid + Basic buffer solution", "Buffer solution" },
 
     // Protein solution preparation
-    { "Buffer solution + Centrifuge tube", "Buffer solution in tube" },
-    { "Buffer solution in tube + Protein", "Untreated protein solution" },
+    { "Buffer solution + Centrifuge tube", "Buffer solution" },
+    { "Protein + Buffer solution", "Untreated protein solution" },
+    { "Buffer solution + Protein", "Untreated protein solution" },
     { "Untreated protein solution + Centrifuge", "Treated protein solution" },
     { "Treated protein solution + Syringe", "Filtered protein solution" },
 
@@ -23,6 +24,17 @@ public class CombinationRules
     { "Sodium Hydroxide + Hydrogen Chloride", "Sodium Chloride" },
   };
 
+  public static string GetCombinationResult(string consumer, string consumable) {
+    if (combinations.TryGetValue($"{consumable.Trim()} + {consumer.Trim()}", out string result)) {
+      return result;
+    } else if (combinations.TryGetValue($"[{consumable.Trim()}] + {consumer.Trim()}", out result)) {
+      return result;
+    } else {
+      return null;
+    }
+  }
+
+/*
   public static string GetCombinationResult(string item1, string item2) {
     if (combinations.TryGetValue(item1.Trim() + " + " + item2.Trim(), out string result)) {
       return result;
@@ -31,4 +43,5 @@ public class CombinationRules
     }
     return null;
   }
+  */
 }

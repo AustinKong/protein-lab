@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Minigame_Mixing : Draggable
+public class Minigame_Mixing : Minigame_Draggable
 {
   [SerializeField] private Sprite mixingCompletionSprite;
 
@@ -10,6 +10,7 @@ public class Minigame_Mixing : Draggable
   private const float SHAKE_THRESHOLD = 20f;
   private const int SHAKES_REQUIRED = 8;
   private const float SHAKES_COOLDOWN = 1.5f;
+  protected new bool DO_ROTATION = true;
 
   private int shakesCount = 0;
   private float lastShakeTime;
@@ -18,10 +19,8 @@ public class Minigame_Mixing : Draggable
     initialPosition = transform.position;
   }
 
-  // FIXME 
-  protected void Update() {
+  protected override void Update() {
     if (canShake) {
-      // base.Update();
       if (isDragging) {
         TrackShakeInput();
       } else {
@@ -47,4 +46,5 @@ public class Minigame_Mixing : Draggable
       }
     }
   }
+
 }

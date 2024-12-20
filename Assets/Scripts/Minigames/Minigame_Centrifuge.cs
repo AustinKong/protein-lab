@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Minigame_Centrifuge : MonoBehaviour
 {
-  /*
   [SerializeField] private Transform centrifuge;
   [SerializeField] private Transform[] centrifugeSlots;
   [SerializeField] private Minigame_CentrifugeTube[] centrifugeTubes;
@@ -131,5 +130,4 @@ public class Minigame_Centrifuge : MonoBehaviour
     }
     return true;
   }
-  */
 }
