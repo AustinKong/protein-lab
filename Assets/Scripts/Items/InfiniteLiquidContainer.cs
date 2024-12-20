@@ -5,6 +5,7 @@ public class InfiniteLiquidContainer : Draggable
 {
   [Header("Infinite Liquid Container Properties")]
   [SerializeField] private string contents;
+  [SerializeField] private string actionId;
 
   private Animator animator;
 
@@ -17,12 +18,13 @@ public class InfiniteLiquidContainer : Draggable
     base.OnDragEnd();
 
     IConsumer[] consumers = GetNearbyInteractables()
-      .Where(i => i is IConsumer c && c.CanConsume(itemName))
+      .Where(i => i is IConsumer c && c.CanConsume(contents))
       .Select(i => i as IConsumer).ToArray();
 
     if (consumers.Length > 0) {
-      consumers[0].Consume(itemName);
+      consumers[0].Consume(contents);
       animator.SetTrigger("Pour");
+      GameEventSystem.Instance.TriggerActionCompleted(Utils.ToCamelCase(actionId));
     }
   }
 }

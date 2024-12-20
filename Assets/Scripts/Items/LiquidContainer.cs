@@ -20,7 +20,7 @@ public class LiquidContainer : Draggable, IConsumer
   protected override void Update() {
     base.Update();
     if (string.IsNullOrEmpty(contents)) {
-      SetLabel(itemName);
+      SetLabel(GetItemName());
     } else {
       SetLabel(contents);
     }
@@ -49,8 +49,10 @@ public class LiquidContainer : Draggable, IConsumer
   public string Consume(string otherItemName) {
     if (string.IsNullOrEmpty(contents)) {
       contents = otherItemName;
+      GameEventSystem.Instance.TriggerActionCompleted("onItemInput");
     } else {
       contents = CombinationRules.GetCombinationResult(contents, otherItemName);
+      GameEventSystem.Instance.TriggerActionCompleted("onSolutionMix");
     }
     return "Contents";
   }

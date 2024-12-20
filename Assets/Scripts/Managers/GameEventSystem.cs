@@ -16,6 +16,7 @@ public class GameEventSystem : MonoBehaviour
   public event Action<string> OnActionCompleted;
 
   public void TriggerActionCompleted(string actionId) {
+    Debug.Log(actionId);
     OnActionCompleted?.Invoke(actionId);
   }
 }

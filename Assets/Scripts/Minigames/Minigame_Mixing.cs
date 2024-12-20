@@ -20,6 +20,7 @@ public class Minigame_Mixing : Minigame_Draggable
   }
 
   protected override void Update() {
+    base.Update();
     if (canShake) {
       if (isDragging) {
         TrackShakeInput();

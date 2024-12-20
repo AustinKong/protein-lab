@@ -17,7 +17,7 @@ public class StirringPlate : Interactable, IConsumer
   public string Consume(string otherItemName) {
     spriteRenderer.sprite = postConsumeSprite;
     hasContents = true;
-    SetLabel(itemName);
+    SetLabel(GetItemName(), true);
     return "Container";
   }
 
@@ -37,6 +37,7 @@ public class StirringPlate : Interactable, IConsumer
       Instantiate(postMixPrefab.gameObject, transform.position + Vector3.up * 2f, Quaternion.identity);
       spriteRenderer.sprite = preConsumeSprite;
       hasContents = false;
+      SetLabel(GetItemName(), true);
     }
   }
 }

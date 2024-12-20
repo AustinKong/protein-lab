@@ -685,6 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Sodium hydroxide
   contents: Sodium hydroxide
+  actionId: 
 --- !u!50 &876434409
 Rigidbody2D:
   serializedVersion: 5
@@ -1167,6 +1168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Hydrochloride acid
   contents: Hydrochloride acid
+  actionId: 
 --- !u!50 &1481120772
 Rigidbody2D:
   serializedVersion: 5
@@ -4462,9 +4464,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Buffer salts
   hasLid: 1
-  contentsPrefab: {fileID: 4268137981097769446, guid: 2151e511451209a42aabea9fae27b7b3, type: 3}
+  actionId: onSaltTake
   withLid: {fileID: 21300000, guid: 0793d05e474bf584ab06ed0fecee2108, type: 3}
   withoutLid: {fileID: 21300000, guid: 89218dc343d010e40b48f7f49fc71c68, type: 3}
+  contentsPrefab: {fileID: 4268137981097769446, guid: 2151e511451209a42aabea9fae27b7b3, type: 3}
 --- !u!224 &8350453214506091246
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4618,6 +4621,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Deionized water
   contents: Deionized water
+  actionId: onWaterPour
 --- !u!222 &8788729052277588703
 CanvasRenderer:
   m_ObjectHideFlags: 0
