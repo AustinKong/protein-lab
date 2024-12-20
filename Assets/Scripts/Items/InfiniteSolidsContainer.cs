@@ -10,6 +10,10 @@ public class InfiniteSolidsContainer : Interactable
   [SerializeField] private bool hasLid = false;
   [SerializeField] private Draggable contentsPrefab;
 
+  [Header("Infintie Container References")]
+  [SerializeField] private Sprite withLid;
+  [SerializeField] private Sprite withoutLid;
+
   private bool isOpen = false;
   private float dragStartY;
 
@@ -18,7 +22,10 @@ public class InfiniteSolidsContainer : Interactable
 
   protected override void OnTap() {
     base.OnTap();
-    if (hasLid) isOpen = !isOpen;
+    if (hasLid) {
+      isOpen = !isOpen;
+      spriteRenderer.sprite = isOpen ? withoutLid : withLid;
+    }
   }
 
   protected override void OnDragStart() {

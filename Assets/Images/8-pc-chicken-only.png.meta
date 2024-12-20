@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d4414276d48ca5844bc38fd8b71d3109
+guid: 132bfb59b793c084585144f60f3a6f04
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6234176133674011997
-    second: Base_0
+      213: -6252434282765972531
+    second: 8-pc-chicken-only_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Base_0
+      name: 8-pc-chicken-only_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 189
-        height: 333
+        x: 198
+        y: 71
+        width: 962
+        height: 961
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5d8bdad92e348650800000000000000
-      internalID: 6234176133674011997
+      spriteID: dcb824a8524ea39a0800000000000000
+      internalID: -6252434282765972531
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Base_0: 6234176133674011997
+      8-pc-chicken-only_0: -6252434282765972531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

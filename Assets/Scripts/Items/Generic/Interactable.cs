@@ -38,7 +38,7 @@ public class Interactable : MonoBehaviour
   [SerializeField] protected string itemName;
 
   protected TMP_Text labelText;
-  private SpriteRenderer spriteRenderer;
+  protected SpriteRenderer spriteRenderer;
   private RectTransform label;
   private InputActionAsset inputActions;
   private Camera mainCamera;
@@ -62,10 +62,12 @@ public class Interactable : MonoBehaviour
 
   protected virtual void OnDragStart() {
     isDragging = true;
+    spriteRenderer.sortingOrder = 100;
   }
 
   protected virtual void OnDragEnd() {
     isDragging = false;
+    spriteRenderer.sortingOrder = 0;
   }
 
   #region Callback abstractions
@@ -138,11 +140,11 @@ public class Interactable : MonoBehaviour
 
   protected Interactable[] GetNearbyInteractables() {
     Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, 1f);
-    return hitColliders.Where(c => c.CompareTag("Interactable")).Select(c => c.GetComponent<Interactable>()).ToArray();
+    return hitColliders.Where(c => c.CompareTag("Interactable") && c.gameObject != gameObject).Select(c => c.GetComponent<Interactable>()).ToArray();
   }
 
-  protected void SetLabel(string text) {
-    if (labelText.text == text) return; // Avoid rebuilding layout
+  protected void SetLabel(string text, bool force = false) {
+    if (labelText.text == text && !force) return;
     labelText.text = text;
     LayoutRebuilder.ForceRebuildLayoutImmediate(labelText.rectTransform);
     label.position = new Vector3(transform.position.x, 0.1f + spriteRenderer.bounds.max.y, 0);

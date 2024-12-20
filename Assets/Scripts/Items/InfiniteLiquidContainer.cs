@@ -16,9 +16,12 @@ public class InfiniteLiquidContainer : Draggable
   protected override void OnDragEnd() {
     base.OnDragEnd();
 
-    IConsumer[] consumers = GetNearbyInteractables().Where(i => i is IConsumer consumer && consumer.CanConsume(contents)).Select(i => i as IConsumer).ToArray();
+    IConsumer[] consumers = GetNearbyInteractables()
+      .Where(i => i is IConsumer c && c.CanConsume(itemName))
+      .Select(i => i as IConsumer).ToArray();
+
     if (consumers.Length > 0) {
-      consumers[0].Consume(contents);
+      consumers[0].Consume(itemName);
       animator.SetTrigger("Pour");
     }
   }
