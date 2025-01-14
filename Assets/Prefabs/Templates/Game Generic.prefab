@@ -1644,3 +1644,5 @@ MonoBehaviour:
     particlePrefab: {fileID: 8846222262072863122, guid: 323ae81320821b4408067157594e8f6c, type: 3}
   - particleName: RedBubblesLarge
     particlePrefab: {fileID: 2280897603040023594, guid: 4e2bd7b4bb6bb7a4786ad22bab2fad3f, type: 3}
+  - particleName: Shards
+    particlePrefab: {fileID: 7847007212009393550, guid: 7976b0fe18c5f224682233e02b71ab87, type: 3}
