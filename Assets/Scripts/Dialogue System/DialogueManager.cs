@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
     dialogueData = JsonUtility.FromJson<DialogueData>(jsonFile.text);
   }
 
-   void StartDialogue(string sceneName) {
+  void StartDialogue(string sceneName) {
     currentScene = new Queue<Dialogue>(dialogueData.scenes.Find(scene => scene.sceneName == sceneName).dialogues);
     if (currentScene == null || currentScene.Count == 0) {
       Debug.LogError($"Dialogue scene with name {sceneName} not found");
