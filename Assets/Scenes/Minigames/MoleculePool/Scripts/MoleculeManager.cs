@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -66,16 +67,21 @@ public class MoleculeManager : MonoBehaviour
       }
 
       moleculeGroups.Remove(group);
-      foreach (Molecule molecule in group.molecules) {
-        ParticlePoolManager.Instance.PlayParticle("Shards", molecule.transform.position);
-        Destroy(molecule.gameObject);
-      }
+      StartCoroutine(DissolveRoutine(group.molecules));
     }
 
     // Replenish seeds
     int seedsNeeded = SEED_COUNT - moleculeGroups.Count;
     for (int i = 0; i < seedsNeeded; i++) {
       GenerateSeed();
+    }
+  }
+
+  private IEnumerator DissolveRoutine(List<Molecule> molecules) {
+    foreach (Molecule molecule in molecules) {
+      ParticlePoolManager.Instance.PlayParticle("Shards", molecule.transform.position);
+      Destroy(molecule.gameObject);
+      yield return new WaitForSeconds(0.1f);
     }
   }
 
