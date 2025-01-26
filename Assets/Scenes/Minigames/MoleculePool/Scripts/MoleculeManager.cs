@@ -3,6 +3,8 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System;
+using NUnit.Framework.Constraints;
 
 public class MoleculeGroup {
   public List<Molecule> molecules;
@@ -19,8 +21,10 @@ public class MoleculeManager : MonoBehaviour
   private List<MoleculeGroup> moleculeGroups = new();
   private int points = 0;
 
-  private const int GRID_WIDTH = 20;
-  private const int GRID_HEIGHT = 5;
+  private const float GRID_TOP = 5f;
+  private const float GRID_BOTTOM = -1f;
+  private const float GRID_LEFT = -9f;
+  private const float GRID_RIGHT = 9f;
   private const int SEED_COUNT = 2;
   private const int DISSOLVE_TIMER = 8;
 
@@ -40,14 +44,25 @@ public class MoleculeManager : MonoBehaviour
   }
   
   private void GenerateSeed() {
-    GameObject seed = Instantiate(
-      moleculePrefab, 
-      tilemap.CellToWorld(new Vector3Int(
-        UnityEngine.Random.Range(-1 * GRID_WIDTH / 2, GRID_WIDTH / 2), 
-        UnityEngine.Random.Range(0, GRID_HEIGHT),
-        0)), 
-      Quaternion.identity);
+    Vector2 pos = 
+      AlignToGrid(
+        new Vector2(
+        UnityEngine.Random.Range(GRID_LEFT, GRID_RIGHT),
+        UnityEngine.Random.Range(GRID_BOTTOM, GRID_TOP))
+      );
+    Collider2D[] cols = Physics2D.OverlapPointAll(pos);
 
+    foreach (Collider2D col in cols) {
+      if (col.GetComponent<Molecule>() != null) {
+        GenerateSeed();
+        return;
+      }
+    }
+
+    GameObject seed = Instantiate(
+      moleculePrefab,
+      pos,
+      Quaternion.identity);
     CreateGroup(seed.GetComponent<Molecule>());
   }
 
@@ -77,11 +92,33 @@ public class MoleculeManager : MonoBehaviour
     }
   }
 
+  private const float ANIMATION_DURATION = 0.8f;
+
   private IEnumerator DissolveRoutine(List<Molecule> molecules) {
+    List<Vector3> originalPositions = new();
+    Vector3 center = Vector2.zero;
+    foreach (Molecule molecule in molecules) {
+      center += molecule.transform.position;
+      originalPositions.Add(molecule.transform.position);
+      molecule.GetComponent<Collider2D>().enabled = false;
+    }
+    center /= molecules.Count;
+
+    List<Vector3> packedPositions = GeneratePackedCirclePositions(molecules.Count, center, 0.8f);
+
+    float elapsedTime = 0;
+    while (elapsedTime < ANIMATION_DURATION) {
+      elapsedTime += Time.deltaTime;
+      for (int i = 0; i < molecules.Count; i++) {
+        molecules[i].transform.position = Vector3.Slerp(originalPositions[i], packedPositions[i], elapsedTime / ANIMATION_DURATION);
+      }
+      yield return null;
+    }
+    yield return new WaitForSeconds(0.4f);
+
     foreach (Molecule molecule in molecules) {
       ParticlePoolManager.Instance.PlayParticle("Shards", molecule.transform.position);
       Destroy(molecule.gameObject);
-      yield return new WaitForSeconds(0.1f);
     }
   }
 
@@ -97,7 +134,9 @@ public class MoleculeManager : MonoBehaviour
     MoleculeGroup groupB = moleculeGroups.Find(group => group.molecules.Contains(b));
 
     if (groupA == groupB || (groupA == null && groupB == null)) {
-      return;
+      CreateGroup(a);
+      groupA = moleculeGroups.Find(group => group.molecules.Contains(a));
+      groupA.molecules.Add(b);
     } else if (groupA == null && groupB != null) {
       groupB.molecules.Add(a);
       groupB.dissolveTimer = DISSOLVE_TIMER;
@@ -111,8 +150,34 @@ public class MoleculeManager : MonoBehaviour
     }
   }
 
-
   public Vector2 AlignToGrid(Vector2 pos) {
-    return tilemap.CellToWorld(tilemap.WorldToCell(pos));
+    return tilemap.GetCellCenterWorld(tilemap.WorldToCell(pos));
+  }
+
+  private List<Vector3> GeneratePackedCirclePositions(int count, Vector3 center, float spacing) {
+    List<Vector3> positions = new List<Vector3>();
+    int layer = 0;
+    int added = 0;
+
+    while (added < count) {
+      if (layer == 0) {
+        positions.Add(center);
+        added++;
+      } else {
+        int numPoints = 6 * layer; // Number of points in the current layer
+        float angleStep = 360f / numPoints;
+        float radius = layer * spacing; // Radius increases with each layer
+
+        for (int i = 0; i < numPoints && added < count; i++) {
+          float angle = i * angleStep * Mathf.Deg2Rad;
+          Vector3 position = center + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
+          positions.Add(position);
+          added++;
+        }
+      }
+      layer++;
+    }
+
+    return positions;
   }
 }
