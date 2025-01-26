@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ba6f234a90a7c1d49b64b92df51d02b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc748895da532de499fa3d85bd19b616, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,6 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd1b978a3d1b234fb8d91eb6b932eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: a688f7f864753eb49a0350f9edc3f264, type: 3}
+  - {fileID: 21300000, guid: 915477ba1aea1454f9b940d431718173, type: 3}
+  - {fileID: 21300000, guid: a94a9d74c484736479f3767414d22ef1, type: 3}
+  - {fileID: 21300000, guid: cc748895da532de499fa3d85bd19b616, type: 3}
 --- !u!58 &1308693333738083701
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,7 +142,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 0.4
 --- !u!50 &5271639714544352900
 Rigidbody2D:
   serializedVersion: 5
