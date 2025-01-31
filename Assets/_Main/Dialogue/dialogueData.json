@@ -1,0 +1,202 @@
+{
+  "scenes": [
+    {
+      "sceneName": "Game01",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "Hello, young scientist! I'm Dr. Penguin, and today we’ll be making a buffer solution. Follow my instructions carefully to complete this experiment. Let’s start by pouring some deionized water into a glass bottle."
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Great job! Now, add some buffer salt into the deionized water. Be careful not to spill any.",
+          "triggerEventType": 1,
+          "triggerEvent": "onWaterPour"
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "The buffer salt is right over there! Let’s uncap the salt by clicking on it, then pull upwards to take some salt."
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Nice, now mix it with the deionized water.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSaltTake"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Perfect! Now, place the bottle on the stirring plate. This will help dissolve the salt evenly. Click on the stirring plate to start the machine.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Great job, now pull upwards to take the mixed solution from the stirring plate."
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Next, we’ll need to adjust the pH. Add a little acid or base to the mixture to balance it."
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Great! Now add the other one. Let’s continue adjusting the pH until Dr. Penguin says it’s perfect.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Fantastic! You’ve successfully prepared a buffer solution. Well done, young scientist!",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
+        }
+      ]
+    },
+    {
+      "sceneName": "Game02",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "Hello again, young scientist! I’m Dr. Penguin, and today we’ll work with proteins. Let’s start by pouring some buffer solution into a centrifuge tube."
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "The buffer solution is right there! Click and drag the bottle over to the centrifuge tubes to pour it in."
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Pour once more.",
+          "triggerEventType": 1,
+          "triggerEvent": "onBufferPour"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Well done! Now, let’s add some protein to the centrifuge tube. You can find the protein container (KFC) nearby.",
+          "triggerEventType": 1,
+          "triggerEvent": "onBufferPour"
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Pull upwards to take some protein, then drag it over to the centrifuge tube. Carefully add it to the buffer solution."
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Add another one to the other centrifuge tube.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Excellent work! Next, place the centrifuge tubes into the centrifuge. This will help mix the solution evenly.",
+          "triggerEventType": 1,
+          "triggerEvent": "onSolutionMix"
+        },
+        {
+          "character": "Lab Assistant Hedgehog",
+          "text": "Drag the centrifuge tubes onto the centrifuge and click to turn it on. Watch it spin!"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Fantastic job! You’ve completed the process. This is a vital step in preparing proteins for further analysis. Well done, young scientist!"
+        }
+      ]
+    },
+    {
+      "sceneName": "Mixing",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "Hello, lets get to mixing. Click on the beaker and move it around to mix it"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Mix it until stars come out"
+        }
+      ]
+    },
+    {
+      "sceneName": "Centrifuge",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "Hello, lets centrifuge. Drag the tubes into the centrifuge such that it is balanced, then press start. The weights of each tube are written on its cap"
+        },
+        {
+          "character": "Lab Assitant Hedgehog",
+          "text": "Oh dear Dr Penguin, it seems this game has a lot of bugs"
+        },
+        {
+          "character": "Dr Penguin",
+          "text": "Shhhh. The programmer is trying his best."
+        }
+      ]
+    },
+    {
+      "sceneName": "MeasuringCylinder",
+      "dialogues": [
+        {
+          "character": "Dr Penguin",
+          "text": "This is a test of using a measuring cylinder. click anywhere on the screen to pour. careful, only pour when youre ready. letting go will stop you from pouring"
+        }
+      ]
+    },
+
+    {
+      "sceneName": "GrowthRegime",
+      "dialogues": [
+        {
+          "character": "Athena",
+          "text": "This game simulates different types of crystal growth: spiral, step, and rough growth."
+        },
+        {
+          "character": "Athena",
+          "text": "Your goal is to match the shaded area as closely as possible using crystal building blocks. The better your match, the higher your score."
+        },
+        {
+          "character": "Athena",
+          "text": "You will see a shaded area in one of three shapes: spiral, step, or rough. You will receive 20 blue crystal building blocks that you can drag and drop onto the board."
+        },
+        {
+          "character": "Athena",
+          "text": "Crystals must be placed touching an existing crystal—you can’t place them freely. This mimics how real crystals grow. Keep placing crystals to fill the shaded area as accurately as possible."
+        },
+        {
+          "character": "Athena",
+          "text": "That’s it! Try to get the highest match percentage possible. Good luck!"
+        }
+      ]
+    },
+    {
+      "sceneName": "EnergyBarrier",
+      "dialogues": [
+        {
+          "character": "Oat",
+          "text": "This game is all about forming a stable nucleus by gathering molecules and overcoming the energy barrier."
+        },
+        {
+          "character": "Oat",
+          "text": "You've received 3 molecules, these molecules have different energy values, which contribute to the total energy of your cluster. Your goal is to match or exceed the energy barrier required for nucleation."
+        },
+        {
+          "character": "Oat",
+          "text": "Now you’ll need to make a decision — adjusting the Supersaturation Slider. A lower supersaturation level makes nucleation harder but rewards you with more points. A higher supersaturation level makes nucleation easier but comes with a lower score. Choose wisely!"
+        },
+        {
+          "character": "Oat",
+          "text": "After setting the supersaturation, we'll reveal your final molecule and add its energy to your cluster. Just click on the 'Get Final Molecule' button."
+        },
+        {
+          "character": "Oat",
+          "text": "Now comes the nucleation phase. If your cluster’s total energy meets or exceeds the energy barrier, nucleation is successful, and you score points. If your energy falls short, you still have a chance through TSNM (Two-Step Nucleation Mechanism)."
+        },
+        {
+          "character": "Oat",
+          "text": "With TSNM, if your cluster has at least half the required energy, you can form a disordered cluster. A lower supersaturation level makes reorganization more difficult, while a higher supersaturation gives you a better chance of success."
+        },
+        {
+          "character": "Oat",
+          "text": "Tweak your supersaturation again and press on the 'TSNM' button!"
+        }
+      ]
+    }
+  ]
+}
