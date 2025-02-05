@@ -5,6 +5,7 @@ public class StoryManager : MonoBehaviour
 {
   [SerializeField] private Image image;
   [SerializeField] private string nextSceneName;
+  [SerializeField] private GameObject nextIcon;
 
   private bool isEnabled = true;
 
@@ -22,7 +23,14 @@ public class StoryManager : MonoBehaviour
     if (sprite != null) {
       image.sprite = sprite;
     } else {
-      TransitionToGame();
+      Transition();
+    }
+
+    bool hasNext = Resources.Load<Sprite>($"Story/{SceneManager.Instance.GetActiveScene()}/{string.Format("{0:00}", currentPage + 1)}");
+    if (hasNext) {
+      nextIcon.SetActive(true);
+    } else {
+      nextIcon.SetActive(false);
     }
   }
 
@@ -36,7 +44,7 @@ public class StoryManager : MonoBehaviour
     }
   }
 
-  private void TransitionToGame() {
+  private void Transition() {
     isEnabled = false;
     SceneManager.Instance.LoadScene(nextSceneName);
   }
