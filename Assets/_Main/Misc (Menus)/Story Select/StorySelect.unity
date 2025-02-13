@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddf732fde855924a8b0a36a70e3add9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: Act3
 --- !u!1 &828307635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddf732fde855924a8b0a36a70e3add9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: Act2
 --- !u!1 &908777061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,7 +1890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddf732fde855924a8b0a36a70e3add9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Act01
+  sceneToLoad: Act0
 --- !u!1001 &1311834133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2220,7 +2220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddf732fde855924a8b0a36a70e3add9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: Act1
 --- !u!1 &1523109581
 GameObject:
   m_ObjectHideFlags: 0

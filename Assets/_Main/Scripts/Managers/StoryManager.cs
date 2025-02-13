@@ -1,51 +1,65 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class StoryManager : MonoBehaviour
 {
+  [Header("References")]
   [SerializeField] private Image image;
-  [SerializeField] private string nextSceneName;
   [SerializeField] private GameObject nextIcon;
+  [SerializeField] private GameObject choicePanel;
+  [SerializeField] private Button[] choiceButtons;
 
-  private bool isEnabled = true;
-
-  private int currentPage = 0;
+  [Header("Data")]
+  [SerializeField] private StoryNode currentNode;
+  [SerializeField] private string nextSceneName;
 
   private void Start() {
-    NextPage();
+    DisplayNode(currentNode);
   }
 
-  public void NextPage() {
-    if (!isEnabled) return;
-
-    currentPage++;
-    Sprite sprite = Resources.Load<Sprite>($"Story/{SceneManager.Instance.GetActiveScene()}/{string.Format("{0:00}", currentPage)}");
-    if (sprite != null) {
-      image.sprite = sprite;
-    } else {
-      Transition();
+  private void DisplayNode(StoryNode node) {
+    if (node == null) {
+      SceneManager.Instance.LoadScene(nextSceneName);
+      return;
     }
 
-    bool hasNext = Resources.Load<Sprite>($"Story/{SceneManager.Instance.GetActiveScene()}/{string.Format("{0:00}", currentPage + 1)}");
-    if (hasNext) {
+    currentNode = node;
+    image.sprite = currentNode.storyImage;
+
+    if (currentNode.choices.Count > 0) {
+      ShowChoices();
+    } else {
+      choicePanel.SetActive(false);
+    }
+
+    if (currentNode.nextPage != null) {
       nextIcon.SetActive(true);
     } else {
       nextIcon.SetActive(false);
     }
   }
 
-  public void PreviousPage() {
-    if (!isEnabled) return;
+  private void ShowChoices() {
+    choicePanel.SetActive(true);
+    for (int i = 0; i < choiceButtons.Length; i++) {
+      if (i < currentNode.choices.Count) {
+        choiceButtons[i].gameObject.SetActive(true);
+        choiceButtons[i].GetComponentInChildren<TMP_Text>().text = currentNode.choices[i].choiceText;
 
-    currentPage = Mathf.Max(currentPage - 1, 1);
-    Sprite sprite = Resources.Load<Sprite>($"Story/{SceneManager.Instance.GetActiveScene()}/{string.Format("{0:00}", currentPage)}");
-    if (sprite != null) {
-      image.sprite = sprite;
+        choiceButtons[i].onClick.RemoveAllListeners();
+        // Need to capture the reference to nextNode, if not the button will only use i = 4
+        StoryNode nextNode = currentNode.choices[i].nextNode;
+        choiceButtons[i].onClick.AddListener(() => {
+          DisplayNode(nextNode);
+        });
+      } else {
+        choiceButtons[i].gameObject.SetActive(false);
+      }
     }
   }
 
-  private void Transition() {
-    isEnabled = false;
-    SceneManager.Instance.LoadScene(nextSceneName);
+  public void NextPage() {
+    DisplayNode(currentNode.nextPage);
   }
 }
