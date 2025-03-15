@@ -197,6 +197,40 @@
           "text": "Tweak your supersaturation again and press on the 'TSNM' button!"
         }
       ]
+    },
+    {
+      "sceneName": "Tetris",
+      "dialogues": [
+        {
+          "character": "Oat",
+          "text": "Welcome to the Growth Regime game! Your goal is to fit the tetrominoes into the grid to match the shape of the shaded areas."
+        },
+        {
+          "character": "Oat",
+          "text": "Get 100% coverae to win the game!"
+        },
+        {
+          "character": "Oat",
+          "text": "Good luck, and have fun!"
+        }
+      ]
+    },
+    {
+      "sceneName": "SequenceAlignment",
+      "dialogues": [
+        {
+          "character": "Athena",
+          "text": "Welcome to the Sequence Alignment game! Your goal is to align the sequences of amino acids in the database sequences to match the target sequence."
+        },
+        {
+          "character": "Athena",
+          "text": "Click on the slider to move the database sequence left or right. When you think you have the correct alignment, click on the 'Check Alignment' button to see if you are correct."
+        },
+        {
+          "character": "Athena",
+          "text": "Fully align the target sequence with subsequences from the databse to win. Good luck!"
+        }
+      ]
     }
   ]
 }

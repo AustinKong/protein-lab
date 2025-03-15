@@ -32,6 +32,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Main/Story/Act 2/Act2.unity
     guid: 14fb458128dc9a945b8192c4e96550f7
+  - enabled: 1
+    path: Assets/_Main/Story/Act 3/Act3.unity
+    guid: d3f050889bc4ce94daf42d760bc07822
+  - enabled: 1
+    path: Assets/_Main/Minigames/Tetris/Tetris.unity
+    guid: 2010ae3c7212a7541a09c58608fdb58a
+  - enabled: 1
+    path: Assets/_Main/Minigames/PairwiseInteractions/PairwiseInteractions.unity
+    guid: 9a833f7a8ea6e594c859574ff4e1c1f4
+  - enabled: 1
+    path: Assets/_Main/Minigames/SequenceAlignment/SequenceAlignment.unity
+    guid: a0cf4d3850b2aab48bdd8e0aee79266d
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 5b4ba5ed8fec3364495e43bed56d8bea, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

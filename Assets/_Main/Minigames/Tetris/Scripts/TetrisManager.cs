@@ -9,6 +9,7 @@ public class TetrisManager : MonoBehaviour {
   [SerializeField] private GameObject[] tetrisBlockPrefabs;
   [SerializeField] private GameObject[] scoringShadows;
   [SerializeField] private TMP_Text coverageText;
+  [SerializeField] private Sprite completionSprite;
   private Collider2D scoringShadowCollider;
   private List<Collider2D> tetrisBlockColliders = new List<Collider2D>();
 
@@ -35,19 +36,23 @@ public class TetrisManager : MonoBehaviour {
   private void ReplenishBlock() {
     Instantiate(tetrisBlockPrefabs[UnityEngine.Random.Range(0, tetrisBlockPrefabs.Length)],
       new Vector3(UnityEngine.Random.Range(-8f, 8f), UnityEngine.Random.Range(-3f, 4f), 0), 
-      Quaternion.Euler(new Vector3(0 ,0, UnityEngine.Random.Range(0, 360f))));
+      Quaternion.Euler(new Vector3(0 ,0, Mathf.Round(UnityEngine.Random.Range(0, 360) / 90) * 90)));
   }
 
   public void RegisterOutOfBounds(GameObject o) {
     o.transform.SetPositionAndRotation(
       new Vector3(UnityEngine.Random.Range(-8f, 8f), UnityEngine.Random.Range(-3f, 4f), 0), 
-      Quaternion.Euler(new Vector3(0 ,0, UnityEngine.Random.Range(0, 360f))));
+      Quaternion.Euler(new Vector3(0, 0, Mathf.Round(UnityEngine.Random.Range(0, 360) / 90) * 90)));
   }
 
   public void RegisterCombine(GameObject o) {
     tetrisBlockColliders.Add(o.GetComponent<Collider2D>());
     ReplenishBlock();
-    coverageText.text = Mathf.Round(GetCoverage() * 100).ToString() + "%";
+    int coverage = Mathf.RoundToInt(GetCoverage() * 100);
+    coverageText.text = coverage.ToString() + "%";
+    if (coverage >= 100) {
+      MinigameManager.Instance.Completion(completionSprite, "Well done");
+    }
   }
 
   // Returns [% of area covered, no. of points out of bounds]
@@ -72,6 +77,6 @@ public class TetrisManager : MonoBehaviour {
       }
     }
 
-    return Mathf.Clamp(1.2f * coveredPoints / totalPoints, 0, 1);
+    return Mathf.Clamp(1.4f * coveredPoints / totalPoints, 0, 1);
   } 
 }

@@ -98,14 +98,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4307706683549833561}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -160,15 +160,15 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9125, y: 0.6125}
+    pivot: {x: 0, y: 1}
+    oldSize: {x: 0.75, y: 0.5}
     newSize: {x: 1.46, y: 0.98}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -176,10 +176,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.42447603, y: 0.27249008}
-      - {x: -0.43241948, y: 0.048769783}
-      - {x: 0.16953507, y: 0.04118237}
-      - {x: 0.17038277, y: -0.25163835}
-      - {x: 0.42348295, y: -0.2685184}
-      - {x: 0.4195113, y: 0.26355365}
+    - - {x: -0.026696384, y: 0.031145722}
+      - {x: -0.028921038, y: -0.28084445}
+      - {x: 0.45851147, y: -0.302383}
+      - {x: 0.46207592, y: -0.5344827}
+      - {x: 0.7666852, y: -0.5411567}
+      - {x: 0.775584, y: 0.034482762}
   m_UseDelaunayMesh: 0

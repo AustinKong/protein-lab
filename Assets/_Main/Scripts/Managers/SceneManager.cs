@@ -6,6 +6,7 @@ public class SceneManager : MonoBehaviour
 {
   public static SceneManager Instance;
 
+  [SerializeField] private RectTransform canvas;
   [SerializeField] private Animator transitionAnimator;
 
   // NOTE: Current system only supports two scenes at one time. If more scenes are required,
@@ -41,11 +42,14 @@ public class SceneManager : MonoBehaviour
   }
 
   private IEnumerator LoadSceneRoutine(string sceneName) {
+    canvas.gameObject.SetActive(true);
     transitionAnimator.SetTrigger("Transition");
     yield return new WaitForSeconds(TRANSITION_DURATION);
     currentBaseScene = sceneName;
     UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     transitionAnimator.SetTrigger("Transition");
+    yield return new WaitForSeconds(TRANSITION_DURATION);
+    canvas.gameObject.SetActive(false);
   }
 
   // Callback is when the result of a minigame will affect some state in the main game
