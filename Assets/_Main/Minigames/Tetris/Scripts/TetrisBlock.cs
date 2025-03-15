@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -14,6 +15,10 @@ public class TetrisBlock : MonoBehaviour
   private float rotation;
   private float floatSpeed;
   [SerializeField] private bool isStatic = false; // Serialized for Seeds
+  private const float GRID_SIZE = 0.25f; // Custom grid size
+
+  private float moveInterval = 0.5f; // Interval in seconds
+  private float moveTimer = 0f; // Timer to track the interval
 
   private void Awake() {
     mainCamera = Camera.main;
@@ -21,19 +26,26 @@ public class TetrisBlock : MonoBehaviour
     clickAction = inputActions.FindAction("Game/Click");
     pointAction = inputActions.FindAction("Game/Point");
     floatDirection = UnityEngine.Random.insideUnitCircle.normalized;
-    rotation = UnityEngine.Random.Range(-30f, 30f);
-    floatSpeed = UnityEngine.Random.Range(0, 0.6f);
+    // rotation = UnityEngine.Random.Range(-30f, 30f);
+    floatSpeed = UnityEngine.Random.Range(0.2f, 0.8f);
     if (!isStatic) GetComponent<SpriteRenderer>().color = Color.gray;
   }
 
   private void Update() {
     if (isDragging && !isStatic) {
-      transform.position = Vector3.Lerp(transform.position, GetPointerWorldPosition(), Time.deltaTime * 2f);
+      // transform.position = Vector3.Lerp(transform.position, GetPointerWorldPosition(), Time.deltaTime * 2f);
+      transform.position = GetPointerWorldPosition();
       // OnDrag();
     } else if (!isDragging && !isStatic) {
-      transform.position += floatSpeed * Time.deltaTime * (Vector3) floatDirection;
+      moveTimer += Time.deltaTime;
+      if (moveTimer >= moveInterval) {
+        transform.position += floatSpeed * (Vector3) floatDirection;
+        moveTimer = 0f;
+      }
       transform.Rotate(Vector3.forward, rotation * Time.deltaTime);
     }
+
+    SnapToGrid();
   }
 
   private void OnEnable() {
@@ -94,5 +106,34 @@ public class TetrisBlock : MonoBehaviour
 
   private void OnBecameInvisible() {
     TetrisManager.Instance.RegisterOutOfBounds(gameObject);
+  }
+
+  private void SnapToGrid() {
+    Vector3 position = transform.position;
+    // Vector3 topLeftOffset = new Vector3(-GetComponent<SpriteRenderer>().bounds.size.x / 2, GetComponent<SpriteRenderer>().bounds.size.y / 2, 0);
+    // position += topLeftOffset;
+    position.x = Mathf.Round(position.x / GRID_SIZE) * GRID_SIZE;
+    position.y = Mathf.Round(position.y / GRID_SIZE) * GRID_SIZE;
+    // position -= topLeftOffset;
+    transform.position = position;
+  }
+
+  private bool IsColliding(Vector3 position, out Vector2 collisionNormal) {
+    Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 0.1f);
+    foreach (Collider2D collider in colliders) {
+      if (collider.gameObject != gameObject && collider.GetComponent<TetrisBlock>() != null) {
+        collisionNormal = (transform.position - collider.transform.position).normalized;
+        return true;
+      }
+    }
+    collisionNormal = Vector2.zero;
+    return false;
+  }
+
+  private void OnTriggerEnter2D(Collider2D collider) {
+    if (collider.gameObject.GetComponent<TetrisBlock>() != null) {
+      Vector2 collisionNormal = (transform.position - collider.transform.position).normalized;
+      floatDirection = Vector2.Reflect(floatDirection, collisionNormal); // Reflect direction on collision
+    }
   }
 }

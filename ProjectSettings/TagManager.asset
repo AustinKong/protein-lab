@@ -7,6 +7,7 @@ TagManager:
   - CentrifugeSlot
   - Manager
   - Interactable
+  - XrayReflective
   layers:
   - Default
   - TransparentFX

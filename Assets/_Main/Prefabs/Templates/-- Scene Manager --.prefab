@@ -88,7 +88,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!95 &7090563261379335174
 Animator:
@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8637993104770262379
 RectTransform:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 32767
   m_TargetDisplay: 0
 --- !u!114 &541333516352053758
 MonoBehaviour:
@@ -334,4 +334,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934f654bc8a9ce34b9befcfc7be4ef44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 8637993104770262379}
   transitionAnimator: {fileID: 7090563261379335174}

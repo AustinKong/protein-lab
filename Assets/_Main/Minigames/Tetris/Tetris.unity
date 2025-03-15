@@ -158,6 +158,7 @@ MonoBehaviour:
   scoringShadows:
   - {fileID: 692443180}
   coverageText: {fileID: 1054946544}
+  completionSprite: {fileID: 1515622694917723629, guid: 35f9ef63b6f9c4542bc323a4aac29813, type: 3}
 --- !u!4 &195993377
 Transform:
   m_ObjectHideFlags: 0
@@ -1035,11 +1036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8071151579239899821, guid: 79812b5bfbd49034491a9e94924cd723, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.46
+      value: -0.98
       objectReference: {fileID: 0}
     - target: {fileID: 8071151579239899821, guid: 79812b5bfbd49034491a9e94924cd723, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.16
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 8071151579239899821, guid: 79812b5bfbd49034491a9e94924cd723, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1051,15 +1052,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8071151579239899821, guid: 79812b5bfbd49034491a9e94924cd723, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8071151579239899821, guid: 79812b5bfbd49034491a9e94924cd723, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8071151579239899821, guid: 79812b5bfbd49034491a9e94924cd723, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8071151579239899821, guid: 79812b5bfbd49034491a9e94924cd723, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1085,5 +1086,5 @@ SceneRoots:
   - {fileID: 349341281}
   - {fileID: 1090804586}
   - {fileID: 195993377}
-  - {fileID: 8734892970028283410}
   - {fileID: 692443182}
+  - {fileID: 8734892970028283410}
