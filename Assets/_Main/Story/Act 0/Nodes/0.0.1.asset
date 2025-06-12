@@ -15,3 +15,6 @@ MonoBehaviour:
   storyImage: {fileID: 21300000, guid: 53d3745b24ea51049834ec35d4d14114, type: 3}
   choices: []
   nextPage: {fileID: 11400000, guid: 6ec270cb367ae7342a37ba93d7796bae, type: 2}
+  dialogueText: 
+  narrationAudio: {fileID: 8300000, guid: ad739582034c4e34b8aecc8e4fdd2502, type: 3}
+  backgroundMusic: {fileID: 0}

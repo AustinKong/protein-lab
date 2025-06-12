@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EnergyBarrier Icon_0: 1068456660922313534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

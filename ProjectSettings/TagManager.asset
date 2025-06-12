@@ -8,6 +8,10 @@ TagManager:
   - Manager
   - Interactable
   - XrayReflective
+  - Seed
+  - ScreenEdge
+  - Particle
+  - Indicator
   layers:
   - Default
   - TransparentFX

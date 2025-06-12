@@ -23,8 +23,6 @@ public class SceneManager : MonoBehaviour
     if (Instance == null) {
       Instance = this; 
       if (transform.parent != null) transform.SetParent(null);
-      // This line is for development, such that we can open any scene to test
-      currentBaseScene = GetActiveScene();
       DontDestroyOnLoad(gameObject);
     } else {
       if (!Instance.isActiveAndEnabled) Instance.gameObject.SetActive(true);
@@ -32,8 +30,16 @@ public class SceneManager : MonoBehaviour
     }
   }
 
-  public void LoadScene(string sceneName) {
-    if (!string.IsNullOrEmpty(currentAdditiveScene)) {
+  private void Start()
+  {
+    // This line is for development, such that we can open any scene to test
+    currentBaseScene = GetActiveScene();
+  }
+
+  public void LoadScene(string sceneName)
+  {
+    if (!string.IsNullOrEmpty(currentAdditiveScene))
+    {
       UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentAdditiveScene);
       currentAdditiveScene = null;
     }
