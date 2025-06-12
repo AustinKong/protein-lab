@@ -1,13 +1,15 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class XrayDiffractionManager : MonoBehaviour
 {
+  public static XrayDiffractionManager Instance;
+
   [SerializeField] private GameObject targetPrefab;
 
   [SerializeField] private LineRenderer lineRenderer;
   [SerializeField] private Transform shooter;
   [SerializeField] private Transform crystal;
+  [SerializeField] private Transform glowEffect;
 
   private const int NUMBER_OF_TARGETS = 3;
   private const float MIN_Y = -2f;
@@ -16,15 +18,19 @@ public class XrayDiffractionManager : MonoBehaviour
   private const float MAX_SPEED = 3f;
   private float[] X_POSITIONS = { 7.3f, 7.8f, 8.3f };
 
-  private List<GameObject> targets = new List<GameObject>();
+  private void Awake()
+  {
+    Instance = this;   
+  }
 
   // Manages the targets
   private void Start()
   {
+    MinigameManager.Instance.Initialize(60, true, true, null, "congrats", 10);
+
     for (int i = 0; i < NUMBER_OF_TARGETS; i++)
     {
       GameObject target = Instantiate(targetPrefab, new Vector3(X_POSITIONS[Random.Range(0, X_POSITIONS.Length)], Random.Range(MIN_Y, MAX_Y), 0), Quaternion.identity);
-      targets.Add(target);
       float speed = Random.Range(MIN_SPEED, MAX_SPEED);
       target.GetComponent<Target>().Initialize(MIN_Y, MAX_Y, speed);
     }
@@ -35,12 +41,14 @@ public class XrayDiffractionManager : MonoBehaviour
   private void Update()
   {
     Vector3 endPos = CalculateEndPosition();
-    GenerateSineWave(shooter.position, crystal.position, endPos);
 
     RaycastHit2D hit = Physics2D.Linecast(crystal.position, endPos);
     if (hit.collider != null && hit.collider.GetComponent<Target>() != null) {
       hit.collider.GetComponent<Target>().Hit();
+      endPos = hit.point;
     }
+
+    GenerateSineWave(shooter.position, crystal.position, endPos);
   }
 
   public float wavelength = 0.2f;
@@ -73,14 +81,24 @@ public class XrayDiffractionManager : MonoBehaviour
       wavePoints[i + pointsBetweenStartAndMid] = interpolated;
     }
 
+    glowEffect.position = wavePoints[wavePoints.Length - 1];
+    glowEffect.transform.Rotate(Vector3.forward, Time.deltaTime * 100f);
+
     lineRenderer.SetPositions(wavePoints);
   }
 
-  private const float REFRACTION_Y_MULTIPLE = 2f;
-  private const float X_RAY_END_X = 9f;
+  private const float REFRACTION_Y_MULTIPLE = 4f;
+  private const float X_RAY_END_X = 8.5f;
 
   private Vector3 CalculateEndPosition()
   {
     return new Vector3(X_RAY_END_X, -1 * shooter.position.y * REFRACTION_Y_MULTIPLE, 0);
+  }
+
+  public void Score() {
+    MinigameManager.Instance.Score();
+    GameObject target = Instantiate(targetPrefab, new Vector3(X_POSITIONS[Random.Range(0, X_POSITIONS.Length)], Random.Range(MIN_Y, MAX_Y), 0), Quaternion.identity);
+    float speed = Random.Range(MIN_SPEED, MAX_SPEED);
+    target.GetComponent<Target>().Initialize(MIN_Y, MAX_Y, speed);
   }
 }

@@ -14,52 +14,72 @@ public class StoryManager : MonoBehaviour
   [SerializeField] private StoryNode currentNode;
   [SerializeField] private string nextSceneName;
 
-  private void Start() {
+  private void Start()
+  {
     DisplayNode(currentNode);
   }
 
-  private void DisplayNode(StoryNode node) {
-    if (node == null) {
+  private void DisplayNode(StoryNode node)
+  {
+    if (node == null)
+    {
+      SoundManager.Instance.StopBGM();
+      SoundManager.Instance.StopAllSFX();
       SceneManager.Instance.LoadScene(nextSceneName);
       return;
     }
 
+    SoundManager.Instance.PlaySFX(node.narrationAudio);
+    SoundManager.Instance.PlayBGM(node.backgroundMusic);
     currentNode = node;
     image.sprite = currentNode.storyImage;
 
-    if (currentNode.choices.Count > 0) {
+    if (currentNode.choices.Count > 0)
+    {
       ShowChoices();
-    } else {
+    }
+    else
+    {
       choicePanel.SetActive(false);
     }
 
-    if (currentNode.nextPage != null) {
+    if (currentNode.nextPage != null)
+    {
       nextIcon.SetActive(true);
-    } else {
+    }
+    else
+    {
       nextIcon.SetActive(false);
     }
   }
 
-  private void ShowChoices() {
+  private void ShowChoices()
+  {
     choicePanel.SetActive(true);
-    for (int i = 0; i < choiceButtons.Length; i++) {
-      if (i < currentNode.choices.Count) {
+    for (int i = 0; i < choiceButtons.Length; i++)
+    {
+      if (i < currentNode.choices.Count)
+      {
         choiceButtons[i].gameObject.SetActive(true);
         choiceButtons[i].GetComponentInChildren<TMP_Text>().text = currentNode.choices[i].choiceText;
 
         choiceButtons[i].onClick.RemoveAllListeners();
         // Need to capture the reference to nextNode, if not the button will only use i = 4
         StoryNode nextNode = currentNode.choices[i].nextNode;
-        choiceButtons[i].onClick.AddListener(() => {
+        choiceButtons[i].onClick.AddListener(() =>
+        {
           DisplayNode(nextNode);
         });
-      } else {
+      }
+      else
+      {
         choiceButtons[i].gameObject.SetActive(false);
       }
     }
   }
 
-  public void NextPage() {
+  public void NextPage()
+  {
     DisplayNode(currentNode.nextPage);
   }
 }
