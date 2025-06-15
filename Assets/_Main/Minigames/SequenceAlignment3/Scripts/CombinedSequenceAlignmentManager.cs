@@ -14,7 +14,7 @@ public enum ProteinColor
 public class CombinedSequenceAlignmentManager : MonoBehaviour
 {
     [Header("Animation Settings")]
-    private const float FALL_DISTANCE = 6f;      // how far above the row to start / end
+    private const float FALL_DISTANCE = 7f;      // how far above the row to start / end
     private const float ANIM_DURATION = 0.2f;    // how long each block takes
     private const float BASE_STAGGER = 0.02f;   // per‐index delay
     private const float STAGGER_VARIANCE = 0.03f;   // ± randomness
@@ -40,6 +40,7 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
     [SerializeField] private Slider alignmentSlider;        // 0→1 for left/right
     [SerializeField] private Button submitButton;           // “Submit” your guess
     [SerializeField] private TMP_Text similarityText;       // Shows “XX%”
+    [SerializeField] private TMP_Text similarityStatus;     // Shows “PERFECT"
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private Image siren;
     [SerializeField] private Image sirenLight;
@@ -61,10 +62,11 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
     private const float tintAmount = 0.6f;
     private float timer = 0f;
     private bool tickDownTimer = false;
+    private float maxPossibleSimilarity = 0f;
 
     private void Start()
     {
-        MinigameManager.Instance.Initialize(90, true, true, completionSprite, "Great Job!", 600);
+        MinigameManager.Instance.Initialize(60, true, true, completionSprite, "Great Job!", 600);
         // Hook events
         alignmentSlider.onValueChanged.AddListener(OnSliderValueChanged);
         submitButton.onClick.AddListener(OnLevelSubmit);
@@ -85,9 +87,11 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
         maxOffset = targetLength - 1;
 
         databaseParent.localPosition = new Vector3(0, databaseParent.localPosition.y, databaseParent.localPosition.z);
-        xOffsetTarget = targetLength * SPACING / 2f;
+        xOffsetTarget = (targetLength - 1) * SPACING / 2f;
         targetParent.localPosition = new Vector3(-xOffsetTarget, targetParent.localPosition.y, targetParent.localPosition.z);
         similarityText.text = "Wait!";
+        similarityStatus.text = "...";
+        similarityStatus.color = Color.black;
 
         GenerateRandomSequences();
         CreateTargetDisplay();
@@ -96,13 +100,14 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
         int offset = Mathf.RoundToInt(Mathf.Lerp(minOffset, maxOffset, 0.5f));
         databaseParent.localPosition = new Vector3(offset * SPACING - xOffsetTarget, databaseParent.localPosition.y, databaseParent.localPosition.z);
         ApplyGrayTintToBothSequences(offset);
+        maxPossibleSimilarity = ComputeMaxPossibleSimilarity();
 
         Invoke(nameof(SetTickDownTimerTrue), 1.5f);
     }
 
     private void SetTickDownTimerTrue()
     {
-        timer = 15f;
+        timer = 10f;
         timerText.text = $"{Math.Ceiling(timer)}s";
         tickDownTimer = true;
         submitButton.interactable = true;
@@ -125,8 +130,8 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
         else
         {
             timerText.text = $"{Math.Ceiling(timer)}s";
-            siren.sprite = sirenSprites[timer > 8f ? 0 : timer > 4f ? 1 : 2];
-            sirenLight.color = sirenLightColors[timer > 8f ? 0 : timer > 4f ? 1 : 2];
+            siren.sprite = sirenSprites[timer > 6f ? 0 : timer > 3f ? 1 : 2];
+            sirenLight.color = sirenLightColors[timer > 6f ? 0 : timer > 3f ? 1 : 2];
         }
     }
 
@@ -234,6 +239,21 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
         // Recompute & display similarity (matches ÷ targetLength)
         int sim = ComputeOverlapSimilarity(offset);
         similarityText.text = $"{sim}%";
+        switch (sim / maxPossibleSimilarity)
+        {
+            case 1:
+                similarityStatus.text = "PERFECT";
+                similarityStatus.color = Color.green;
+                break;
+            case >= 0.5f:
+                similarityStatus.text = "AMAZING";
+                similarityStatus.color = Color.yellow;
+                break;
+            default:
+                similarityStatus.text = "MEH";
+                similarityStatus.color = Color.red;
+                break;
+        }
     }
 
     private void ApplyGrayTintToBothSequences(int offset)
@@ -381,6 +401,8 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
     private IEnumerator SubmitAnimationRoutine()
     {
         similarityText.text = "Wait!";
+        similarityStatus.text = "...";
+        similarityStatus.color = Color.black;
         submitButton.interactable = false;
         alignmentSlider.interactable = false;
         tickDownTimer = false; // stop the timer

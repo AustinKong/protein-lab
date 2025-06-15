@@ -12,6 +12,8 @@ TagManager:
   - ScreenEdge
   - Particle
   - Indicator
+  - PaddleTop
+  - PaddleBottom
   layers:
   - Default
   - TransparentFX
