@@ -1357,10 +1357,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget odio
+  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget odio
     luctus, scelerisque magna id, gravida eros. Vivamus fringilla, purus a tincidunt
-    fermentum, libero purus egestas risus, nec pulvinar quam justo vel ante. Quisque
-    malesuada vestibulum placerat. Donec pellentesque aliquet posuere. '
+    fermentum, libero purus egestas risus
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d81d2223cb086a419aa8360841d281e, type: 2}
   m_sharedMaterial: {fileID: -7798303798650869185, guid: 2d81d2223cb086a419aa8360841d281e, type: 2}
@@ -1387,8 +1386,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1675,6 +1674,14 @@ PrefabInstance:
       propertyPath: sfxPoolSize
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3834075746134923643, guid: f4d83eecdb9028442a9e8ebc99882870, type: 3}
+      propertyPath: soundEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834075746134923643, guid: f4d83eecdb9028442a9e8ebc99882870, type: 3}
+      propertyPath: 'soundEffects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 80bdbe41e8f0ed14dadb7509bc249492, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1764,8 +1771,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64
-  m_fontSizeBase: 64
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2108,11 +2115,27 @@ MonoBehaviour:
   instructionImage: {fileID: 2015390510}
   nextScene: Nucleation
   tutorialSteps:
-  - text: Welcome to Crystal Cluster Growth.\n\nYour objective is to build a perfect
-      crystal by guiding molecules into a structured cluster.
-    image: {fileID: -7239773047376726648, guid: 0bea5d5de8338d245bd2d8c775fab8b1, type: 3}
-  - text: Glucose fructose
-    image: {fileID: -7239773047376726648, guid: 0bea5d5de8338d245bd2d8c775fab8b1, type: 3}
+  - text: You're about to play a game where you help molecules form a crystal! \n\nIt
+      all starts when another molecule bumps into you and kicks off nucleation.
+    image: {fileID: 21300000, guid: d1a0a2ddae0bc064a9ed88bb34b4ffd1, type: 3}
+  - text: "Now it\u2019s time to grow your nucleus! \\n\\nStick to molecules that
+      look just like you to make the seed grow bigger."
+    image: {fileID: 21300000, guid: b573fc2c5c7c4d441b37f6d15a0a0924, type: 3}
+  - text: "But watch out! \\n\\nToo many wrong molecules and you\u2019ll form a messy
+      lump called a precipitate."
+    image: {fileID: 21300000, guid: b4a6e814f747e6341ab987d183933dd7, type: 3}
+  - text: 'Keep collecting the right kind to pass the nucleation threshold.\n\nOnce
+      you do, your nucleus becomes a crystal! Kicking off phase 2: Crystal growth!'
+    image: {fileID: 21300000, guid: 2e0341fe573c1eb4f87e696137c1b4f0, type: 3}
+  - text: "Look for the crosshair\u2014it shows where your crystal can grow. \\n\\nMove
+      your molecule there and stick any kind of molecule to grow your crystal."
+    image: {fileID: 21300000, guid: 91f65d3a86f45eb45a46d6ff98f9b2ac, type: 3}
+  - text: "Keep growing your crystal until it's complete. \\n\\nDo it right and you\u2019ll
+      build a beautiful protein crystal \u2014 just like real scientists!"
+    image: {fileID: 21300000, guid: 91f65d3a86f45eb45a46d6ff98f9b2ac, type: 3}
+  - text: But remember! \n\nOnly molecules that land on the crosshair will work.
+      The rest bounce off!
+    image: {fileID: 21300000, guid: 69caba478b4df6a4bbdbd77de26f40a9, type: 3}
 --- !u!4 &2098436809
 Transform:
   m_ObjectHideFlags: 0

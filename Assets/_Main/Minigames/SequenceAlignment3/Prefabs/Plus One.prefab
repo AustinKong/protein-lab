@@ -19559,7 +19559,7 @@ GameObject:
   - component: {fileID: 966406395192360982}
   - component: {fileID: 3520066725134644049}
   m_Layer: 0
-  m_Name: Text_Bonk
+  m_Name: Plus_One
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24439,7 +24439,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fc03ac083fdbcb349ade9dbec0b45850, type: 2}
+  - {fileID: 2100000, guid: 53ef793481fc87145a87ddf888454fe5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
