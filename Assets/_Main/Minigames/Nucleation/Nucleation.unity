@@ -828,7 +828,7 @@ MonoBehaviour:
   nucleationText: {fileID: 6458614797979684591, guid: 7cb271fa798721249864a0cfad6b8815, type: 3}
   precipitationText: {fileID: 5272336711522030024, guid: ca59299bb0c90d74b9edf6979e902126, type: 3}
   gameStartText: {fileID: 6328342863304576363, guid: 6a703f1c1db70244d842d4273cfc58c0, type: 3}
-  completionSprite: {fileID: 21300000, guid: 3582ce4496df0d94e9fbe7e43a58d1d0, type: 3}
+  completionSprite: {fileID: 21300000, guid: 31fb1f12c0a5d5c46aeb6256cb2a39c8, type: 3}
   bonkText: {fileID: 8430150067804831311, guid: a75c2bc7c87c0714f8c3942f4c0cf4b5, type: 3}
   mainSprite: {fileID: 21300000, guid: 18d5684f618fb4944a6325382468e1d3, type: 3}
   nonMainSprites:

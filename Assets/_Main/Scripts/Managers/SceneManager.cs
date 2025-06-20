@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneManager : MonoBehaviour
@@ -16,15 +17,20 @@ public class SceneManager : MonoBehaviour
   private string currentBaseScene;
   private string currentAdditiveScene;
   private Action<int> preAdditiveSceneCallback;
+  private List<string> unlockedNames = new List<string>();
 
   private const float TRANSITION_DURATION = 1f;
 
-  private void Awake() {
-    if (Instance == null) {
-      Instance = this; 
+  private void Awake()
+  {
+    if (Instance == null)
+    {
+      Instance = this;
       if (transform.parent != null) transform.SetParent(null);
       DontDestroyOnLoad(gameObject);
-    } else {
+    }
+    else
+    {
       if (!Instance.isActiveAndEnabled) Instance.gameObject.SetActive(true);
       Destroy(gameObject);
     }
@@ -47,7 +53,8 @@ public class SceneManager : MonoBehaviour
     StartCoroutine(LoadSceneRoutine(sceneName));
   }
 
-  private IEnumerator LoadSceneRoutine(string sceneName) {
+  private IEnumerator LoadSceneRoutine(string sceneName)
+  {
     canvas.gameObject.SetActive(true);
     transitionAnimator.SetTrigger("Transition");
     yield return new WaitForSeconds(TRANSITION_DURATION);
@@ -62,8 +69,10 @@ public class SceneManager : MonoBehaviour
   // An example of this is filling a measuring cylinder with water, the callback should
   // set the value of contentUnits in measuring cylinder based on the result provided by minigame
   // FIXME: This is currently unused, can be removed possibly
-  public void LoadMinigameScene(string sceneName, Action<int> callback = null) {
-    if (!string.IsNullOrEmpty(currentAdditiveScene)) {
+  public void LoadMinigameScene(string sceneName, Action<int> callback = null)
+  {
+    if (!string.IsNullOrEmpty(currentAdditiveScene))
+    {
       Debug.LogWarning("An additive scene is already loaded. Unload it first.");
       return;
     }
@@ -72,19 +81,23 @@ public class SceneManager : MonoBehaviour
     StartCoroutine(LoadSceneAdditivelyRoutine(sceneName));
   }
 
-  private IEnumerator LoadSceneAdditivelyRoutine(string sceneName) {
+  private IEnumerator LoadSceneAdditivelyRoutine(string sceneName)
+  {
     transitionAnimator.SetTrigger("Transition");
     yield return new WaitForSeconds(TRANSITION_DURATION);
     currentAdditiveScene = sceneName;
     yield return UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, UnityEngine.SceneManagement.LoadSceneMode.Additive);
-    if (!string.IsNullOrEmpty(currentBaseScene)) {
+    if (!string.IsNullOrEmpty(currentBaseScene))
+    {
       HideBaseScene();
     }
     transitionAnimator.SetTrigger("Transition");
   }
 
-  public void ReturnToOriginalScene(int result = -1) {
-    if (string.IsNullOrEmpty(currentBaseScene)) {
+  public void ReturnToOriginalScene(int result = -1)
+  {
+    if (string.IsNullOrEmpty(currentBaseScene))
+    {
       Debug.LogError("No original scene found.");
       return;
     }
@@ -92,45 +105,71 @@ public class SceneManager : MonoBehaviour
     StartCoroutine(ReturnToOriginalSceneRoutine(result));
   }
 
-  private IEnumerator ReturnToOriginalSceneRoutine(int result = -1) {
+  private IEnumerator ReturnToOriginalSceneRoutine(int result = -1)
+  {
     transitionAnimator.SetTrigger("Transition");
     yield return new WaitForSeconds(TRANSITION_DURATION);
     ShowBaseScene();
-    yield return UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentAdditiveScene);  
+    yield return UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(currentAdditiveScene);
     currentAdditiveScene = null;
     transitionAnimator.SetTrigger("Transition");
 
-    if (result >= 0 && preAdditiveSceneCallback != null) {
+    if (result >= 0 && preAdditiveSceneCallback != null)
+    {
       preAdditiveSceneCallback(result);
       preAdditiveSceneCallback = null;
     }
   }
 
-  public string GetActiveScene() {
-    if (!string.IsNullOrEmpty(currentAdditiveScene)) {
+  public string GetActiveScene()
+  {
+    if (!string.IsNullOrEmpty(currentAdditiveScene))
+    {
       return currentAdditiveScene;
-    } else if (!string.IsNullOrEmpty(currentBaseScene)) {
+    }
+    else if (!string.IsNullOrEmpty(currentBaseScene))
+    {
       return currentBaseScene;
-    } else {
+    }
+    else
+    {
       // Fallback, it should never reach this unless I fuked up
       return UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
     }
   }
 
-  private void HideBaseScene() {
+  private void HideBaseScene()
+  {
     UnityEngine.SceneManagement.Scene baseScene = UnityEngine.SceneManagement.SceneManager.GetSceneByName(currentBaseScene);
-    foreach (GameObject obj in baseScene.GetRootGameObjects()) {
-      if (!obj.CompareTag("Manager")) {
+    foreach (GameObject obj in baseScene.GetRootGameObjects())
+    {
+      if (!obj.CompareTag("Manager"))
+      {
         obj.SetActive(false);
       }
     }
   }
 
-  private void ShowBaseScene() {
+  private void ShowBaseScene()
+  {
     UnityEngine.SceneManagement.Scene baseScene = UnityEngine.SceneManagement.SceneManager.GetSceneByName(currentBaseScene);
     Debug.Log(baseScene);
-    foreach (GameObject obj in baseScene.GetRootGameObjects()) {
+    foreach (GameObject obj in baseScene.GetRootGameObjects())
+    {
       obj.SetActive(true);
     }
+  }
+
+  public void UnlockScene(string unlockName)
+  {
+    if (!unlockedNames.Contains(unlockName))
+    {
+      unlockedNames.Add(unlockName);
+    }
+  }
+
+  public bool IsSceneUnlocked(string unlockName)
+  {
+    return unlockedNames.Contains(unlockName);
   }
 }

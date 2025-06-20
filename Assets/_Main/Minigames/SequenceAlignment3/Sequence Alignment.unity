@@ -1640,7 +1640,7 @@ MonoBehaviour:
   - {r: 1, g: 0.8223318, b: 0.32210237, a: 1}
   - {r: 0.93530995, g: 0.32105333, b: 0, a: 1}
   colorBlockPrefab: {fileID: 2926948654328521448, guid: 92d2be1a0c3e23e449a2e6c1cb0f027b, type: 3}
-  completionSprite: {fileID: 21300000, guid: f19c016bfe530d04a9f7220cd58b3eeb, type: 3}
+  completionSprite: {fileID: 21300000, guid: 1880dc52b6448be4c9ffc84ddc567d29, type: 3}
   targetParent: {fileID: 1822764538}
   databaseParent: {fileID: 1125916660}
   alignmentSlider: {fileID: 1004873783}

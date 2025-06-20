@@ -21,6 +21,9 @@ public class StoryNode : ScriptableObject
 
   [Tooltip("(Optional) Background music to play when this node is reached.")]
   public AudioClip backgroundMusic;
+
+  [Tooltip("The unlockable name to add.")]
+  public string unlocks;
 } 
 
 [System.Serializable]

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -121,8 +122,15 @@ public class MinigameManager : MonoBehaviour
     completionObject.SetActive(true);
   }
 
+  private Dictionary<string, string> currentSceneToNextUnlock = new Dictionary<string, string>
+  {
+    { "Nucleation", "SequenceAlignment" },
+    { "SequenceAlignment3", "Xray" },
+  };
+
   public void CloseCompletion()
   {
+    SceneManager.Instance.UnlockScene(currentSceneToNextUnlock[SceneManager.Instance.GetActiveScene()]);
     SceneManager.Instance.LoadScene("LevelSelect");
   }
 }
