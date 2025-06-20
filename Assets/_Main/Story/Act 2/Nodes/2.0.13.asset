@@ -15,3 +15,7 @@ MonoBehaviour:
   storyImage: {fileID: 21300000, guid: 63ac6e26caf22744d987761b46f1aa39, type: 3}
   choices: []
   nextPage: {fileID: 0}
+  dialogueText: 
+  narrationAudio: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  unlocks: Act3

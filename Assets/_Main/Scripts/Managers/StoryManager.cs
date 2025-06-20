@@ -23,6 +23,7 @@ public class StoryManager : MonoBehaviour
   {
     if (node == null)
     {
+      SceneManager.Instance.UnlockScene(currentNode.unlocks);
       SoundManager.Instance.StopBGM();
       SoundManager.Instance.StopAllSFX();
       SceneManager.Instance.LoadScene(nextSceneName);
