@@ -5,9 +5,9 @@ public class Ball : MonoBehaviour
     private Vector2 velocity;
     private bool hasBounced = false;
     private bool isTopBall;
+
     [SerializeField] private GameObject plusOnePrefab;
     [SerializeField] private GameObject missedPrefab;
-    [SerializeField] private GameObject wave;
 
     /// <summary>
     /// Call this right after Instantiate:
@@ -24,11 +24,14 @@ public class Ball : MonoBehaviour
     void Update()
     {
         transform.Translate(velocity * Time.deltaTime);
-        Vector2 perp = new Vector2(-velocity.y, velocity.x).normalized;
-        wave.transform.position = transform.position + (Vector3)(Mathf.Sin(Time.time * 20f) * perp * 0.1f);
+
         if (transform.position.x > 10f || transform.position.y < -5.5f)
         {
-            if (transform.position.y < -5.5f && !isTopBall) Instantiate(missedPrefab, transform.position + Vector3.up, Quaternion.identity);
+            if (transform.position.y < -5.5f && !isTopBall)
+            {
+                PaddleController.Instance.RegisterMiss();
+                Instantiate(missedPrefab, transform.position + Vector3.up, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }
@@ -45,7 +48,9 @@ public class Ball : MonoBehaviour
                 Instantiate(plusOnePrefab, transform.position, Quaternion.identity);
                 SoundManager.Instance.PlaySFX($"SFX-impact-simple-0{Random.Range(1, 4)}_wav");
             }
+
             MinigameManager.Instance.Score(1);
+            PaddleController.Instance.RegisterHit();
             hasBounced = true;
             velocity.y *= -1;
         }

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b652e25e6d993e146aef0e9b16b97655, type: 3}
   m_Name: 0.0.14
   m_EditorClassIdentifier: 
-  storyImage: {fileID: 21300000, guid: 61050d4578291884b800aea3cf2eea4e, type: 3}
+  storyImage: {fileID: 21300000, guid: a8c16da123d856b4492e4eb003f1dd4f, type: 3}
   choices: []
   nextPage: {fileID: 11400000, guid: e6fce2760d3ff244dbdbc716e494c83c, type: 2}
+  dialogueText: 
+  narrationAudio: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  unlocks: 
