@@ -81,6 +81,11 @@ public class StoryManager : MonoBehaviour
 
   public void NextPage()
   {
+    // Don't proceed, wait for button (choice) click
+    if (currentNode.nextPage == null && currentNode.choices.Count > 0)
+    {
+      return;
+    }
     DisplayNode(currentNode.nextPage);
   }
 }
