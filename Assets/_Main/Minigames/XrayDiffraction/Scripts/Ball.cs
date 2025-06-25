@@ -4,7 +4,7 @@ public class Ball : MonoBehaviour
 {
     private Vector2 velocity;
     private bool hasBounced = false;
-    private bool isTopBall;
+    public bool isTopBall;
 
     [SerializeField] private GameObject plusOnePrefab;
     [SerializeField] private GameObject missedPrefab;
@@ -46,13 +46,20 @@ public class Ball : MonoBehaviour
             if (!isTopBall)
             {
                 Instantiate(plusOnePrefab, transform.position, Quaternion.identity);
-                SoundManager.Instance.PlaySFX($"SFX-impact-simple-0{Random.Range(1, 4)}_wav");
             }
 
-            MinigameManager.Instance.Score(1);
-            PaddleController.Instance.RegisterHit();
+            HandlePaddleHit();
             hasBounced = true;
             velocity.y *= -1;
         }
+    }
+
+    protected virtual void HandlePaddleHit()
+    {
+        if (!isTopBall)
+        {
+            SoundManager.Instance.PlaySFX($"SFX-impact-simple-0{Random.Range(1, 4)}_wav");
+        }
+        PaddleController.Instance.RegisterHit();
     }
 }

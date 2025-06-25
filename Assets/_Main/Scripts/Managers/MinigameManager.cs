@@ -130,7 +130,10 @@ public class MinigameManager : MonoBehaviour
 
   public void CloseCompletion()
   {
-    SceneManager.Instance.UnlockScene(currentSceneToNextUnlock[SceneManager.Instance.GetActiveScene()]);
+    if (currentSceneToNextUnlock.ContainsKey(SceneManager.Instance.GetActiveScene()))
+    {
+      SceneManager.Instance.UnlockScene(currentSceneToNextUnlock[SceneManager.Instance.GetActiveScene()]);
+    }
     SceneManager.Instance.LoadScene("LevelSelect");
   }
 }

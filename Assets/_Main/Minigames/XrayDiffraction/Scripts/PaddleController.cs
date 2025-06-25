@@ -72,6 +72,7 @@ public class PaddleController : MonoBehaviour
         if (currentCombo % 2 == 0)
         {
             int pairCount = currentCombo / 2;
+            MinigameManager.Instance.Score(pairCount);
 
             if (pairCount >= 2)
             {
@@ -112,7 +113,7 @@ public class PaddleController : MonoBehaviour
 
     private IEnumerator PulseTextCoroutine(Transform textTransform, float duration = 0.3f, float maxScale = 1.5f)
     {
-        Vector3 originalScale = textTransform.localScale;
+        Vector3 originalScale = Vector3.one;
         float timer = 0f;
 
         while (timer < duration)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DifficultySettings
 {
-    public float spawnInterval;
+    public float roundGap;
     public float ballSpeed;
     public float paddleWidth;
     public float roundDuration;
@@ -16,14 +16,17 @@ public class BallSpawner : MonoBehaviour
 
     private readonly Dictionary<int, DifficultySettings> difficultyMap = new Dictionary<int, DifficultySettings>
 {
-    { 1, new DifficultySettings { spawnInterval = 0.8f, ballSpeed = 3f, paddleWidth = 1.8f, roundDuration = 3.5f } },
-    { 2, new DifficultySettings { spawnInterval = 0.7f, ballSpeed = 3.5f, paddleWidth = 1.5f, roundDuration = 3f } },
-    { 3, new DifficultySettings { spawnInterval = 0.6f, ballSpeed = 4.5f, paddleWidth = 1.2f, roundDuration = 2.5f } },
-    { 4, new DifficultySettings { spawnInterval = 0.5f, ballSpeed = 5.5f, paddleWidth = 1, roundDuration = 2f } },
-    { 5, new DifficultySettings { spawnInterval = 0.4f, ballSpeed = 6.5f, paddleWidth = 0.7f, roundDuration = 1.6f } },
+    { 1, new DifficultySettings { roundGap = 2.0f, ballSpeed = 4.5f, paddleWidth = 1.2f, roundDuration = 2.0f } },
+    { 2, new DifficultySettings { roundGap = 1.85f, ballSpeed = 5.0f, paddleWidth = 1.075f, roundDuration = 1.75f } },
+    { 3, new DifficultySettings { roundGap = 1.7f, ballSpeed = 5.5f, paddleWidth = 0.95f, roundDuration = 1.5f } },
+    { 4, new DifficultySettings { roundGap = 1.55f, ballSpeed = 6.0f, paddleWidth = 0.825f, roundDuration = 1.25f } },
+    { 5, new DifficultySettings { roundGap = 1.4f, ballSpeed = 6.5f, paddleWidth = 0.7f, roundDuration = 1.0f } },
 };
 
     public static BallSpawner Instance; // Add this line at the top
+
+    [Header("Speed Lines")]
+    [SerializeField] private GameObject[] speedLines;
 
     [Header("Bomb Settings")]
     [SerializeField] private GameObject bombPrefab;
@@ -32,8 +35,7 @@ public class BallSpawner : MonoBehaviour
 
     [Header("Prefabs & Timing")]
     public GameObject ballPrefab;
-    private const float ballSpeed = 5f;
-    private const float spawnInterval = 0.5f;
+    public GameObject evilPhotonPrefab;
 
     [Header("Bounds for Waypoints")]
     private const float targetMinX = -7f, targetMaxX = +8.5f;
@@ -50,6 +52,8 @@ public class BallSpawner : MonoBehaviour
     private Vector3 sourcePosition;
     private Vector3 targetPosition;
 
+    public Sprite completionSprite;
+
     private DifficultySettings currentSettings;
 
     void Awake()
@@ -57,26 +61,45 @@ public class BallSpawner : MonoBehaviour
         Instance = this;
     }
 
-    void Start()
+    public void SetDifficulty(int newDifficulty)
     {
-        DifficultySettings settings = difficultyMap[Mathf.Clamp(difficulty, 1, 5)];
+        difficulty = Mathf.Clamp(newDifficulty, 1, 5);
+        foreach (var line in speedLines)
+        {
+            line.SetActive(false);
+        }
 
+        if (difficulty > 1) speedLines[difficulty - 2].SetActive(true);
+
+        DifficultySettings settings = difficultyMap[difficulty];
         // Apply paddle width
         PaddleController.Instance.SetPaddleWidth(settings.paddleWidth);
-
-        // Store for use in spawn loop
         currentSettings = settings;
+    }
 
-        MinigameManager.Instance.Initialize(60f, true, true);
+    void Start()
+    {
+        SetDifficulty(1);
+        MinigameManager.Instance.Initialize(60f, true, true, completionSprite, "Good job", 500);
         MinigameManager.Instance.StartGame();
         StartCoroutine(RoundLoop());
         StartCoroutine(BombSpawnerLoop());
+        StartCoroutine(LevelUpRoutine());
+
+
     }
 
-    public void IncreaseDifficulty()
+    private IEnumerator LevelUpRoutine()
     {
-        difficulty = Mathf.Clamp(difficulty + 1, 1, 5);
-        Debug.Log($"Difficulty increased to {difficulty}");
+        while (difficulty < 5)
+        {
+            yield return new WaitForSeconds(12f);
+
+            if (difficulty < 5)
+            {
+                SetDifficulty(difficulty + 1);
+            }
+        }
     }
 
     private IEnumerator BombSpawnerLoop()
@@ -103,6 +126,7 @@ public class BallSpawner : MonoBehaviour
     {
         while (true)
         {
+            // Set this wave's start/end positions
             sourcePosition = new Vector3(
                 initialSourcePosition.x,
                 Random.Range(sourceMinY, sourceMaxY),
@@ -126,44 +150,47 @@ public class BallSpawner : MonoBehaviour
                 0f
             );
 
-            float elapsed = 0f;
-            float nextSpawn = 0f;
-            float roundDuration = currentSettings.roundDuration;
+            // Choose number of ball pairs this wave
+            int numBallPairs = Random.Range(3, 6); // 3 to 5 inclusive
 
-            while (elapsed < roundDuration)
+            // Time between each ball pair
+            float spawnInterval = currentSettings.roundDuration / numBallPairs;
+
+            // Decide if this wave is evil
+            bool thisWaveIsEvil = Random.value < 0.3f;
+
+            for (int i = 0; i < numBallPairs; i++)
             {
-                float t = elapsed / roundDuration;
+                // Lerp spawn and target points for this ball
+                float t = i / (float)(numBallPairs - 1);
                 sourcePosition = Vector3.Lerp(initialSourcePosition, roundDestSource, t);
                 targetPosition = Vector3.Lerp(initialTargetPosition, roundDestTarget, t);
 
-                if (elapsed >= nextSpawn)
-                {
-                    SpawnBallPair();
-                    nextSpawn += currentSettings.spawnInterval;
-                }
-
-                elapsed += Time.deltaTime;
-                yield return null;
+                SpawnBallPair(thisWaveIsEvil);
+                yield return new WaitForSeconds(spawnInterval);
             }
 
-            yield return new WaitForSeconds(3f);
+            // Wait before next wave
+            yield return new WaitForSeconds(currentSettings.roundGap);
         }
     }
 
-    private void SpawnBallPair()
+
+    private void SpawnBallPair(bool isEvilWave)
     {
         float halfOffset = verticalOffset * 0.5f;
+        GameObject toSpawn = isEvilWave ? evilPhotonPrefab : ballPrefab;
 
         // top ball
         Vector3 topStart = sourcePosition + Vector3.up * halfOffset;
         Vector2 topDir = (targetPosition + Vector3.up * halfOffset - topStart).normalized;
-        var top = Instantiate(ballPrefab, topStart, Quaternion.identity);
+        var top = Instantiate(toSpawn, topStart, Quaternion.identity);
         top.GetComponent<Ball>().Initialize(topDir, currentSettings.ballSpeed, true);
 
         // bottom ball
         Vector3 botStart = sourcePosition - Vector3.up * halfOffset;
         Vector2 botDir = (targetPosition - Vector3.up * halfOffset - botStart).normalized;
-        var bot = Instantiate(ballPrefab, botStart, Quaternion.identity);
+        var bot = Instantiate(toSpawn, botStart, Quaternion.identity);
         bot.GetComponent<Ball>().Initialize(botDir, currentSettings.ballSpeed, false);
     }
 }
