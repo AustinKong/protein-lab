@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f46d290ba47874facc3ac1d19e3629, type: 3}
+  m_Name: Sodium Acetate Buffer
+  m_EditorClassIdentifier: 
+  recipeName: Sodium Acetate Buffer
+  targetVolumeML: 1000
+  targetPH: 4.5
+  targetConductivity: 0
+  salt1Name: Sodium Acetate
+  salt1Amount: 820
+  salt2Name: 
+  salt2Amount: 0
+  acidName: Acetic Acid
+  acidVolumeML: 1
+  baseName: Sodium Hydroxide
+  baseForm: Solution
+  baseAmount: 1
+  useSmallScaleEquipment: 1
+  usesPelletBase: 0
+  sceneItemRequirements:
+  - sceneIndex: 1
+    titleName: Measuring De-ionised Water
+    items:
+    - instanceID: Measuring Cylinder
+      prefab: {fileID: 6191883985322689842, guid: 57a33835a55e8dc47826cde9e464fb67, type: 3}
+      uiPosition: {x: -803, y: -281}
+    - instanceID: De-ionised Water
+      prefab: {fileID: 1272571444800023944, guid: d32e9f117433ba9429d44635b83a9b75, type: 3}
+      uiPosition: {x: -492, y: -299}
+    - instanceID: GlassBottle800ml
+      prefab: {fileID: 4936263685472704893, guid: f2e3664a52f386d41b2904832e994f7f, type: 3}
+      uiPosition: {x: -164, y: -303}
+    - instanceID: Marker
+      prefab: {fileID: 4963125611447262513, guid: f85d2a9db36e0b44fa7bca73528010a7, type: 3}
+      uiPosition: {x: 194, y: -443}
+    stepDescriptions:
+    - Pour 1000 mL deionised water into the measuring cylinder and transfer it to
+      the bottle.
+    - Mark the water level on the bottle using the marker.
+    - Repeat with 800 mL deionised water for backup.
+  - sceneIndex: 2
+    titleName: Buffer Salt Addition and Dissolution
+    items:
+    - instanceID: MagneticStirringPlate
+      prefab: {fileID: 3696917504562782137, guid: 1cc37c6c12f736b449281a656ac17bae, type: 3}
+      uiPosition: {x: 320, y: -245}
+    - instanceID: GlassBottle800ml
+      prefab: {fileID: 4936263685472704893, guid: 1b381da6737fc5c42a101c58b56f602f, type: 3}
+      uiPosition: {x: -482, y: -272}
+    - instanceID: MagneticStirrer
+      prefab: {fileID: 2991022772643766926, guid: b5491d707dcb2ae4aa6cb2d49ae54c47, type: 3}
+      uiPosition: {x: 163, y: 494}
+    - instanceID: SodiumAcetate
+      prefab: {fileID: 1704442064474389651, guid: 08514fbf4a68db64d90f9535753c3fad, type: 3}
+      uiPosition: {x: -800, y: -385}
+    - instanceID: BottleCap
+      prefab: {fileID: 7091436740186135957, guid: 8def7b7cc1be9a64a8856bd380d2a6f2, type: 3}
+      uiPosition: {x: -796, y: -201}
+    stepDescriptions:
+    - Place a clean magnetic stirrer  into the de-ionised water.
+    - 'Add Sodium Acetate (quantity: 820) into the de-ionised water.'
+    - Cap the bottle.
+    - Place the bottle on the stirring plate. Switch on the magnetic stirring until
+      all salt is completely dissolved.
+  - sceneIndex: 3
+    titleName: pH Adjustment and Verification
+    items:
+    - instanceID: pH Screen
+      prefab: {fileID: 5701036040770836415, guid: 3d1aee5afdbd1cb489cb9cc3cf904dad, type: 3}
+      uiPosition: {x: 801, y: 155}
+    - instanceID: AceticAcid
+      prefab: {fileID: 4388069939357479075, guid: e1c2134601b02d8489df72f755be727f, type: 3}
+      uiPosition: {x: -565, y: -349}
+    - instanceID: BottleCap
+      prefab: {fileID: 7091436740186135957, guid: 8def7b7cc1be9a64a8856bd380d2a6f2, type: 3}
+      uiPosition: {x: -814, y: -3}
+    - instanceID: CentrifugeTube
+      prefab: {fileID: 5686105626935759946, guid: a0fb9d41eeb039c4eb87c057d1eac0db, type: 3}
+      uiPosition: {x: -392, y: -402}
+    - instanceID: MagneticStirringPlate
+      prefab: {fileID: 3696917504562782137, guid: 1cc37c6c12f736b449281a656ac17bae, type: 3}
+      uiPosition: {x: 281, y: -282}
+    - instanceID: pH Probe
+      prefab: {fileID: 2944646707861233072, guid: 512a091833818e1478dcfcf6d44a26f9, type: 3}
+      uiPosition: {x: 578, y: 167}
+    - instanceID: GlassBottle800ml
+      prefab: {fileID: 4936263685472704893, guid: 8834aeb026f68d74a99575b9efe1bd84, type: 3}
+      uiPosition: {x: -814, y: -314}
+    - instanceID: Pipette
+      prefab: {fileID: 3333259507649346958, guid: 9b5543d56c2aa8e46a934e427fd7677c, type: 3}
+      uiPosition: {x: -319, y: -92}
+    - instanceID: Dropper
+      prefab: {fileID: 6777109884694755269, guid: 9c8dac6bea686d84a988ed8898515b7c, type: 3}
+      uiPosition: {x: -247, y: -409}
+    stepDescriptions:
+    - Add 1ml Acetic Acid into the mixture.
+    - Cap the bottle
+    - 'Place it on the stirring plate. Switch on the magnetic stirring (speed: 1000rmp;
+      time: 5mins).'
+    - Transfer a sample of the mixture from the bottle to a centrifuge tube
+    - Insert the pH probe into the sample to check its pH.
+    - Adjust the pH of the mixture in the glass bottle  to achieve the target pH(4.5).
+  - sceneIndex: 4
+    titleName: Magnetic Stirrer Retrieval and Final Volume Adjustment
+    items:
+    - instanceID: GlassBottle
+      prefab: {fileID: 4936263685472704893, guid: 8834aeb026f68d74a99575b9efe1bd84, type: 3}
+      uiPosition: {x: -436, y: -272}
+    - instanceID: Magnetic Rod
+      prefab: {fileID: 224446933530391813, guid: 0e6cf5091e0c4ad4eada57a73f030d3b, type: 3}
+      uiPosition: {x: -192, y: -353}
+    - instanceID: De-ionised Water
+      prefab: {fileID: 1272571444800023944, guid: d32e9f117433ba9429d44635b83a9b75, type: 3}
+      uiPosition: {x: -765, y: -272}
+    stepDescriptions:
+    - Retrieve the magnetic stirrer from the mixture using a magnetic rod
+    - Top up the solution inside the glass bottle with de-ionised water until the
+      water level marked
+  - sceneIndex: 5
+    titleName: Conductivity Measurement
+    items:
+    - instanceID: GlassBottle
+      prefab: {fileID: 4936263685472704893, guid: 303b9fff5bdba42428e24606819661fd, type: 3}
+      uiPosition: {x: -436, y: -272}
+    - instanceID: Pipette
+      prefab: {fileID: 3333259507649346958, guid: 9b5543d56c2aa8e46a934e427fd7677c, type: 3}
+      uiPosition: {x: -192, y: -353}
+    - instanceID: Centrifuge Tube
+      prefab: {fileID: 5686105626935759946, guid: a0fb9d41eeb039c4eb87c057d1eac0db, type: 3}
+      uiPosition: {x: 122.3, y: -353}
+    - instanceID: Conductivity Probe
+      prefab: {fileID: 6891656437369532218, guid: 82a697525a31e0943b1893c77f2fd871, type: 3}
+      uiPosition: {x: 212, y: 229}
+    stepDescriptions:
+    - Transfer a sample of the mixture  from the bottle to a centrifuge tube .
+    - Insert the conductivity probe into the sample to measure its conductivity
