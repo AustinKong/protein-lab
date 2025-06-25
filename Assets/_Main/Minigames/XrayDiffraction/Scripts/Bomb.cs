@@ -50,6 +50,7 @@ public class Bomb : MonoBehaviour
 
             PaddleController.Instance.RegisterMiss();       // Reset combo
             PaddleController.Instance.LockPaddle(1f);       // 🔐 Lock for 1 second
+            SoundManager.Instance.PlaySFX("DM-CGS-17");
 
             Destroy(gameObject);
         }

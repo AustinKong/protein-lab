@@ -1,0 +1,1196 @@
+fileFormatVersion: 2
+guid: 58a59c74d5e01324eafb639498eaa4c5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6256725665901173023
+    second: SpeedLines2_0
+  - first:
+      213: -1142783232973342568
+    second: SpeedLines2_1
+  - first:
+      213: 688867770708924949
+    second: SpeedLines2_2
+  - first:
+      213: -6041436792215651461
+    second: SpeedLines2_3
+  - first:
+      213: -8633148762684117881
+    second: SpeedLines2_4
+  - first:
+      213: 7915942510877536529
+    second: SpeedLines2_5
+  - first:
+      213: -7720381526360293527
+    second: SpeedLines2_6
+  - first:
+      213: -9062233343720687571
+    second: SpeedLines2_7
+  - first:
+      213: 1516144659511784091
+    second: SpeedLines2_8
+  - first:
+      213: 988678894343003240
+    second: SpeedLines2_9
+  - first:
+      213: 881873502608307030
+    second: SpeedLines2_10
+  - first:
+      213: -8908938725835018771
+    second: SpeedLines2_11
+  - first:
+      213: 3781965471702886365
+    second: SpeedLines2_12
+  - first:
+      213: -1114754897654588916
+    second: SpeedLines2_13
+  - first:
+      213: 4492824393725192076
+    second: SpeedLines2_14
+  - first:
+      213: -1946144761912859624
+    second: SpeedLines2_15
+  - first:
+      213: 8804123079593886237
+    second: SpeedLines2_16
+  - first:
+      213: 8848275762444299729
+    second: SpeedLines2_17
+  - first:
+      213: 8088983399900053289
+    second: SpeedLines2_18
+  - first:
+      213: 5304704770171875867
+    second: SpeedLines2_19
+  - first:
+      213: -3514229126473882339
+    second: SpeedLines2_20
+  - first:
+      213: 6041722903070660823
+    second: SpeedLines2_21
+  - first:
+      213: 8774039179676874450
+    second: SpeedLines2_22
+  - first:
+      213: -3128659572578558304
+    second: SpeedLines2_23
+  - first:
+      213: 5937285794015080602
+    second: SpeedLines2_24
+  - first:
+      213: 2204414788696713095
+    second: SpeedLines2_25
+  - first:
+      213: -799608552454887819
+    second: SpeedLines2_26
+  - first:
+      213: 2204610533696090589
+    second: SpeedLines2_27
+  - first:
+      213: -4505575934162326375
+    second: SpeedLines2_28
+  - first:
+      213: -6180058450098798086
+    second: SpeedLines2_29
+  - first:
+      213: 8543695906274467324
+    second: SpeedLines2_30
+  - first:
+      213: 112886773722985773
+    second: SpeedLines2_31
+  - first:
+      213: 7505287287093498545
+    second: SpeedLines2_32
+  - first:
+      213: 4979685354844625460
+    second: SpeedLines2_33
+  - first:
+      213: -8607201660678329901
+    second: SpeedLines2_34
+  - first:
+      213: -8811648030546291799
+    second: SpeedLines2_35
+  - first:
+      213: 7306025003870837244
+    second: SpeedLines2_36
+  - first:
+      213: 8181193187447827555
+    second: SpeedLines2_37
+  - first:
+      213: 7647469357861257017
+    second: SpeedLines2_38
+  - first:
+      213: -1590321505040565552
+    second: SpeedLines2_39
+  - first:
+      213: -248873655858584414
+    second: SpeedLines2_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpeedLines2_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 967
+        width: 78
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19db15f7da54d650800000000000000
+      internalID: 6256725665901173023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 880
+        width: 166
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898f95f44b40420f0800000000000000
+      internalID: -1142783232973342568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 969
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a125276995f8900800000000000000
+      internalID: 688867770708924949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_3
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 905
+        width: 104
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7bb2031f31882ca0800000000000000
+      internalID: -6041436792215651461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_4
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 946
+        width: 51
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c2c13d0f4e03880800000000000000
+      internalID: -8633148762684117881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_5
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 848
+        width: 84
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111f44fe5c31bdd60800000000000000
+      internalID: 7915942510877536529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_6
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 982
+        width: 15
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f7ec6f7e1bbd490800000000000000
+      internalID: -7720381526360293527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_7
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 967
+        width: 81
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d28f3d3a9ca7c3280800000000000000
+      internalID: -9062233343720687571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_8
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 900
+        width: 36
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b923e42f88d6a0510800000000000000
+      internalID: 1516144659511784091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_9
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 919
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c9d36573e78bd00800000000000000
+      internalID: 988678894343003240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_10
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 1004
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6533ccb374b0d3c00800000000000000
+      internalID: 881873502608307030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_11
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 891
+        width: 129
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dede1e03e671d5480800000000000000
+      internalID: -8908938725835018771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_12
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 845
+        width: 200
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd7a4ad0f8d3c7430800000000000000
+      internalID: 3781965471702886365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_13
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 833
+        width: 253
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0adba9a3589780f0800000000000000
+      internalID: -1114754897654588916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 807
+        width: 255
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87233a6bf7b95e30800000000000000
+      internalID: 4492824393725192076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 805
+        width: 167
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81462b076a7edf4e0800000000000000
+      internalID: -1946144761912859624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_16
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 874
+        width: 43
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d12030e6b478e2a70800000000000000
+      internalID: 8804123079593886237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_17
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 855
+        width: 200
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dde03ffce36bca70800000000000000
+      internalID: 8848275762444299729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 54
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ff2118b87d14070800000000000000
+      internalID: 8088983399900053289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_19
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 626
+        width: 162
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b123a6802e81e9940800000000000000
+      internalID: 5304704770171875867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_20
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 573
+        width: 137
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1561398a33fa3fc0800000000000000
+      internalID: -3514229126473882339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 500
+        width: 93
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d85edc48f288d350800000000000000
+      internalID: 6041722903070660823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 333
+        width: 122
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6fff5a526a3c970800000000000000
+      internalID: 8774039179676874450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 330
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae5451f1b4c494d0800000000000000
+      internalID: -3128659572578558304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_24
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 337
+        width: 195
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90fd3af8f9756250800000000000000
+      internalID: 5937285794015080602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_25
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 323
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 787a2e12297a79e10800000000000000
+      internalID: 2204414788696713095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_26
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 443
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 576ef8f024837e4f0800000000000000
+      internalID: -799608552454887819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 265
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd13a019999589e10800000000000000
+      internalID: 2204610533696090589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_28
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 177
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ca4b73f8af871c0800000000000000
+      internalID: -4505575934162326375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_29
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 0
+        width: 133
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1c5be35950c3aa0800000000000000
+      internalID: -6180058450098798086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_30
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 0
+        width: 88
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdd27a092e419670800000000000000
+      internalID: 8543695906274467324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_31
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 0
+        width: 141
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25399f2ced019100800000000000000
+      internalID: 112886773722985773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_32
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 0
+        width: 29
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2967cd503282860800000000000000
+      internalID: 7505287287093498545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_33
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 0
+        width: 17
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a9abc52756b1540800000000000000
+      internalID: 4979685354844625460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_34
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 0
+        width: 6
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d9ad1941b31d8880800000000000000
+      internalID: -8607201660678329901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_35
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 0
+        width: 32
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a394856dccb6b580800000000000000
+      internalID: -8811648030546291799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_36
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 0
+        width: 56
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9d7d33807346560800000000000000
+      internalID: 7306025003870837244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_37
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 0
+        width: 188
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36c6ca0bbdf698170800000000000000
+      internalID: 8181193187447827555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_38
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 72
+        width: 367
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f310aecd4412a60800000000000000
+      internalID: 7647469357861257017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_39
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 76
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da746d540b0ee9e0800000000000000
+      internalID: -1590321505040565552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpeedLines2_40
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 0
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a4a8948ab2db8cf0800000000000000
+      internalID: -248873655858584414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpeedLines2_0: 6256725665901173023
+      SpeedLines2_1: -1142783232973342568
+      SpeedLines2_10: 881873502608307030
+      SpeedLines2_11: -8908938725835018771
+      SpeedLines2_12: 3781965471702886365
+      SpeedLines2_13: -1114754897654588916
+      SpeedLines2_14: 4492824393725192076
+      SpeedLines2_15: -1946144761912859624
+      SpeedLines2_16: 8804123079593886237
+      SpeedLines2_17: 8848275762444299729
+      SpeedLines2_18: 8088983399900053289
+      SpeedLines2_19: 5304704770171875867
+      SpeedLines2_2: 688867770708924949
+      SpeedLines2_20: -3514229126473882339
+      SpeedLines2_21: 6041722903070660823
+      SpeedLines2_22: 8774039179676874450
+      SpeedLines2_23: -3128659572578558304
+      SpeedLines2_24: 5937285794015080602
+      SpeedLines2_25: 2204414788696713095
+      SpeedLines2_26: -799608552454887819
+      SpeedLines2_27: 2204610533696090589
+      SpeedLines2_28: -4505575934162326375
+      SpeedLines2_29: -6180058450098798086
+      SpeedLines2_3: -6041436792215651461
+      SpeedLines2_30: 8543695906274467324
+      SpeedLines2_31: 112886773722985773
+      SpeedLines2_32: 7505287287093498545
+      SpeedLines2_33: 4979685354844625460
+      SpeedLines2_34: -8607201660678329901
+      SpeedLines2_35: -8811648030546291799
+      SpeedLines2_36: 7306025003870837244
+      SpeedLines2_37: 8181193187447827555
+      SpeedLines2_38: 7647469357861257017
+      SpeedLines2_39: -1590321505040565552
+      SpeedLines2_4: -8633148762684117881
+      SpeedLines2_40: -248873655858584414
+      SpeedLines2_5: 7915942510877536529
+      SpeedLines2_6: -7720381526360293527
+      SpeedLines2_7: -9062233343720687571
+      SpeedLines2_8: 1516144659511784091
+      SpeedLines2_9: 988678894343003240
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
