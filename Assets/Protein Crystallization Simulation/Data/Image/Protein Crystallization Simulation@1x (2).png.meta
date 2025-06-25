@@ -1,0 +1,1055 @@
+fileFormatVersion: 2
+guid: f34ea2daeca903e47b9e58db2b59381e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2733402554350782912
+    second: Protein Crystallization Simulation@1x (2)_0
+  - first:
+      213: 2123560355793344630
+    second: Protein Crystallization Simulation@1x (2)_1
+  - first:
+      213: -5607985853504550635
+    second: Protein Crystallization Simulation@1x (2)_2
+  - first:
+      213: 2212022746001132357
+    second: Protein Crystallization Simulation@1x (2)_3
+  - first:
+      213: 1848037840061057655
+    second: Protein Crystallization Simulation@1x (2)_4
+  - first:
+      213: -8627772747351923994
+    second: Protein Crystallization Simulation@1x (2)_5
+  - first:
+      213: 2575492635833780663
+    second: Protein Crystallization Simulation@1x (2)_6
+  - first:
+      213: 4966199259714766505
+    second: Protein Crystallization Simulation@1x (2)_7
+  - first:
+      213: -486654173397950302
+    second: Protein Crystallization Simulation@1x (2)_8
+  - first:
+      213: -7760716160420757315
+    second: Protein Crystallization Simulation@1x (2)_9
+  - first:
+      213: 6382556427509594762
+    second: Protein Crystallization Simulation@1x (2)_10
+  - first:
+      213: 983338858829789140
+    second: Protein Crystallization Simulation@1x (2)_11
+  - first:
+      213: -3478831819677624505
+    second: Protein Crystallization Simulation@1x (2)_12
+  - first:
+      213: -7284922524155117508
+    second: Protein Crystallization Simulation@1x (2)_13
+  - first:
+      213: 125906589217209221
+    second: Protein Crystallization Simulation@1x (2)_14
+  - first:
+      213: -5526445861844363647
+    second: Protein Crystallization Simulation@1x (2)_15
+  - first:
+      213: 1141973662868922252
+    second: Protein Crystallization Simulation@1x (2)_16
+  - first:
+      213: -3143678440908359605
+    second: Protein Crystallization Simulation@1x (2)_17
+  - first:
+      213: 5645362379333490687
+    second: Protein Crystallization Simulation@1x (2)_18
+  - first:
+      213: -2768434401979431458
+    second: Protein Crystallization Simulation@1x (2)_19
+  - first:
+      213: 5222622698055749478
+    second: Protein Crystallization Simulation@1x (2)_20
+  - first:
+      213: -2429104514524296090
+    second: Protein Crystallization Simulation@1x (2)_21
+  - first:
+      213: 2990184812314591799
+    second: Protein Crystallization Simulation@1x (2)_22
+  - first:
+      213: 4661591655356755201
+    second: Protein Crystallization Simulation@1x (2)_23
+  - first:
+      213: -5178902717404701926
+    second: Protein Crystallization Simulation@1x (2)_24
+  - first:
+      213: -8477853841677085606
+    second: Protein Crystallization Simulation@1x (2)_25
+  - first:
+      213: -6958531304928387322
+    second: Protein Crystallization Simulation@1x (2)_26
+  - first:
+      213: -8303325847568189122
+    second: Protein Crystallization Simulation@1x (2)_27
+  - first:
+      213: 1016656429328654152
+    second: Protein Crystallization Simulation@1x (2)_28
+  - first:
+      213: 3309590862555768663
+    second: Protein Crystallization Simulation@1x (2)_29
+  - first:
+      213: -2010801268495130812
+    second: Protein Crystallization Simulation@1x (2)_30
+  - first:
+      213: 7341547606664974796
+    second: Protein Crystallization Simulation@1x (2)_31
+  - first:
+      213: 6298810400326363482
+    second: Protein Crystallization Simulation@1x (2)_32
+  - first:
+      213: 8541735124295976974
+    second: Protein Crystallization Simulation@1x (2)_33
+  - first:
+      213: -4707942937661220471
+    second: Protein Crystallization Simulation@1x (2)_34
+  - first:
+      213: 2678405068662885729
+    second: Protein Crystallization Simulation@1x (2)_35
+  - first:
+      213: -7136004479884965582
+    second: Protein Crystallization Simulation@1x (2)_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 77
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 046b6c7ebd0011ad0800000000000000
+      internalID: -2733402554350782912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 30
+        width: 57
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6781a2a74e6687d10800000000000000
+      internalID: 2123560355793344630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_2
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 113
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5190270249e6c22b0800000000000000
+      internalID: -5607985853504550635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_3
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 29
+        width: 88
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b4b7ab7fea2be10800000000000000
+      internalID: 2212022746001132357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_4
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 30
+        width: 58
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ac15ccf9c85a910800000000000000
+      internalID: 1848037840061057655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_5
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 30
+        width: 39
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2ea4fe56ef34880800000000000000
+      internalID: -8627772747351923994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_6
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 30
+        width: 39
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9c18028ecfdb320800000000000000
+      internalID: 2575492635833780663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_7
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 113
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a64b172aeb7be440800000000000000
+      internalID: 4966199259714766505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_8
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 30
+        width: 57
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a067229b9e0f39f0800000000000000
+      internalID: -486654173397950302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_9
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 113
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0cc7725c56c4490800000000000000
+      internalID: -7760716160420757315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_10
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 29
+        width: 74
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a789c2145639850800000000000000
+      internalID: 6382556427509594762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_11
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 113
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7336e6b7585ad00800000000000000
+      internalID: 983338858829789140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_12
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 30
+        width: 38
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7471ac244e4b8bfc0800000000000000
+      internalID: -3478831819677624505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_13
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 30
+        width: 57
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c300e7bbf81c6ea90800000000000000
+      internalID: -7284922524155117508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_14
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 113
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58b3c25306f4fb100800000000000000
+      internalID: 125906589217209221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_15
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 30
+        width: 55
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186d65ed4ce1e43b0800000000000000
+      internalID: -5526445861844363647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_16
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 29
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f5726fefa19df00800000000000000
+      internalID: 1141973662868922252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_17
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 29
+        width: 74
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b487a992d196f54d0800000000000000
+      internalID: -3143678440908359605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_18
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 30
+        width: 24
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff7d6807c2b585e40800000000000000
+      internalID: 5645362379333490687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_19
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 30
+        width: 73
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed58b06449b8499d0800000000000000
+      internalID: -2768434401979431458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_20
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 30
+        width: 55
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f41895cab7a7840800000000000000
+      internalID: 5222622698055749478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_21
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 0
+        width: 79
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c4b7160561a4ed0800000000000000
+      internalID: -2429104514524296090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_22
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 29
+        width: 61
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73287ce7e354f7920800000000000000
+      internalID: 2990184812314591799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_23
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 31
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10de67199ec41b040800000000000000
+      internalID: 4661591655356755201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_24
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 30
+        width: 25
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b99c2ea67d028b0800000000000000
+      internalID: -5178902717404701926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_25
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 30
+        width: 74
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54182d39dc985a80800000000000000
+      internalID: -8477853841677085606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_26
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 31
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60fde4365a45e6f90800000000000000
+      internalID: -6958531304928387322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_27
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 30
+        width: 24
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e39f0617229a4cc80800000000000000
+      internalID: -8303325847568189122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_28
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 29
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84f50c0d2a3eb1e00800000000000000
+      internalID: 1016656429328654152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_29
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 30
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757e382ca570eed20800000000000000
+      internalID: 3309590862555768663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_30
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 30
+        width: 24
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f517566e23814e0800000000000000
+      internalID: -2010801268495130812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_31
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 30
+        width: 107
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc192eca6aa62e560800000000000000
+      internalID: 7341547606664974796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_32
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 30
+        width: 72
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a592df2cfaed96750800000000000000
+      internalID: 6298810400326363482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_33
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 31
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e088329e6d65a8670800000000000000
+      internalID: 8541735124295976974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_34
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 30
+        width: 25
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989d4e987d60aaeb0800000000000000
+      internalID: -4707942937661220471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_35
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 29
+        width: 78
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16dc14a183b9b2520800000000000000
+      internalID: 2678405068662885729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protein Crystallization Simulation@1x (2)_36
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 30
+        width: 71
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2394cd4dbb1d7fc90800000000000000
+      internalID: -7136004479884965582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
