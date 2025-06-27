@@ -14,4 +14,13 @@ public class EvilPhoton : Ball
         // Destroy the photon
         Destroy(gameObject);
     }
+
+    protected override void HandleMissed()
+    {
+        if (!isTopBall)
+        {
+            SoundManager.Instance.PlaySFX("DM-CGS-16");
+        }
+        PaddleController.Instance.RegisterHit();
+    }
 }

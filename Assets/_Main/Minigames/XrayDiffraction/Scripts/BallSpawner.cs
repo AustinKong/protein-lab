@@ -8,6 +8,7 @@ public class DifficultySettings
     public float ballSpeed;
     public float paddleWidth;
     public float roundDuration;
+    public int bombSpawnCount; 
 }
 
 public class BallSpawner : MonoBehaviour
@@ -15,13 +16,13 @@ public class BallSpawner : MonoBehaviour
     public int difficulty = 3; // 1 (easiest) to 5 (hardest)
 
     private readonly Dictionary<int, DifficultySettings> difficultyMap = new Dictionary<int, DifficultySettings>
-{
-    { 1, new DifficultySettings { roundGap = 2.0f, ballSpeed = 4.5f, paddleWidth = 1.2f, roundDuration = 2.0f } },
-    { 2, new DifficultySettings { roundGap = 1.85f, ballSpeed = 5.0f, paddleWidth = 1.075f, roundDuration = 1.75f } },
-    { 3, new DifficultySettings { roundGap = 1.7f, ballSpeed = 5.5f, paddleWidth = 0.95f, roundDuration = 1.5f } },
-    { 4, new DifficultySettings { roundGap = 1.55f, ballSpeed = 6.0f, paddleWidth = 0.825f, roundDuration = 1.25f } },
-    { 5, new DifficultySettings { roundGap = 1.4f, ballSpeed = 6.5f, paddleWidth = 0.7f, roundDuration = 1.0f } },
-};
+    {
+        { 1, new DifficultySettings { roundGap = 2.0f, ballSpeed = 4.5f, paddleWidth = 1.2f, roundDuration = 2.0f, bombSpawnCount = 1 } },
+        { 2, new DifficultySettings { roundGap = 1.85f, ballSpeed = 5.0f, paddleWidth = 1.075f, roundDuration = 1.75f, bombSpawnCount = 1 } },
+        { 3, new DifficultySettings { roundGap = 1.7f, ballSpeed = 5.5f, paddleWidth = 0.95f, roundDuration = 1.5f, bombSpawnCount = 2 } },
+        { 4, new DifficultySettings { roundGap = 1.55f, ballSpeed = 6.0f, paddleWidth = 0.825f, roundDuration = 1.25f, bombSpawnCount = 2 } },
+        { 5, new DifficultySettings { roundGap = 1.4f, ballSpeed = 6.5f, paddleWidth = 0.7f, roundDuration = 1.0f, bombSpawnCount = 3 } },
+    };
 
     public static BallSpawner Instance; // Add this line at the top
 
@@ -109,7 +110,12 @@ public class BallSpawner : MonoBehaviour
             float wait = Random.Range(bombIntervalMin, bombIntervalMax);
             yield return new WaitForSeconds(wait);
 
-            SpawnBomb();
+            for (int i = 0; i < currentSettings.bombSpawnCount; i++)
+            {
+                SpawnBomb();
+            }
+            yield return new WaitForSeconds(0.5f);
+            SoundManager.Instance.PlaySFX("DM-CGS-06");
         }
     }
 

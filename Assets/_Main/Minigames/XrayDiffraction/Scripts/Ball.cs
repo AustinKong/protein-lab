@@ -27,10 +27,13 @@ public class Ball : MonoBehaviour
 
         if (transform.position.x > 10f || transform.position.y < -5.5f)
         {
-            if (transform.position.y < -5.5f && !isTopBall)
+            if (transform.position.y < -5.5f)
             {
-                PaddleController.Instance.RegisterMiss();
-                Instantiate(missedPrefab, transform.position + Vector3.up, Quaternion.identity);
+                HandleMissed();
+                if (!isTopBall)
+                {
+                    Instantiate(missedPrefab, transform.position + Vector3.up, Quaternion.identity);
+                }
             }
             Destroy(gameObject);
         }
@@ -61,5 +64,10 @@ public class Ball : MonoBehaviour
             SoundManager.Instance.PlaySFX($"SFX-impact-simple-0{Random.Range(1, 4)}_wav");
         }
         PaddleController.Instance.RegisterHit();
+    }
+
+    protected virtual void HandleMissed()
+    {
+        PaddleController.Instance.RegisterMiss();
     }
 }
