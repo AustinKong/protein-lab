@@ -10,7 +10,6 @@ public class EvilPhoton : Ball
         }
         // Evil behavior: break combo and lock paddle
         PaddleController.Instance.RegisterMiss();
-        PaddleController.Instance.LockPaddle(1f);
 
         // Destroy the photon
         Destroy(gameObject);
