@@ -217,6 +217,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1047,7 +1060,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Protein Crystallization Simulation@1x (2)_0: -2733402554350782912
+      Protein Crystallization Simulation@1x (2)_1: 2123560355793344630
+      Protein Crystallization Simulation@1x (2)_10: 6382556427509594762
+      Protein Crystallization Simulation@1x (2)_11: 983338858829789140
+      Protein Crystallization Simulation@1x (2)_12: -3478831819677624505
+      Protein Crystallization Simulation@1x (2)_13: -7284922524155117508
+      Protein Crystallization Simulation@1x (2)_14: 125906589217209221
+      Protein Crystallization Simulation@1x (2)_15: -5526445861844363647
+      Protein Crystallization Simulation@1x (2)_16: 1141973662868922252
+      Protein Crystallization Simulation@1x (2)_17: -3143678440908359605
+      Protein Crystallization Simulation@1x (2)_18: 5645362379333490687
+      Protein Crystallization Simulation@1x (2)_19: -2768434401979431458
+      Protein Crystallization Simulation@1x (2)_2: -5607985853504550635
+      Protein Crystallization Simulation@1x (2)_20: 5222622698055749478
+      Protein Crystallization Simulation@1x (2)_21: -2429104514524296090
+      Protein Crystallization Simulation@1x (2)_22: 2990184812314591799
+      Protein Crystallization Simulation@1x (2)_23: 4661591655356755201
+      Protein Crystallization Simulation@1x (2)_24: -5178902717404701926
+      Protein Crystallization Simulation@1x (2)_25: -8477853841677085606
+      Protein Crystallization Simulation@1x (2)_26: -6958531304928387322
+      Protein Crystallization Simulation@1x (2)_27: -8303325847568189122
+      Protein Crystallization Simulation@1x (2)_28: 1016656429328654152
+      Protein Crystallization Simulation@1x (2)_29: 3309590862555768663
+      Protein Crystallization Simulation@1x (2)_3: 2212022746001132357
+      Protein Crystallization Simulation@1x (2)_30: -2010801268495130812
+      Protein Crystallization Simulation@1x (2)_31: 7341547606664974796
+      Protein Crystallization Simulation@1x (2)_32: 6298810400326363482
+      Protein Crystallization Simulation@1x (2)_33: 8541735124295976974
+      Protein Crystallization Simulation@1x (2)_34: -4707942937661220471
+      Protein Crystallization Simulation@1x (2)_35: 2678405068662885729
+      Protein Crystallization Simulation@1x (2)_36: -7136004479884965582
+      Protein Crystallization Simulation@1x (2)_4: 1848037840061057655
+      Protein Crystallization Simulation@1x (2)_5: -8627772747351923994
+      Protein Crystallization Simulation@1x (2)_6: 2575492635833780663
+      Protein Crystallization Simulation@1x (2)_7: 4966199259714766505
+      Protein Crystallization Simulation@1x (2)_8: -486654173397950302
+      Protein Crystallization Simulation@1x (2)_9: -7760716160420757315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

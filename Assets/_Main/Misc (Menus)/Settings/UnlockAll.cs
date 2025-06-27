@@ -5,7 +5,8 @@ public class UnlockAll : MonoBehaviour
 {
     string[] scenesToUnlock = new string[]
     {
-        "Act1", "Act2", "Act3", "Nucleation", "SequenceAlignment", "Xray"
+        "Act1", "Act2", "Act3", "Nucleation", "SequenceAlignment", "Xray", "BufferPreparation", "SaltSolutionPreparation",
+        "ProteinSolutionPreparation", "ProteinCrystalisation"
     };
     void Start()
     {

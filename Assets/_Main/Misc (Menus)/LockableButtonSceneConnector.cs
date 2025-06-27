@@ -15,7 +15,7 @@ public class LockableButtonSceneConnector : MonoBehaviour
       lockOverlay.SetActive(false);
       GetComponent<Button>().onClick.AddListener(() =>
       {
-        SceneManager.Instance.LoadScene(sceneToLoad);
+        if (sceneToLoad != null && sceneToLoad != "") SceneManager.Instance.LoadScene(sceneToLoad);
         SoundManager.Instance.PlaySFX("SFX-impact-mechanical-01_wav");
       });
     }
