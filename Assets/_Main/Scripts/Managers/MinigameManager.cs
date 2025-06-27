@@ -16,6 +16,8 @@ public class MinigameManager : MonoBehaviour
   [SerializeField] private TMP_Text timerText;
   [SerializeField] private TMP_Text scoreText;
 
+  private RectTransform scoreTextRect;
+
   private int score = 0;
   private float timer = 0f;
   private bool useTimer = false;
@@ -34,6 +36,8 @@ public class MinigameManager : MonoBehaviour
     {
       Destroy(gameObject);
     }
+
+    scoreTextRect = scoreText.GetComponent<RectTransform>();
   }
 
   public void Initialize(
@@ -84,7 +88,36 @@ public class MinigameManager : MonoBehaviour
   {
     score += points;
     scoreText.text = score.ToString();
+    StartCoroutine(PopScoreText());
   }
+
+private IEnumerator PopScoreText()
+{
+    Vector3 startScale = Vector3.one;
+    Vector3 popScale = Vector3.one * 1.2f;
+    float duration = 0.1f;
+
+    // Scale up
+    float t = 0f;
+    while (t < duration)
+    {
+        t += Time.deltaTime;
+        scoreTextRect.localScale = Vector3.Lerp(startScale, popScale, t / duration);
+        yield return null;
+    }
+
+    // Scale down
+    t = 0f;
+    while (t < duration)
+    {
+        t += Time.deltaTime;
+        scoreTextRect.localScale = Vector3.Lerp(popScale, startScale, t / duration);
+        yield return null;
+    }
+
+    scoreTextRect.localScale = Vector3.one;
+}
+
 
   public void Completion()
   {
