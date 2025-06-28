@@ -2117,23 +2117,23 @@ MonoBehaviour:
   - text: "This game shows how Bragg's Law works with crystals.  Bragg's Law explains
       how light diffracts off crystals.\\n\\n You\u2019ll use two crystal paddles
       to control the way light bounces."
-    image: {fileID: 21300000, guid: fb188d7ee2bd11a47a3f0dbe82e3e83d, type: 3}
+    image: {fileID: 21300000, guid: 005e940bae58b8644991c3b3b52f1fec, type: 3}
   - text: Photons will fly in from the left side of the screen.\n\nYour job is to
       bounce them off the crystals to score points.
-    image: {fileID: 21300000, guid: 8c084b5ad9c2992439553b7b1d66870d, type: 3}
+    image: {fileID: 21300000, guid: 3cdd405fb920b2a4aa33696af0ec4c36, type: 3}
   - text: "When a photon hits the crystal at the right angle, it bounces off.\\n\\nThat\u2019s
       how diffraction works \u2014 just like Bragg's Law in real crystals."
-    image: {fileID: 21300000, guid: 66f1421a5baff794aa0faf7df8123bfd, type: 3}
+    image: {fileID: 21300000, guid: d204888a2773dc34aa7fe7d86e36f6c2, type: 3}
   - text: If you bounce photons over and over without missing, you build a combo.\n\nCombos
       increase your score quickly.
-    image: {fileID: 21300000, guid: 6db06f0666fdff24f9c19e2aca60fd42, type: 3}
+    image: {fileID: 21300000, guid: a29ec0a926c292e4d80e62dd6d9c30cb, type: 3}
   - text: "But be careful \u2014 not every photon is good.  Evil photons look different
       from the normal ones.\\n\\nIf you bounce an evil photon, your combo breaks
       right away."
-    image: {fileID: 21300000, guid: d0cdb450bd634e74cb00ecab9411a6ba, type: 3}
+    image: {fileID: 21300000, guid: 4a36ce9a67191084ebf7af2b4cf2c61b, type: 3}
   - text: "Watch the sky! Bombs will fall during the game.\\n\\nBombs are dangerous
       \u2014 avoid them at all costs."
-    image: {fileID: 21300000, guid: d0cdb450bd634e74cb00ecab9411a6ba, type: 3}
+    image: {fileID: 21300000, guid: 09cb0640191e1a448bc1f3ba4df9967f, type: 3}
 --- !u!4 &2098436809
 Transform:
   m_ObjectHideFlags: 0
