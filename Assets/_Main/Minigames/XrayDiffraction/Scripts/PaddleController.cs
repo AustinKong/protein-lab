@@ -17,6 +17,7 @@ public class PaddleController : MonoBehaviour
     [Header("Paddle Settings")]
     public Transform paddleParent;
     private const float moveSpeed = 10f;
+    private float paddleWidthMult = 1.0f;
     private float paddleWidth = 1.0f;
 
     private Camera mainCamera;
@@ -68,10 +69,10 @@ public class PaddleController : MonoBehaviour
     {
         currentCombo++;
 
-
         if (currentCombo % 2 == 0)
         {
             int pairCount = currentCombo / 2;
+            SetPaddleWidthMultiplier(pairCount * 0.1f + 1f);
             MinigameManager.Instance.Score(pairCount);
 
             if (pairCount >= 2)
@@ -103,6 +104,7 @@ public class PaddleController : MonoBehaviour
     private void ResetCombo()
     {
         currentCombo = 0;
+        SetPaddleWidthMultiplier(1f);
 
         // Hide all combo texts
         foreach (var text in comboTexts)
@@ -132,10 +134,15 @@ public class PaddleController : MonoBehaviour
     public void SetPaddleWidth(float width)
     {
         paddleWidth = width;
+        // Vector3 scale = paddleParent.localScale;
+        // scale.x = width;
+        paddleParent.localScale = new Vector3(paddleWidth * paddleWidthMult, 1, 1);
+    }
 
-        Vector3 scale = paddleParent.localScale;
-        scale.x = width;
-        paddleParent.localScale = scale;
+    public void SetPaddleWidthMultiplier(float multiplier)
+    {
+        paddleWidthMult = multiplier;
+        paddleParent.localScale = new Vector3(paddleWidth * paddleWidthMult, 1, 1);
     }
 
     public void LockPaddle(float duration)
