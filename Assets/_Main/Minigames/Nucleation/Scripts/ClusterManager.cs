@@ -53,6 +53,7 @@ public class ClusterManager : MonoBehaviour
     void Start()
     {
         MinigameManager.Instance.Initialize(120f, true, true, completionSprite, "Good job nucleating!", 30f);
+        Invoke(nameof(GameStart), 1f);
     }
 
     void Update()
@@ -315,16 +316,6 @@ public class ClusterManager : MonoBehaviour
             Molecule free = a.state == MoleculeState.Free ? a : b;
             free.transform.position = clustered.transform.position + (free.transform.position - clustered.transform.position).normalized * SPACING;
 
-            if (!isInitialized)
-            {
-                isInitialized = true;
-                Instantiate(gameStartText, GetClusterCenter(), Quaternion.identity);
-                MinigameManager.Instance.StartGame();
-                free.TriggerBounce(clustered);
-                SoundManager.Instance.PlaySFX("DM-CGS-36");
-                return;
-            }
-
             if (growthState == GrowthState.FreeForm)
             {
                 free.state = MoleculeState.Clustered;
@@ -350,6 +341,14 @@ public class ClusterManager : MonoBehaviour
             }
 
         }
+    }
+
+    private void GameStart()
+    {
+        isInitialized = true;
+        Instantiate(gameStartText, GetClusterCenter(), Quaternion.identity);
+        MinigameManager.Instance.StartGame();
+        SoundManager.Instance.PlaySFX("DM-CGS-36");
     }
 
     public void HandleIndicatorCollision(Molecule molecule)

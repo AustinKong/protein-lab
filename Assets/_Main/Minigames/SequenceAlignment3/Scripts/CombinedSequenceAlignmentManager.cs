@@ -108,7 +108,7 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
     private void SetTickDownTimerTrue()
     {
         timer = 10f;
-        timerText.text = $"{Math.Ceiling(timer)}s";
+        timerText.text = $"{Math.Ceiling(timer)}";
         tickDownTimer = true;
         submitButton.interactable = true;
         alignmentSlider.interactable = true;
@@ -124,12 +124,13 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
         if (timer <= 0f)
         {
             timer = 0f;
-            timerText.text = "0s";
+            timerText.text = "0";
             OnLevelSubmit();  // Auto-submit when time runs out
         }
         else
         {
-            timerText.text = $"{Math.Ceiling(timer)}s";
+            timerText.text = $"{Math.Ceiling(timer)}";
+            // timerText.color = timer > 6f ? Color.green : timer > 3f ? Color.yellow : Color.red;
             siren.sprite = sirenSprites[timer > 6f ? 0 : timer > 3f ? 1 : 2];
             sirenLight.color = sirenLightColors[timer > 6f ? 0 : timer > 3f ? 1 : 2];
         }
@@ -244,14 +245,17 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
             case 1:
                 similarityStatus.text = "PERFECT";
                 similarityStatus.color = Color.green;
+                similarityText.color = Color.green;
                 break;
             case >= 0.5f:
                 similarityStatus.text = "AMAZING";
                 similarityStatus.color = Color.yellow;
+                similarityText.color = Color.yellow;
                 break;
             default:
                 similarityStatus.text = "MEH";
                 similarityStatus.color = Color.red;
+                similarityText.color = Color.red;
                 break;
         }
     }
@@ -403,6 +407,7 @@ public class CombinedSequenceAlignmentManager : MonoBehaviour
         similarityText.text = "Wait!";
         similarityStatus.text = "...";
         similarityStatus.color = Color.black;
+        similarityText.color = Color.black;
         submitButton.interactable = false;
         alignmentSlider.interactable = false;
         tickDownTimer = false; // stop the timer
