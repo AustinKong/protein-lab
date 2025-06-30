@@ -19,7 +19,7 @@ MonoBehaviour:
   - choiceText: How exactly do we plan on visualising this stuff? Our protein crystals
       are so fine they're basically a white powder!
     nextNode: {fileID: 11400000, guid: ce30760221efb8b4cb2ee187c3ab4f8e, type: 2}
-  nextPage: {fileID: 11400000, guid: b95d17401b03e0d4ca73038030c46ab0, type: 2}
+  nextPage: {fileID: 0}
   dialogueText: 
   narrationAudio: {fileID: 0}
   backgroundMusic: {fileID: 0}

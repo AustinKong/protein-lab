@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b652e25e6d993e146aef0e9b16b97655, type: 3}
   m_Name: 3.0.6
   m_EditorClassIdentifier: 
-  storyImage: {fileID: 21300000, guid: 69e330f774d07d14eaa5c64dec59fb33, type: 3}
-  choices: []
+  storyImage: {fileID: 21300000, guid: 3a5082fbfc28b2048aedb4848ee03f68, type: 3}
+  choices:
+  - choiceText: Wait... How do we make sure the drugs acts specifically then?
+    nextNode: {fileID: 11400000, guid: e0904e99e66abfc42a0ff4314d58036c, type: 2}
+  - choiceText: How is the protein's structure tied to how our drug works?
+    nextNode: {fileID: 11400000, guid: 54181797432335e4eb651ffe31f618cc, type: 2}
   nextPage: {fileID: 11400000, guid: 2e494f982eeded549be24181676725bc, type: 2}
+  dialogueText: 
+  narrationAudio: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  unlocks: 
