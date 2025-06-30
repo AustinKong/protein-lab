@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b652e25e6d993e146aef0e9b16b97655, type: 3}
   m_Name: 1.0.1
   m_EditorClassIdentifier: 
-  storyImage: {fileID: 21300000, guid: 8248eedc8e48ab64f9462782433bfba5, type: 3}
+  storyImage: {fileID: 21300000, guid: b98699c985144d242b7dd7a1a23412f1, type: 3}
   choices: []
   nextPage: {fileID: 11400000, guid: d331ef9775b6f4d48980c82866384786, type: 2}
   dialogueText: 

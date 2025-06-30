@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b652e25e6d993e146aef0e9b16b97655, type: 3}
   m_Name: 2.0.8
   m_EditorClassIdentifier: 
-  storyImage: {fileID: 21300000, guid: c20370eb74b90c44aae29c40d7440bae, type: 3}
-  choices: []
+  storyImage: {fileID: 21300000, guid: 98e690d89a1be0d40a2011294eb2c1b5, type: 3}
+  choices:
+  - choiceText: I heard you were talking about some kinda- spectro- spectra...
+    nextNode: {fileID: 11400000, guid: b95d17401b03e0d4ca73038030c46ab0, type: 2}
+  - choiceText: How exactly do we plan on visualising this stuff? Our protein crystals
+      are so fine they're basically a white powder!
+    nextNode: {fileID: 11400000, guid: ce30760221efb8b4cb2ee187c3ab4f8e, type: 2}
   nextPage: {fileID: 11400000, guid: b95d17401b03e0d4ca73038030c46ab0, type: 2}
+  dialogueText: 
+  narrationAudio: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  unlocks: 
