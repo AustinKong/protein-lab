@@ -7,18 +7,6 @@ public class LabStateManager : MonoBehaviour
 
     public List<LabItemInstance> carriedItems = new List<LabItemInstance>();
 
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public LabItemInstance GetItem(string id)
     {

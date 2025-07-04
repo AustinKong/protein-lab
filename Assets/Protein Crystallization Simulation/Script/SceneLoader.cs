@@ -33,7 +33,7 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    public void LoadMainMenu()
+    /*public void LoadMainMenu()
     {
         DestroyAllManagers(); // 销毁静态单例或 DontDestroy 对象
 
@@ -50,5 +50,5 @@ public class SceneLoader : MonoBehaviour
 
 
         // 其他你用 DontDestroyOnLoad 保留的脚本也加上
-    }
+    }*/
 }

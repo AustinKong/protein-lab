@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 5897905697383910356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3463794123660594077}
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 272.52, y: 154.1, z: 258.72, w: 89.52}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -136,7 +136,6 @@ MonoBehaviour:
   invalidInteractionUIPopupPrefab: {fileID: 8737738248843980286, guid: fcb6d2dc6339a6345ab25cf387b5d8fe, type: 3}
   feedbackContainer: {fileID: 0}
   levelEmpty: {fileID: 8168007836696601493}
-  levelHalf: {fileID: 7265098078687058608}
   levelFull: {fileID: 5897905697383910356}
   fillSound: {fileID: 3844706444008609029}
   currentLevel: 0
@@ -155,6 +154,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8e4edabbd9d18514684d03e7b3e5052a, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8e4edabbd9d18514684d03e7b3e5052a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -380,7 +380,7 @@ RectTransform:
   m_GameObject: {fileID: 8168007836696601493}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3463794123660594077}
@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 269.35, y: 205.86, z: 260.79, w: 172.99}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

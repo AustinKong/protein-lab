@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "NewBufferRecipe", menuName = "Buffer/Recipe")]
 public class BufferRecipe : ScriptableObject
 {
-    [Header("General Info")]
+    /*[Header("General Info")]
     public string recipeName;
     public float targetVolumeML;
     public float targetPH;
@@ -28,7 +28,7 @@ public class BufferRecipe : ScriptableObject
 
     [Header("Equipment Settings")]
     public bool useSmallScaleEquipment;
-    public bool usesPelletBase;
+    public bool usesPelletBase;*/
 
     [System.Serializable]
     public class SceneItemRequirement

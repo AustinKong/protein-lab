@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f46d290ba47874facc3ac1d19e3629, type: 3}
+  m_Name: ProteinSolution Preparation
+  m_EditorClassIdentifier: 
+  sceneItemRequirements:
+  - sceneIndex: 1
+    titleName: Protein Solution Preparation
+    items:
+    - instanceID: Magbetic Stirrer Plate
+      prefab: {fileID: 3696917504562782137, guid: 1cc37c6c12f736b449281a656ac17bae, type: 3}
+      uiPosition: {x: 554, y: -279}
+    - instanceID: GlassBottle1000ml
+      prefab: {fileID: 4936263685472704893, guid: e78c931603d1b4f46bc0616e65fad514, type: 3}
+      uiPosition: {x: -844, y: -350}
+    - instanceID: Lysozyme
+      prefab: {fileID: 4388069939357479075, guid: 6c466325095d0404a84fb2a9552df5b3, type: 3}
+      uiPosition: {x: -646, y: -382}
+    - instanceID: GlassBottle5ml
+      prefab: {fileID: 4936263685472704893, guid: eec76b30e279ce343b8de720d314adbc, type: 3}
+      uiPosition: {x: -350, y: -439}
+    - instanceID: Magbetic Stirrer
+      prefab: {fileID: 2991022772643766926, guid: b5491d707dcb2ae4aa6cb2d49ae54c47, type: 3}
+      uiPosition: {x: 732, y: 56}
+    stepDescriptions:
+    - Transfer a portion of the buffer solution (5 mL) into a new container.
+    - Place a magnetic stir bar into the buffer solution in the new container.
+    - Add lysozyme (150 mg) into the buffer solution.
+    - 'Place the bottle on the magnetic stirrer (1000 rpm, 5 minute) until lysozyme
+      is completely dissolved. '
