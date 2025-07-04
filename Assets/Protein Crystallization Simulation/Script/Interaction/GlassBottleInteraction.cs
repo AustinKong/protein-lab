@@ -28,7 +28,8 @@ public class GlassBottleInteraction : DraggableUI
     {
         if (other.itemID == "Measuring Cylinder")
         {
-            MeasuringCylinderInteraction cylinder = other.GetComponent<MeasuringCylinderInteraction>();
+            //-----------------OLD VERSION----------------------
+            /*MeasuringCylinderInteraction cylinder = other.GetComponent<MeasuringCylinderInteraction>();
             if (cylinder.currentLevel == 1f)
             {   
                 if (bottle_Empty_Marked.activeSelf) 
@@ -64,23 +65,36 @@ public class GlassBottleInteraction : DraggableUI
             {
                 Debug.Log("[800ml瓶] 液体等级不匹配，拒绝接收");
                 //cylinder.ShowInvalidInteraction();
-            }
+            }*/
+
+
+            //--------------SIMPLIFIED VERSION:------------------------
+            bottle_1000ml.SetActive(true);
+            FindObjectOfType<HintPageUI>().MarkStepComplete(0);
         }
         else if (other.itemID == "Magnetic Stirrer")
         {
-            magneticStirrer.SetActive(true);
-            other.gameObject.SetActive(false);
-            FindObjectOfType<HintPageUI>().MarkStepComplete(0);
+            if (FindObjectOfType<HintPageUI>().stepCompletedRuntime[0])
+            {
+                magneticStirrer.SetActive(true);
+                other.gameObject.SetActive(false);
+                FindObjectOfType<HintPageUI>().MarkStepComplete(1);
+            }
+            else
+            {
+                FindObjectOfType<HintPageUI>().ShowMindOrderPopup();
+            }
+
         }
         else if (other.itemID == "Sodium Acetate")
         {
-            if (inputQuantityUI_1 != null && FindObjectOfType<HintPageUI>().stepCompletedRuntime[0])
+            if (inputQuantityUI_1 != null && FindObjectOfType<HintPageUI>().stepCompletedRuntime[1])
             {
                 inputQuantityUI_1.SetActive(true);
             }
             else
             {
-                FindObjectOfType<HintPageUI>().mindOrderUI.SetActive(true);
+                FindObjectOfType<HintPageUI>().ShowMindOrderPopup();
             }
 }
         else if (other.itemID == "Bottle Cap")
@@ -137,7 +151,7 @@ public class GlassBottleInteraction : DraggableUI
         else if (other.itemID == "Pipette")
         {
             PipetteInteraction pipette = other as PipetteInteraction;
-            pipette.isFull = true;
+            //pipette.isFull = true;
         }
     }
 }

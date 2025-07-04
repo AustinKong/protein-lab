@@ -22,19 +22,19 @@ public class CentrifugeTubeInteraction : DraggableUI
         if (other.itemID == "Pipette")
         {
             PipetteInteraction pipette = other as PipetteInteraction;
-            if (pipette.isFull)
+            if (FindObjectOfType<HintPageUI>().stepCompletedRuntime[4])
             {
-                levelEmpty.SetActive(false);
-                levelFull.SetActive(true);
-                isFull = true;
-                if (stepManager.currentStepIndex == 3)
+                if (pipette.isFull)
                 {
-                    FindObjectOfType<HintPageUI>().MarkStepComplete(3);
+                    levelEmpty.SetActive(false);
+                    levelFull.SetActive(true);
+                    isFull = true;
+                    FindObjectOfType<HintPageUI>().MarkStepComplete(5);
                 }
-                else if (stepManager.currentStepIndex == 5)
-                {
-                    FindObjectOfType<HintPageUI>().MarkStepComplete(0);
-                }
+            }
+            else
+            {
+                FindObjectOfType<HintPageUI>().ShowMindOrderPopup();
             }
         }
         else if (other.itemID == "pH Probe")
@@ -44,10 +44,11 @@ public class CentrifugeTubeInteraction : DraggableUI
                 other.gameObject.SetActive(false);
                 pHProbe.SetActive(true);
                 FindObjectOfType<PHValueChange>().InitializePHValue();
-                FindObjectOfType<HintPageUI>().MarkStepComplete(4);
+                FindObjectOfType<HintPageUI>().MarkStepComplete(6);
             }
             else 
             {
+                FindObjectOfType<HintPageUI>().ShowMindOrderPopup();
             }
         }
         else if (other.itemID == "Conductivity Probe")

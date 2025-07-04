@@ -2,17 +2,18 @@ using UnityEngine;
 using TMPro;
 
 public class DualInputChecker : MonoBehaviour
-{
+{   
+    public int stepNumber = 0;
     public TMP_InputField inputField1; // 第一个输入框（例如盐质量）
     public TMP_InputField inputField2; // 第二个输入框（例如水体积）
     public int targetValue1;
     public int targetValue2;
     public TMP_Text feedbackText;     // 第一个提示文本
-    public StepManager stepManager;
+    //public StepManager stepManager;
 
     void Start()
     {
-        stepManager = FindObjectOfType<StepManager>();
+        //stepManager = FindObjectOfType<StepManager>();
     }
 
     public void CheckInputs()
@@ -58,16 +59,17 @@ public class DualInputChecker : MonoBehaviour
 
         // 如果两个都正确
         if (input1Correct && input2Correct)
-        {   
-            if(stepManager.currentStepIndex == 2)
+        {
+            if (FindObjectOfType<HintPageUI>().stepCompletedRuntime[3])
+            {
+                FindObjectOfType<HintPageUI>().MarkStepComplete(4);
+            }
+            else
             {
                 FindObjectOfType<HintPageUI>().MarkStepComplete(3);
             }
-            else if( stepManager.currentStepIndex == 3)
-            {
-                FindObjectOfType<HintPageUI>().MarkStepComplete(2);
-            }
-
+            inputField1.text = "";
+            inputField2.text = "";
             this.gameObject.SetActive(false);
         }
     }

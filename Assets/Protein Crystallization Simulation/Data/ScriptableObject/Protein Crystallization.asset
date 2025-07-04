@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f46d290ba47874facc3ac1d19e3629, type: 3}
+  m_Name: Protein Crystallization
+  m_EditorClassIdentifier: 
+  sceneItemRequirements:
+  - sceneIndex: 1
+    titleName: Protein Crystallization
+    items:
+    - instanceID: Refrigerator
+      prefab: {fileID: 3696917504562782137, guid: 93537165e242ea64491e0fcdad445ce4, type: 3}
+      uiPosition: {x: 667, y: -200}
+    - instanceID: SaltSolution
+      prefab: {fileID: 4936263685472704893, guid: c8a584e974d4ac34e988c399009e5e78, type: 3}
+      uiPosition: {x: -655, y: -372}
+    - instanceID: 24WellPlate
+      prefab: {fileID: 3696917504562782137, guid: 7319c2f8116a81a48b07ae1204764824, type: 3}
+      uiPosition: {x: 2.8, y: -325}
+    - instanceID: ProteinSolution
+      prefab: {fileID: 4936263685472704893, guid: 13611aa38ab88694689866d13c95e44e, type: 3}
+      uiPosition: {x: -795, y: -385}
+    - instanceID: GlassSlide
+      prefab: {fileID: 2991022772643766926, guid: d25ee89afb2e4fb46985c7d88ae7887e, type: 3}
+      uiPosition: {x: 471, y: 127}
+    - instanceID: Pipette
+      prefab: {fileID: 3333259507649346958, guid: 9b5543d56c2aa8e46a934e427fd7677c, type: 3}
+      uiPosition: {x: -714, y: -123}
+    stepDescriptions:
+    - 'Pipette the salt solution (300 uL) into a well in the 24 well plate. '
+    - Pipette the protein solution (300 uL) into the same well.
+    - Use a glass slide to cover the well.
+    - 'Place the well in a refrigerator (4 oC). Observe the well under a microscope
+      after 1 day. '

@@ -9,7 +9,7 @@ public class PHValueChange : MonoBehaviour
 
     public void InitializePHValue()
     {
-        pHValue.text = "4.2";
+        pHValue.text = "4.5";
     }
 
     public void IncreasePHValue()

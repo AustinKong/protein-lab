@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f46d290ba47874facc3ac1d19e3629, type: 3}
+  m_Name: Buffer Preparation
+  m_EditorClassIdentifier: 
+  recipeName: Sodium Acetate Buffer
+  targetVolumeML: 1000
+  targetPH: 4.5
+  targetConductivity: 0
+  salt1Name: Sodium Acetate
+  salt1Amount: 820
+  salt2Name: 
+  salt2Amount: 0
+  acidName: Acetic Acid
+  acidVolumeML: 1
+  baseName: Sodium Hydroxide
+  baseForm: Solution
+  baseAmount: 1
+  useSmallScaleEquipment: 1
+  usesPelletBase: 0
+  sceneItemRequirements:
+  - sceneIndex: 1
+    titleName: Buffer Preparation
+    items:
+    - instanceID: Magnetic Stirring Plate
+      prefab: {fileID: 3696917504562782137, guid: 1cc37c6c12f736b449281a656ac17bae, type: 3}
+      uiPosition: {x: 554, y: -279}
+    - instanceID: Measuring Cylinder
+      prefab: {fileID: 6191883985322689842, guid: 57a33835a55e8dc47826cde9e464fb67, type: 3}
+      uiPosition: {x: -830, y: -300}
+    - instanceID: De-ionised Water
+      prefab: {fileID: 1272571444800023944, guid: d32e9f117433ba9429d44635b83a9b75, type: 3}
+      uiPosition: {x: -621, y: -315}
+    - instanceID: GlassBottle800ml
+      prefab: {fileID: 4936263685472704893, guid: f2e3664a52f386d41b2904832e994f7f, type: 3}
+      uiPosition: {x: -398, y: -307}
+    - instanceID: Magnetic Stirrer
+      prefab: {fileID: 2991022772643766926, guid: b5491d707dcb2ae4aa6cb2d49ae54c47, type: 3}
+      uiPosition: {x: 299, y: 533}
+    - instanceID: Sodium Acetate
+      prefab: {fileID: 1704442064474389651, guid: 08514fbf4a68db64d90f9535753c3fad, type: 3}
+      uiPosition: {x: -832, y: 0}
+    - instanceID: Acetic Acid
+      prefab: {fileID: 4388069939357479075, guid: e1c2134601b02d8489df72f755be727f, type: 3}
+      uiPosition: {x: -193, y: -320}
+    - instanceID: Pipette
+      prefab: {fileID: 3333259507649346958, guid: 9b5543d56c2aa8e46a934e427fd7677c, type: 3}
+      uiPosition: {x: -517, y: 9}
+    - instanceID: Centrifuge Tube
+      prefab: {fileID: 5686105626935759946, guid: a0fb9d41eeb039c4eb87c057d1eac0db, type: 3}
+      uiPosition: {x: -37.5, y: -343}
+    - instanceID: pH Probe
+      prefab: {fileID: 2944646707861233072, guid: 512a091833818e1478dcfcf6d44a26f9, type: 3}
+      uiPosition: {x: 669, y: 217}
+    - instanceID: pH Screen
+      prefab: {fileID: 5701036040770836415, guid: 3d1aee5afdbd1cb489cb9cc3cf904dad, type: 3}
+      uiPosition: {x: 841, y: 214}
+    stepDescriptions:
+    - Pour de-ionised water (1000 mL) into the measuring cylinder and transfer it
+      to the bottle.
+    - 'Place a magnetic stir bar into the de-ionised water. '
+    - Add sodium acetate (820 mg) into the de-ionised water.
+    - 'Place the bottle on the magnetic stirrer (1000 rpm, 5 minute) until sodium
+      acetate is completely dissolved. '
+    - 'Add acetic acid (1 mL) into the sodium acetate solution and set the parameter
+      for the magnetic stirrer (1000 rpm, 5 minute). '
+    - Transfer a sample of the mixture from the bottle to a centrifuge tube.
+    - 'Insert a pH probe into the sample to check its pH. '

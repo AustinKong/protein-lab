@@ -1,8 +1,8 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class StepManager : MonoBehaviour
 {
-    public static StepManager Instance;
+    //public static StepManager Instance;
 
     public BufferRecipe recipe;
     public SceneLoader itemLoader;
@@ -12,7 +12,7 @@ public class StepManager : MonoBehaviour
     public int CurrentStepIndex => currentStepIndex;
 
 
-    void Awake()
+    /*void Awake()
     {
         // 确保单例不重复
         if (Instance == null)
@@ -23,7 +23,7 @@ public class StepManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 
     void Start()
     {
@@ -44,14 +44,31 @@ public class StepManager : MonoBehaviour
         hintUI.RefreshSteps(); // 类似 GenerateStepUI()
     }
 
-    public void GoToNextStep()
+    public void GoToSaltSolutionPreparation()
     {
-        int next = currentStepIndex + 1;
+        //-----------------OLD VERSION--------------------
+        /*int next = currentStepIndex + 1;
         var exists = recipe.sceneItemRequirements.Exists(r => r.sceneIndex == next);
         if (exists)
             LoadStep(next);
         else
-            Debug.Log("所有步骤已完成！");
+            Debug.Log("所有步骤已完成！");*/
+
+        //----------------NEWVERSION-----------------------
+        SceneManager.Instance.UnlockScene("SaltSolutionPreparation");
+        SceneManager.Instance.LoadScene("ExperimentSelect");
+    }
+
+    public void GoToProteinSolutionPreparation()
+    {
+        SceneManager.Instance.UnlockScene("ProteinSolutionPreparation");
+        SceneManager.Instance.LoadScene("ExperimentSelect");
+    }
+
+    public void GoToProteinCrystallization()
+    {
+        SceneManager.Instance.UnlockScene("ProteinCrystallization");
+        SceneManager.Instance.LoadScene("ExperimentSelect");
     }
     public void RestartCurrentStep()
     {

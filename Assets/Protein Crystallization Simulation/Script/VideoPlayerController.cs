@@ -8,16 +8,9 @@ public class VideoPlayerController : MonoBehaviour
     public VideoPlayer videoPlayer;
     public GameObject videoPanel;
 
-    public StepManager stepManager; // 拖入 StepManager 或通过 Find 获取
-
     void Start()
     {
         videoPanel.SetActive(false);
-
-        if (stepManager == null)
-        {
-            stepManager = FindObjectOfType<StepManager>();
-        }
 
         videoPlayer.errorReceived += OnVideoError;
         videoPlayer.loopPointReached += OnVideoFinished;
@@ -25,11 +18,12 @@ public class VideoPlayerController : MonoBehaviour
 
     public void PlayVideo()
     {
+        // 使用 Unity 内置 SceneManager 获取场景名
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
-
-        string videoFileName = $"{stepManager.currentStepIndex}.mp4";
+        // 构建视频路径
+        string videoFileName = $"{sceneName}.mp4";
         string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName);
-
 
         videoPanel.SetActive(true);
         videoPlayer.url = videoPath;

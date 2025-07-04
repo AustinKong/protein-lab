@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f46d290ba47874facc3ac1d19e3629, type: 3}
+  m_Name: SaltSolution Preparation
+  m_EditorClassIdentifier: 
+  sceneItemRequirements:
+  - sceneIndex: 1
+    titleName: Salt Solution Preparation
+    items:
+    - instanceID: Magnetic Stirring Plate
+      prefab: {fileID: 3696917504562782137, guid: 1cc37c6c12f736b449281a656ac17bae, type: 3}
+      uiPosition: {x: 554, y: -279}
+    - instanceID: GlassBottle800ml
+      prefab: {fileID: 4936263685472704893, guid: 1b381da6737fc5c42a101c58b56f602f, type: 3}
+      uiPosition: {x: -823, y: -346}
+    - instanceID: Polyethylene Glycol
+      prefab: {fileID: 4388069939357479075, guid: cc8697df667f91a44a785c4a8c1efbfe, type: 3}
+      uiPosition: {x: -616, y: -357}
+    - instanceID: GlassBottle100ml
+      prefab: {fileID: 4936263685472704893, guid: 16afc66f187c15c4083782b97ef21b21, type: 3}
+      uiPosition: {x: -442, y: -399}
+    - instanceID: Magnetic Stirrer
+      prefab: {fileID: 2991022772643766926, guid: b5491d707dcb2ae4aa6cb2d49ae54c47, type: 3}
+      uiPosition: {x: 257, y: 482}
+    - instanceID: Sodium Chloride
+      prefab: {fileID: 1704442064474389651, guid: a096338d9063ffa4f99823744bc05544, type: 3}
+      uiPosition: {x: -851, y: -69}
+    stepDescriptions:
+    - Transfer a portion of the buffer solution (100 mL) into a new bottle.
+    - Place a magnetic stir bar into the buffer solution in the new bottle.
+    - 'Add sodium chloride (11.7 g) into the buffer solution. '
+    - Add polyethylene glycol (PEG) 400 (50 mg) into the mixture.
+    - 'Place the bottle on the magnetic stirrer (1000 rpm, 5 minute) until sodium
+      chloride and PEG 400 are completely dissolved. '

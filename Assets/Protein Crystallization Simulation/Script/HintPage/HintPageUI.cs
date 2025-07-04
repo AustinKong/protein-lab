@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 using System;
+using System.Collections;
 
 public class HintPageUI : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class HintPageUI : MonoBehaviour
 
     public static HintPageUI Instance;
 
+    public GameObject blackScreenWithText; // 黑幕+“一天后”的图片
+    public GameObject finalResultUI;       // 最终结果UI
+    private bool allowClickToProceed = false;
+
     void Awake()
     {
         if (Instance == null)
@@ -40,6 +45,15 @@ public class HintPageUI : MonoBehaviour
         if (nextSceneUI != null)
             nextSceneUI.SetActive(false);
     }
+
+    void Update()
+    {
+        if (allowClickToProceed && Input.GetKeyDown(KeyCode.Space))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("ExperimentSelect");
+        }
+    }
+
 
     void GenerateStepUI()
     {
@@ -107,11 +121,6 @@ public class HintPageUI : MonoBehaviour
                 if (text != null)
                 text.color = Color.green;
             }
-            else 
-            {
-                ShowMindOrderPopup();
-            }
-
         }
 
         CheckIfAllStepsDone();
@@ -124,13 +133,13 @@ public class HintPageUI : MonoBehaviour
 
         if (allDone && nextSceneUI != null)
         {
-            if (currentSceneIndex != 5)
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "ProteinCrystallization")
             {
-                nextSceneUI.SetActive(true);
+                StartCoroutine(ShowBlackScreenSequence());
             }
             else
             {
-                backToMainMenuUI.SetActive(true);
+                nextSceneUI.SetActive(true);
             }
         }
     }
@@ -164,6 +173,35 @@ public class HintPageUI : MonoBehaviour
         RectTransform rt = currentMindOrderUI.GetComponent<RectTransform>();
         rt.anchoredPosition = Vector2.zero;
         Destroy(currentMindOrderUI, 1f);
+    }
+
+    IEnumerator ShowBlackScreenSequence()
+    {
+        blackScreenWithText.SetActive(true);
+
+        CanvasGroup group = blackScreenWithText.GetComponent<CanvasGroup>();
+        if (group == null) group = blackScreenWithText.AddComponent<CanvasGroup>();
+
+        group.alpha = 0f;
+        float fadeDuration = 1f;
+
+        // 渐显
+        while (group.alpha < 1f)
+        {
+            group.alpha += Time.deltaTime / fadeDuration;
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(2f); // 停留时间
+        finalResultUI.SetActive(true);
+        // 渐隐
+        while (group.alpha > 0f)
+        {
+            group.alpha -= Time.deltaTime / fadeDuration;
+            yield return null;
+        }
+        blackScreenWithText.SetActive(false);
+        allowClickToProceed = true;
     }
 
 }
