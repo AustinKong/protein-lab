@@ -25,12 +25,12 @@ public class InputChecker : MonoBehaviour
             }
             else
             {
-                feedbackText.text = $"Try again (Hint: must be close to {targetValue})";
+                feedbackText.text = $"Try again";
             }
         }
         else
         {
-            feedbackText.text = "Please enter a valid number (e.g., 12.5)";
+            feedbackText.text = "Please enter a valid number";
         }
     }
 }
