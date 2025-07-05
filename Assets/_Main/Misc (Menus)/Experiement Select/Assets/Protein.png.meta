@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9fa6f2c66e2320648ae7e22619f78d61
+guid: a7e5a222289f3854d957b68f5baa9b7e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3483242223429997477
-    second: Sodium Chloride_0
+      213: -1519525468695217492
+    second: Protein_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -85,19 +85,6 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sodium Chloride_0
+      name: Protein_0
       rect:
         serializedVersion: 2
-        x: 143
-        y: 57
-        width: 742
-        height: 848
+        x: 0
+        y: 0
+        width: 768
+        height: 1536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5c20dd17a909afc0800000000000000
-      internalID: -3483242223429997477
+      spriteID: caa334313af89eae0800000000000000
+      internalID: -1519525468695217492
       vertices: []
       indices: 
       edges: []
@@ -161,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sodium Chloride_0: -3483242223429997477
+      Protein_0: -1519525468695217492
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
