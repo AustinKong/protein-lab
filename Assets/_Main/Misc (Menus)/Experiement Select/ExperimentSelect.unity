@@ -3576,8 +3576,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockOverlay: {fileID: 2014211415}
-  sceneToLoad: ProteinCrystallization
-  unlockName: ProteinCrystallization
+  sceneToLoad: ProteinCrystalisation
+  unlockName: ProteinCrystalisation
 --- !u!114 &1258516777
 MonoBehaviour:
   m_ObjectHideFlags: 0

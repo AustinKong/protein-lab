@@ -133,7 +133,7 @@ public class HintPageUI : MonoBehaviour
 
         if (allDone && nextSceneUI != null)
         {
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "ProteinCrystallization")
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "ProteinCrystalisation")
             {
                 StartCoroutine(ShowBlackScreenSequence());
             }

@@ -63,7 +63,7 @@ EditorBuildSettings:
     path: Assets/Protein Crystallization Simulation/Scenes/ProteinSolutionPreparation.unity
     guid: d71a1e46f7369b94fb7d4eeed304b317
   - enabled: 1
-    path: Assets/Protein Crystallization Simulation/Scenes/ProteinCrystallization.unity
+    path: Assets/Protein Crystallization Simulation/Scenes/ProteinCrystalisation.unity
     guid: 5adbe2a83f81f9e43bfd7ff563a11054
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 5b4ba5ed8fec3364495e43bed56d8bea, type: 2}

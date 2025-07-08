@@ -65,9 +65,9 @@ public class StepManager : MonoBehaviour
         SceneManager.Instance.LoadScene("ExperimentSelect");
     }
 
-    public void GoToProteinCrystallization()
+    public void GoToProteinCrystalisation()
     {
-        SceneManager.Instance.UnlockScene("ProteinCrystallization");
+        SceneManager.Instance.UnlockScene("ProteinCrystalisation");
         SceneManager.Instance.LoadScene("ExperimentSelect");
     }
     public void RestartCurrentStep()
