@@ -18,4 +18,4 @@ MonoBehaviour:
   dialogueText: 
   narrationAudio: {fileID: 0}
   backgroundMusic: {fileID: 0}
-  unlocks: 
+  unlocks: Act3

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyImage: {fileID: 21300000, guid: 2fcd70aa00bfe2440b9bfa88d9eecca8, type: 3}
   choices: []
-  nextPage: {fileID: 11400000, guid: 449f09807bc747544ae313ff67b40344, type: 2}
+  nextPage: {fileID: 11400000, guid: 68b04550cf2615a4dabcced76fa583d7, type: 2}
   dialogueText: 
-  narrationAudio: {fileID: 0}
+  narrationAudio: {fileID: 8300000, guid: 64185c1ab4ef0444290fe887b8a9dfea, type: 3}
   backgroundMusic: {fileID: 0}
   unlocks: 
