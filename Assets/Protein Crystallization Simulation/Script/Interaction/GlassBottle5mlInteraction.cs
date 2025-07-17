@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GlassBottle5mlInteraction : DraggableUI
@@ -46,8 +47,10 @@ public class GlassBottle5mlInteraction : DraggableUI
             if (FindObjectOfType<HintPageUI>().stepCompletedRuntime[0])
             {
                 PipetteInteraction pipette = other as PipetteInteraction;
+
                 pipette.withProtein = true;
                 pipette.withSalt = false;
+                pipette.UpdateSolutionUI();
             }
             else
             {
@@ -55,4 +58,5 @@ public class GlassBottle5mlInteraction : DraggableUI
             }
         }
     }
+
 }

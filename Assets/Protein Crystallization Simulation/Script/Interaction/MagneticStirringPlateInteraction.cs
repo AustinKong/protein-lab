@@ -24,12 +24,15 @@ public class MagneticStirringPlateInteraction : DraggableUI
                 FindObjectOfType<HintPageUI>().ShowMindOrderPopup();
             }
         }
-        else if (other.itemID == "Pipette")
+        else if (other.itemID == "Centrifuge Tube")
         {
             if (FindObjectOfType<HintPageUI>().stepCompletedRuntime[4])
             {
-                PipetteInteraction pipette = other as PipetteInteraction;
-                pipette.isFull = true;
+                CentrifugeTubeInteraction centrifugeTube = other as CentrifugeTubeInteraction;
+                centrifugeTube.levelEmpty.SetActive(false);
+                centrifugeTube.levelFull.SetActive(true);
+                centrifugeTube.isFull = true;
+                FindObjectOfType<HintPageUI>().MarkStepComplete(5);
             }
             else
             {

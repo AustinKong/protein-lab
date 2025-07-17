@@ -12,6 +12,7 @@ public class WellPlateInteraction : DraggableUI
             if (pipette.withSalt)
             {
                 pipette.withSalt = false;
+                pipette.UpdateSolutionUI();
                 liquid.SetActive(true);
                 FindObjectOfType<HintPageUI>().MarkStepComplete(0);
             }
@@ -19,6 +20,8 @@ public class WellPlateInteraction : DraggableUI
             {
                 if (FindObjectOfType<HintPageUI>().stepCompletedRuntime[0])
                 {
+                    pipette.withProtein = false;
+                    pipette.UpdateSolutionUI();
                     FindObjectOfType<HintPageUI>().MarkStepComplete(1);
                 }
                 else 

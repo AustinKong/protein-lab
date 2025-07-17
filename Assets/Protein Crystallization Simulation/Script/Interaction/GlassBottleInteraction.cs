@@ -26,7 +26,7 @@ public class GlassBottleInteraction : DraggableUI
 
     public override void ExecuteCustomInteraction(DraggableUI other)
     {
-        if (other.itemID == "Measuring Cylinder")
+        if (other.itemID == "De-ionised Water")
         {
             //-----------------OLD VERSION----------------------
             /*MeasuringCylinderInteraction cylinder = other.GetComponent<MeasuringCylinderInteraction>();

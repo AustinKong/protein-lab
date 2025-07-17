@@ -30,10 +30,10 @@ MonoBehaviour:
       uiPosition: {x: -442, y: -399}
     - instanceID: Magnetic Stirrer
       prefab: {fileID: 2991022772643766926, guid: b5491d707dcb2ae4aa6cb2d49ae54c47, type: 3}
-      uiPosition: {x: 257, y: 482}
+      uiPosition: {x: 679, y: 221}
     - instanceID: Sodium Chloride
       prefab: {fileID: 1704442064474389651, guid: a096338d9063ffa4f99823744bc05544, type: 3}
-      uiPosition: {x: -851, y: -69}
+      uiPosition: {x: -275, y: -455}
     stepDescriptions:
     - Transfer a portion of the buffer solution (100 mL) into a new bottle.
     - Place a magnetic stir bar into the buffer solution in the new bottle.

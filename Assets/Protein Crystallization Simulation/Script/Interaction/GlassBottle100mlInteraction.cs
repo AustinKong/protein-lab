@@ -60,6 +60,7 @@ public class GlassBottle100mlInteraction : DraggableUI
             PipetteInteraction pipette = other as PipetteInteraction;
             pipette.withSalt = true;
             pipette.withProtein = false;
+            pipette.UpdateSolutionUI();
         }
     }
 }
