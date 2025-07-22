@@ -25,15 +25,15 @@ MonoBehaviour:
     - instanceID: Polyethylene Glycol
       prefab: {fileID: 4388069939357479075, guid: cc8697df667f91a44a785c4a8c1efbfe, type: 3}
       uiPosition: {x: -616, y: -357}
-    - instanceID: GlassBottle100ml
-      prefab: {fileID: 4936263685472704893, guid: 16afc66f187c15c4083782b97ef21b21, type: 3}
-      uiPosition: {x: -442, y: -399}
-    - instanceID: Magnetic Stirrer
-      prefab: {fileID: 2991022772643766926, guid: b5491d707dcb2ae4aa6cb2d49ae54c47, type: 3}
-      uiPosition: {x: 679, y: 221}
     - instanceID: Sodium Chloride
       prefab: {fileID: 1704442064474389651, guid: a096338d9063ffa4f99823744bc05544, type: 3}
-      uiPosition: {x: -275, y: -455}
+      uiPosition: {x: -427, y: -363}
+    - instanceID: GlassBottle100ml
+      prefab: {fileID: 4936263685472704893, guid: 16afc66f187c15c4083782b97ef21b21, type: 3}
+      uiPosition: {x: -254, y: -402}
+    - instanceID: Magnetic Stirrer
+      prefab: {fileID: 2991022772643766926, guid: b5491d707dcb2ae4aa6cb2d49ae54c47, type: 3}
+      uiPosition: {x: 845, y: 81}
     stepDescriptions:
     - Transfer a portion of the buffer solution (100 mL) into a new bottle.
     - Place a magnetic stir bar into the buffer solution in the new bottle.

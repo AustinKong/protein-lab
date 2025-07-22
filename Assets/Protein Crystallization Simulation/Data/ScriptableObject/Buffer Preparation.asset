@@ -27,7 +27,7 @@ MonoBehaviour:
       uiPosition: {x: -367, y: -359}
     - instanceID: Centrifuge Tube
       prefab: {fileID: 5686105626935759946, guid: a0fb9d41eeb039c4eb87c057d1eac0db, type: 3}
-      uiPosition: {x: -195, y: -380}
+      uiPosition: {x: 1.5, y: -388}
     - instanceID: pH Probe
       prefab: {fileID: 2944646707861233072, guid: 512a091833818e1478dcfcf6d44a26f9, type: 3}
       uiPosition: {x: -697, y: 15}
@@ -39,10 +39,10 @@ MonoBehaviour:
       uiPosition: {x: -583, y: -349}
     - instanceID: Magnetic Stirrer
       prefab: {fileID: 2991022772643766926, guid: b5491d707dcb2ae4aa6cb2d49ae54c47, type: 3}
-      uiPosition: {x: 917, y: 245}
+      uiPosition: {x: 381, y: 459}
     - instanceID: Sodium Acetate
       prefab: {fileID: 1704442064474389651, guid: 08514fbf4a68db64d90f9535753c3fad, type: 3}
-      uiPosition: {x: -43, y: -438}
+      uiPosition: {x: -165, y: -365}
     stepDescriptions:
     - Pour de-ionised water (1000 mL) into a bottle.
     - 'Place a magnetic stir bar into the de-ionised water. '
