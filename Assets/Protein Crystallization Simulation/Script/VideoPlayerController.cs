@@ -7,6 +7,7 @@ public class VideoPlayerController : MonoBehaviour
     public RawImage videoDisplay;
     public VideoPlayer videoPlayer;
     public GameObject videoPanel;
+    public GameObject backgroundOverlay;
 
     void Start()
     {
@@ -18,14 +19,13 @@ public class VideoPlayerController : MonoBehaviour
 
     public void PlayVideo()
     {
-        // 使用 Unity 内置 SceneManager 获取场景名
         string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-
-        // 构建视频路径
         string videoFileName = $"{sceneName}.mp4";
         string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName);
 
         videoPanel.SetActive(true);
+        backgroundOverlay.gameObject.SetActive(true); 
+
         videoPlayer.url = videoPath;
         videoPlayer.Prepare();
 
@@ -33,6 +33,7 @@ public class VideoPlayerController : MonoBehaviour
         {
             videoDisplay.texture = videoPlayer.texture;
             videoPlayer.Play();
+            backgroundOverlay.gameObject.SetActive(false); 
         };
     }
 

@@ -1277,7 +1277,7 @@ RectTransform:
   m_GameObject: {fileID: 4112094817010455248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.42999998, y: 0.42999998, z: 0.42999998}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5410864763941238856}
@@ -2688,7 +2688,7 @@ MonoBehaviour:
   feedbackText: {fileID: 1979313128983175823}
   stepNumber: 2
   targetValue: 11.7
-  tolerance: 0.1
+  tolerance: 0
 --- !u!1 &8108044680711736735
 GameObject:
   m_ObjectHideFlags: 0

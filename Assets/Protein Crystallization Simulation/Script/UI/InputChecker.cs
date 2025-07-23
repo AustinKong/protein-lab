@@ -10,7 +10,7 @@ public class InputChecker : MonoBehaviour
     public TMP_Text feedbackText;       // 提示文本
     public int stepNumber;              // 步骤编号
     public float targetValue;           // 目标值，可为小数
-    public float tolerance = 0.1f;      // 允许误差范围（例如 ±0.1）
+    public float tolerance = 0f;      // 允许误差范围（例如 ±0.1）
 
     public void CheckInput()
     {
