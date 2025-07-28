@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneItemRequirements:
   - sceneIndex: 1
-    titleName: Protein Crystallization
+    titleName: Protein Crystallisation
     items:
     - instanceID: Refrigerator
       prefab: {fileID: 3696917504562782137, guid: 93537165e242ea64491e0fcdad445ce4, type: 3}
