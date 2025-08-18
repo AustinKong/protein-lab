@@ -28,12 +28,12 @@ MonoBehaviour:
     - instanceID: Centrifuge Tube
       prefab: {fileID: 5686105626935759946, guid: a0fb9d41eeb039c4eb87c057d1eac0db, type: 3}
       uiPosition: {x: 1.5, y: -388}
-    - instanceID: pH Probe
-      prefab: {fileID: 2944646707861233072, guid: 512a091833818e1478dcfcf6d44a26f9, type: 3}
-      uiPosition: {x: -697, y: 15}
     - instanceID: pH Screen
       prefab: {fileID: 5701036040770836415, guid: 3d1aee5afdbd1cb489cb9cc3cf904dad, type: 3}
       uiPosition: {x: -818, y: 15}
+    - instanceID: pH Probe
+      prefab: {fileID: 2944646707861233072, guid: 512a091833818e1478dcfcf6d44a26f9, type: 3}
+      uiPosition: {x: -697, y: 15}
     - instanceID: GlassBottle800ml
       prefab: {fileID: 4936263685472704893, guid: f2e3664a52f386d41b2904832e994f7f, type: 3}
       uiPosition: {x: -802.5, y: -340.5}

@@ -1,0 +1,23 @@
+# ninja log v5
+1387	5256	7771940713081092	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f304d297f7a0b8da
+2814	6733	7771940728123849	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c3949597f09cbe71
+439	5462	7771940715407091	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	9025aca18da4c664
+3840	5647	7771940717284092	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	f7e988d05c214a3
+3	6597	7771940726785005	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	3c0a99ee9a520aa3
+3326	6792	7771940728792810	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	93bfb0d4082825aa
+874	5846	7771940719247316	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	2616a67b21ce64d0
+2329	6114	7771940722004957	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2fe346d506ff41a8
+1889	6502	7771940725873173	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	218c7dbd73323697
+5648	6934	7771940730296378	D:/Unity Project/Game_ProteinLab/protein-lab/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4l6m3a67/obj/arm64-v8a/libswappywrapper.so	e13dea0314665dd2
+6792	7808	7771940738913551	D:/Unity Project/Game_ProteinLab/protein-lab/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4l6m3a67/obj/arm64-v8a/libgame.so	d817a527ee81a54b
+192	1881	7771956189763550	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	9025aca18da4c664
+375	1883	7771956189698145	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	2fe346d506ff41a8
+10	2049	7771956191439810	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	2616a67b21ce64d0
+1598	2086	7771956192014815	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	f7e988d05c214a3
+748	2128	7771956192366865	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	93bfb0d4082825aa
+1151	2521	7771956196281589	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	f304d297f7a0b8da
+558	2537	7771956196411853	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	3c0a99ee9a520aa3
+945	2776	7771956198867944	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	218c7dbd73323697
+2086	2847	7771956199573039	D:/Unity Project/Game_ProteinLab/protein-lab/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4l6m3a67/obj/arm64-v8a/libswappywrapper.so	e13dea0314665dd2
+1362	2898	7771956200068109	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c3949597f09cbe71
+2899	3515	7771956206227051	D:/Unity Project/Game_ProteinLab/protein-lab/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4l6m3a67/obj/arm64-v8a/libgame.so	d817a527ee81a54b

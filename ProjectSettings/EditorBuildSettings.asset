@@ -66,6 +66,7 @@ EditorBuildSettings:
     path: Assets/Protein Crystallization Simulation/Scenes/ProteinCrystalisation.unity
     guid: 5adbe2a83f81f9e43bfd7ff563a11054
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 71de924ba3d4d1142a46854532248c11, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 5b4ba5ed8fec3364495e43bed56d8bea, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
