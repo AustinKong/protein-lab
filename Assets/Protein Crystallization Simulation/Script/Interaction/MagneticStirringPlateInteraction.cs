@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MagneticStirringPlateInteraction : DraggableUI
 {
@@ -9,6 +10,9 @@ public class MagneticStirringPlateInteraction : DraggableUI
     public GameObject wellPreparedBottle100ml;
     public GameObject wellPreparedBottle5ml;
     public GameObject inputQuantityUI_AceticAcid;
+    public override void OnBeginDrag(PointerEventData eventData) { }  // ½ûÖ¹ÍÏ¶¯
+    public override void OnDrag(PointerEventData eventData) { }
+    public override void OnEndDrag(PointerEventData eventData) { }
     public override void ExecuteCustomInteraction(DraggableUI other)
     {   
         if (other.itemID == "GlassBottle800ml")

@@ -69,8 +69,9 @@ public class GlassBottleInteraction : DraggableUI
 
 
             //--------------SIMPLIFIED VERSION:------------------------
-            bottle_1000ml.SetActive(true);
-            FindObjectOfType<HintPageUI>().MarkStepComplete(0);
+            inputQuantityUI_2.SetActive(true);
+            //bottle_1000ml.SetActive(true);
+            //FindObjectOfType<HintPageUI>().MarkStepComplete(0);
         }
         else if (other.itemID == "Magnetic Stirrer")
         {

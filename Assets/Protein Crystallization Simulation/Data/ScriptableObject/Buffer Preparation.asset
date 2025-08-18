@@ -21,10 +21,10 @@ MonoBehaviour:
       uiPosition: {x: 554, y: -279}
     - instanceID: De-ionised Water
       prefab: {fileID: 1272571444800023944, guid: d32e9f117433ba9429d44635b83a9b75, type: 3}
-      uiPosition: {x: -817, y: -345}
+      uiPosition: {x: -572, y: -353}
     - instanceID: Acetic Acid
       prefab: {fileID: 4388069939357479075, guid: e1c2134601b02d8489df72f755be727f, type: 3}
-      uiPosition: {x: -367, y: -359}
+      uiPosition: {x: -159, y: -361}
     - instanceID: Centrifuge Tube
       prefab: {fileID: 5686105626935759946, guid: a0fb9d41eeb039c4eb87c057d1eac0db, type: 3}
       uiPosition: {x: 1.5, y: -388}
@@ -36,13 +36,13 @@ MonoBehaviour:
       uiPosition: {x: -818, y: 15}
     - instanceID: GlassBottle800ml
       prefab: {fileID: 4936263685472704893, guid: f2e3664a52f386d41b2904832e994f7f, type: 3}
-      uiPosition: {x: -583, y: -349}
+      uiPosition: {x: -802.5, y: -340.5}
     - instanceID: Magnetic Stirrer
       prefab: {fileID: 2991022772643766926, guid: b5491d707dcb2ae4aa6cb2d49ae54c47, type: 3}
       uiPosition: {x: 381, y: 459}
     - instanceID: Sodium Acetate
       prefab: {fileID: 1704442064474389651, guid: 08514fbf4a68db64d90f9535753c3fad, type: 3}
-      uiPosition: {x: -165, y: -365}
+      uiPosition: {x: -351, y: -362}
     stepDescriptions:
     - Pour de-ionised water (1000 mL) into a bottle.
     - 'Place a magnetic stir bar into the de-ionised water. '

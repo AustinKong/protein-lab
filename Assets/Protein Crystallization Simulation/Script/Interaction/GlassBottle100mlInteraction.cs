@@ -10,15 +10,17 @@ public class GlassBottle100mlInteraction : DraggableUI
     public GameObject magneticStirrer;
     public GameObject inputQuantityUI_1;
     public GameObject inputQuantityUI_2;
+    public GameObject inputQuantityUI_3;
 
     public override void ExecuteCustomInteraction(DraggableUI other)
     {
         if (other.itemID == "GlassBottle800ml")
         {
-            emptyGlassBottle100ml.SetActive(false);
+            /*emptyGlassBottle100ml.SetActive(false);
             fullGlassBottle100ml.SetActive(true);
             isFulled = true;
-            FindObjectOfType<HintPageUI>().MarkStepComplete(0);
+            FindObjectOfType<HintPageUI>().MarkStepComplete(0);*/
+            inputQuantityUI_3.SetActive(true);
         }
         else if (other.itemID == "Magnetic Stirrer")
         {

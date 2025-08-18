@@ -229,9 +229,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 5447452260189132395}
   feedbackText: {fileID: 7176116135341185747}
-  stepNumber: 2
-  targetValue: 820
-  tolerance: 0.1
+  stepNumber: 0
+  targetValue: 1000
+  tolerance: 0
+  bottleWithWater: {fileID: 7837349611895529530}
 --- !u!1 &1204083686730208441
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,7 +885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46, y: -5}
+  m_AnchoredPosition: {x: -46, y: 38}
   m_SizeDelta: {x: 125.1538, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3387447604214762042
@@ -1696,7 +1697,7 @@ MonoBehaviour:
   bottleCap: {fileID: 1204083686730208441}
   magneticStirrer: {fileID: 4112094817010455248}
   inputQuantityUI_1: {fileID: 7955808820736334579}
-  inputQuantityUI_2: {fileID: 0}
+  inputQuantityUI_2: {fileID: 430895356820026532}
   stepManager: {fileID: 0}
 --- !u!1 &4999550287065532357
 GameObject:
@@ -1941,7 +1942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -290, y: -149}
+  m_AnchoredPosition: {x: -305, y: -32}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4862654993739586747
@@ -2152,7 +2153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181, y: 2}
+  m_AnchoredPosition: {x: 181, y: 41}
   m_SizeDelta: {x: 105.7723, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4303736127364178686
@@ -2183,7 +2184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: mg
+  m_text: ml
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 31648240a2e1df14b9361e4d9e867f4f, type: 2}
   m_sharedMaterial: {fileID: -6335322810477470054, guid: 31648240a2e1df14b9361e4d9e867f4f, type: 2}
@@ -2192,8 +2193,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4280887593
+  m_fontColor: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2596,8 +2597,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3105,6 +3106,7 @@ MonoBehaviour:
   stepNumber: 2
   targetValue: 820
   tolerance: 0.1
+  bottleWithWater: {fileID: 0}
 --- !u!1 &8571732826507075766
 GameObject:
   m_ObjectHideFlags: 0
@@ -3403,7 +3405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: 87}
+  m_AnchoredPosition: {x: -213, y: 108}
   m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4751455434001784978

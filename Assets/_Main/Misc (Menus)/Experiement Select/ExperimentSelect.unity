@@ -920,7 +920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4333720463083865623, guid: 1e1ae5dd3b2064a43b4b918afe3bc1cd, type: 3}
+  m_Sprite: {fileID: -4080032998282622156, guid: 1abf41b2530c63c469de17db2d6b6d3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2289,7 +2289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: protein crystalisation
+  m_text: protein crystallisation
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d81d2223cb086a419aa8360841d281e, type: 2}
   m_sharedMaterial: {fileID: -7798303798650869185, guid: 2d81d2223cb086a419aa8360841d281e, type: 2}

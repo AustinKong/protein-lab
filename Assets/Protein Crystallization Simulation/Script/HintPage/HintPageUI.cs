@@ -48,10 +48,10 @@ public class HintPageUI : MonoBehaviour
 
     void Update()
     {
-        if (allowClickToProceed && Input.GetKeyDown(KeyCode.Space))
+        /*if (allowClickToProceed && Input.GetKeyDown(KeyCode.Space))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("ExperimentSelect");
-        }
+        }*/
     }
 
 
@@ -202,6 +202,9 @@ public class HintPageUI : MonoBehaviour
         }
         blackScreenWithText.SetActive(false);
         allowClickToProceed = true;
+        // µÈ´ý 4 ÃëºóÌø×ª
+        yield return new WaitForSeconds(2.3f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("ExperimentSelect");
     }
 
 }

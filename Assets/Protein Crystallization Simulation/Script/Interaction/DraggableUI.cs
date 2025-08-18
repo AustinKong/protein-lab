@@ -58,7 +58,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         canvasGroup.blocksRaycasts = true;
     }
 
-    public void OnDrop(PointerEventData eventData)
+    public virtual void OnDrop(PointerEventData eventData)
     {
         DraggableUI droppedItem = eventData.pointerDrag?.GetComponent<DraggableUI>();
         if (droppedItem == null) return;
@@ -69,7 +69,7 @@ public class DraggableUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             ExecuteCustomInteraction(droppedItem);
             droppedItem.ReturnToStartPositionAnimated();
         }
-        else
+        else if (droppedItem.itemID != "Magnetic Stirring Plate")
         {
             ShowInvalidInteractionPopup();
             droppedItem.ReturnToStartPositionAnimated();
