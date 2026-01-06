@@ -47,9 +47,9 @@ MonoBehaviour:
     - Pour de-ionised water (1000 mL) into a bottle.
     - 'Place a magnetic stir bar into the de-ionised water. '
     - Add sodium acetate (820 mg) into the de-ionised water.
-    - 'Place the bottle on the magnetic stirrer (1000 rpm, 5 minute) until sodium
+    - 'Place the bottle on the magnetic stirrer (1000 rpm, 5 minutes) until sodium
       acetate is completely dissolved. '
     - 'Add acetic acid (1 mL) into the sodium acetate solution and set the parameter
-      for the magnetic stirrer (1000 rpm, 5 minute). '
+      for the magnetic stirrer (1000 rpm, 5 minutes). '
     - Transfer a sample of the mixture from the bottle to a centrifuge tube.
     - 'Insert a pH probe into the sample to check its pH. '

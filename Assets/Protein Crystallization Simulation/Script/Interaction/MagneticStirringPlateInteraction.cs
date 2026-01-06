@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class MagneticStirringPlateInteraction : DraggableUI
 {
     public GameObject inputParameterUI;
+    public GameObject inputParameterUI_New;
     public GameObject wellPreparedBottle;
     public GameObject wellPreparedBottle100ml;
     public GameObject wellPreparedBottle5ml;
@@ -76,7 +77,7 @@ public class MagneticStirringPlateInteraction : DraggableUI
         {   
             if (FindObjectOfType<HintPageUI>().stepCompletedRuntime[2])
             {
-                inputParameterUI.SetActive(true);
+                inputParameterUI_New.SetActive(true);
                 other.gameObject.SetActive(false);
                 wellPreparedBottle5ml.SetActive(true);
             }
