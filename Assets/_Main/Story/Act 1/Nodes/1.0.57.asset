@@ -16,6 +16,6 @@ MonoBehaviour:
   choices: []
   nextPage: {fileID: 11400000, guid: 91b834fef0b798e4e934e94869a56f1d, type: 2}
   dialogueText: 
-  narrationAudio: {fileID: 0}
+  narrationAudio: {fileID: 8300000, guid: 753fec8940270654a8490018d6473587, type: 3}
   backgroundMusic: {fileID: 0}
   unlocks: 
